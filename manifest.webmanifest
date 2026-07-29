@@ -1,0 +1,32 @@
+{
+  "id": "/Project-JIEYA-Preview/",
+  "name": "界芽：星球观测局",
+  "short_name": "界芽",
+  "description": "亲手创造和改造一颗可观察、可重现的二维世界。",
+  "lang": "zh-CN",
+  "start_url": "/Project-JIEYA-Preview/",
+  "scope": "/Project-JIEYA-Preview/",
+  "display": "standalone",
+  "background_color": "#18352f",
+  "theme_color": "#18352f",
+  "icons": [
+    {
+      "src": "/Project-JIEYA-Preview/jieya-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Project-JIEYA-Preview/jieya-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Project-JIEYA-Preview/jieya-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

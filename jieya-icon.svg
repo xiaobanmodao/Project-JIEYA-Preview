@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">界芽图标</title>
+  <desc id="description">深绿色圆形世界中长出一株浅绿色嫩芽</desc>
+  <rect width="512" height="512" fill="#18352f"/>
+  <circle cx="256" cy="284" r="152" fill="#285d52"/>
+  <path d="M256 391c-19-72-14-134 15-187" fill="none" stroke="#d8f4b1" stroke-linecap="round" stroke-width="28"/>
+  <path d="M267 238c-1-71 40-112 113-112 1 70-40 112-113 112Z" fill="#a9e77b"/>
+  <path d="M247 292c-68-4-105-48-100-120 68 4 105 48 100 120Z" fill="#d8f4b1"/>
+  <path d="M127 371c74 35 184 35 258 0" fill="none" stroke="#79c9d1" stroke-linecap="round" stroke-width="18"/>
+</svg>
