@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-BtnAcbPf.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-D7pbTSbD.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CtuO5-B5.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-BSkJQENn.css">
   </head>
   <body>
     <main class="app-shell">
@@ -117,6 +117,10 @@
           </li>
           <li data-message="guideObserve">
             在萌芽视图阅读摘要，切换调律视图查看当前格的详细坐标。
+          </li>
+          <li data-message="guideWorldFile">
+            可将完整世界导出为
+            .jieya；导入会先验证文件，并要求再次确认后才替换本地世界。
           </li>
         </ol>
       </details>
@@ -333,6 +337,54 @@
           >
             清空本地世界
           </button>
+          <button
+            class="zoom-button"
+            type="button"
+            data-world-file-export
+            data-message="worldFileExport"
+            aria-describedby="world-file-disclosure world-file-status"
+            disabled
+          >
+            导出 .jieya
+          </button>
+          <button
+            class="zoom-button"
+            type="button"
+            data-world-file-choose
+            data-message="worldFileChoose"
+            aria-describedby="world-file-disclosure world-file-status"
+            disabled
+          >
+            选择 .jieya
+          </button>
+          <input
+            class="visually-hidden"
+            type="file"
+            accept=".jieya,application/json"
+            data-world-file-input
+            aria-label="选择 .jieya 世界文件"
+            data-message-aria-label="worldFileChoose"
+            disabled
+          />
+          <button
+            class="zoom-button world-file-confirm"
+            type="button"
+            data-world-file-confirm
+            data-message="worldFileConfirm"
+            aria-describedby="world-file-disclosure world-file-status"
+            hidden
+            disabled
+          >
+            确认导入并替换
+          </button>
+          <p
+            class="world-file-disclosure"
+            id="world-file-disclosure"
+            data-message="worldFileDisclosure"
+          >
+            完整备份包含世界名称、worldId 和
+            seed，只在本机下载或读取，不会上传。
+          </p>
           <output
             class="persistence-status"
             id="persistence-status"
@@ -342,6 +394,16 @@
             aria-live="polite"
           >
             本地世界：世界未启动
+          </output>
+          <output
+            class="world-file-status"
+            id="world-file-status"
+            data-world-file-status
+            data-state="unavailable"
+            data-message="worldFileUnavailable"
+            aria-live="polite"
+          >
+            世界文件：当前不可用
           </output>
         </div>
         <div
