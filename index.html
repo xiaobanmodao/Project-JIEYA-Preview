@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DIJNUYIC.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-zucvGpo5.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CFcmIJSi.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DzSQIFwM.css">
   </head>
   <body>
     <main class="app-shell">
@@ -167,12 +167,12 @@
           </li>
           <li data-message="guideBrush">
             选择 1×1、3×3 或 5×5
-            画笔；选中格子后，可改造地形或降雨范围。画布聚焦后可按 1、3、5
-            快速切换。
+            画笔；选中格子后，可改造地形、降雨或播种先锋草本。画布聚焦后可按
+            1、3、5 快速切换。
           </li>
           <li data-message="guideSimulation">
-            先增加降雨，再推进 1 Tick
-            或运行时间，观察地表水、土壤水和新芽；暂停后可撤销或重做改造，切到其他应用时会自动暂停。
+            亲手播下先锋草本、改变降雨，再推进 1 Tick
+            或运行时间，观察地表水、土壤水和新芽如何回应；暂停后可撤销或重做改造，切到其他应用时会自动暂停。
           </li>
           <li data-message="guideNavigate">
             放大后可拖动画布；聚焦世界视窗后可用方向键或翻页键滚动。
@@ -386,6 +386,34 @@
             aria-live="polite"
           >
             降雨工具：世界未启动
+          </output>
+        </div>
+        <div
+          class="pioneer-plant-sowing-toolbar"
+          role="group"
+          aria-label="生灵匣播种"
+          data-message-aria-label="pioneerPlantSowingControlsLabel"
+        >
+          <b data-message="pioneerPlantSowingLabel">生灵匣</b>
+          <button
+            class="zoom-button pioneer-plant-sowing-button"
+            type="button"
+            data-pioneer-plant-sowing-action
+            data-message="pioneerPlantSow"
+            aria-describedby="pioneer-plant-sowing-status"
+            disabled
+          >
+            播种先锋草本
+          </button>
+          <output
+            class="pioneer-plant-sowing-status"
+            id="pioneer-plant-sowing-status"
+            data-pioneer-plant-sowing-status
+            data-state="unavailable"
+            data-message="pioneerPlantSowingUnavailable"
+            aria-live="polite"
+          >
+            播种工具：世界未启动
           </output>
         </div>
         <div
@@ -847,7 +875,7 @@
         data-message-aria-label="previewFooterLabel"
       >
         <p>
-          <strong data-message="previewVersion">公开预览 0.4.0</strong>
+          <strong data-message="previewVersion">公开预览 0.5.0</strong>
           <span aria-hidden="true"> · </span>
           <span data-message="previewPrivacy">
             世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
