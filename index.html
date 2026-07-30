@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-B4vz3MPF.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DDk4rHor.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DhhhXm41.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-CowV-Ll3.css">
   </head>
   <body>
     <main class="app-shell">
@@ -189,7 +189,7 @@
         </summary>
         <ol class="operation-guide-list">
           <li data-message="guideSelect">
-            先在底部选择观测或创造工具，再点击或触摸世界；聚焦画布后可用方向键移动选择。
+            先在底部选择观测、地形、水体、气候或生灵；创造类别会在上方展开当前工具，再点击或触摸世界。
           </li>
           <li data-message="guideBrush">
             选择 1×1、3×3 或 5×5
@@ -296,12 +296,22 @@
             滚轮缩放 · 空格/中键拖动
           </p>
         </div>
-        <div class="game-tool-dock" aria-label="创造工具坞">
-          <div class="tool-mode-toolbar" role="group" aria-label="地图操作模式">
+        <div
+          class="game-tool-dock"
+          aria-label="创造工具坞"
+          data-message-aria-label="gameToolDockLabel"
+        >
+          <div
+            class="tool-category-toolbar"
+            role="group"
+            aria-label="创造类别"
+            data-message-aria-label="toolCategoriesLabel"
+          >
             <button
-              class="zoom-button tool-button tool-button-inspect"
+              class="zoom-button tool-button tool-category-button tool-button-inspect"
               type="button"
               data-tool-action="Inspect"
+              data-tool-category="inspect"
               aria-label="观测"
               data-message-aria-label="inspectTool"
               aria-pressed="true"
@@ -311,227 +321,298 @@
               <span class="tool-button-icon" aria-hidden="true">⌖</span>
               <span data-message="inspectTool">观测</span>
             </button>
-          </div>
-          <div
-            class="brush-toolbar"
-            role="group"
-            aria-label="画笔范围预览"
-            data-message-aria-label="brushControlsLabel"
-          >
-            <span class="brush-label" data-message="brushLabel">画笔范围</span>
             <button
-              class="zoom-button brush-button"
+              class="zoom-button tool-button tool-category-button"
               type="button"
-              data-brush-size="1"
-              data-message="brushSize1"
-              aria-keyshortcuts="1"
-              aria-pressed="true"
-              disabled
-            >
-              1×1
-            </button>
-            <button
-              class="zoom-button brush-button"
-              type="button"
-              data-brush-size="3"
-              data-message="brushSize3"
-              aria-keyshortcuts="3"
+              data-tool-category="terrain"
+              aria-label="地形"
+              data-message-aria-label="toolCategoryTerrain"
+              aria-controls="contextual-tool-tray"
               aria-pressed="false"
               disabled
             >
-              3×3
+              <span class="tool-button-icon" aria-hidden="true">△</span>
+              <span data-message="toolCategoryTerrain">地形</span>
             </button>
             <button
-              class="zoom-button brush-button"
+              class="zoom-button tool-button tool-category-button"
               type="button"
-              data-brush-size="5"
-              data-message="brushSize5"
-              aria-keyshortcuts="5"
-              aria-pressed="false"
-              disabled
-            >
-              5×5
-            </button>
-            <output
-              class="brush-status"
-              id="brush-status"
-              data-brush-status
-              aria-live="polite"
-            >
-              画笔预览：世界未启动
-            </output>
-            <output
-              class="pointer-status"
-              data-pointer-status
-              data-state="unavailable"
-              data-message="pointerUnavailable"
-              aria-live="off"
-            >
-              指针位置：世界未启动
-            </output>
-          </div>
-          <div
-            class="terrain-toolbar"
-            role="group"
-            aria-label="地形改造"
-            data-message-aria-label="terrainControlsLabel"
-          >
-            <b class="brush-label" data-message="terrainLabel">地形改造</b>
-            <button
-              class="zoom-button terrain-button terrain-button-raise"
-              type="button"
-              data-terrain-action="RaiseTerrain"
-              aria-label="抬高 +100 米"
-              data-message-aria-label="terrainRaise"
-              aria-describedby="terrain-status"
-              aria-pressed="false"
-              disabled
-            >
-              <span class="tool-button-icon" aria-hidden="true">▲</span>
-              <span>抬高</span>
-            </button>
-            <button
-              class="zoom-button terrain-button terrain-button-lower"
-              type="button"
-              data-terrain-action="LowerTerrain"
-              aria-label="降低 −100 米"
-              data-message-aria-label="terrainLower"
-              aria-describedby="terrain-status"
-              aria-pressed="false"
-              disabled
-            >
-              <span class="tool-button-icon" aria-hidden="true">▼</span>
-              <span>挖低</span>
-            </button>
-            <output
-              class="terrain-status"
-              id="terrain-status"
-              data-terrain-status
-              data-state="unavailable"
-              data-message="terrainUnavailable"
-              aria-live="polite"
-            >
-              地形工具：世界未启动
-            </output>
-          </div>
-          <div
-            class="surface-water-toolbar"
-            role="group"
-            aria-label="地表水改造"
-            data-message-aria-label="surfaceWaterControlsLabel"
-          >
-            <b class="brush-label" data-message="surfaceWaterLabel">地表水</b>
-            <button
-              class="zoom-button surface-water-button surface-water-button-add"
-              type="button"
-              data-surface-water-action="AddSurfaceWater"
-              aria-label="加水 +64 毫米"
-              data-message-aria-label="surfaceWaterAdd"
-              aria-describedby="surface-water-status"
+              data-tool-category="water"
+              aria-label="水体"
+              data-message-aria-label="toolCategoryWater"
+              aria-controls="contextual-tool-tray"
               aria-pressed="false"
               disabled
             >
               <span class="tool-button-icon" aria-hidden="true">≋</span>
-              <span>加水</span>
+              <span data-message="toolCategoryWater">水体</span>
             </button>
             <button
-              class="zoom-button surface-water-button surface-water-button-remove"
+              class="zoom-button tool-button tool-category-button"
               type="button"
-              data-surface-water-action="RemoveSurfaceWater"
-              aria-label="排水 −64 毫米"
-              data-message-aria-label="surfaceWaterRemove"
-              aria-describedby="surface-water-status"
-              aria-pressed="false"
-              disabled
-            >
-              <span class="tool-button-icon" aria-hidden="true">⌁</span>
-              <span>排水</span>
-            </button>
-            <output
-              class="surface-water-status"
-              id="surface-water-status"
-              data-surface-water-status
-              data-state="unavailable"
-              data-message="surfaceWaterUnavailable"
-              aria-live="polite"
-            >
-              地表水工具：世界未启动
-            </output>
-          </div>
-          <div
-            class="rainfall-toolbar"
-            role="group"
-            aria-label="降雨改造"
-            data-message-aria-label="rainfallControlsLabel"
-          >
-            <b class="brush-label" data-message="rainfallLabel">降雨改造</b>
-            <button
-              class="zoom-button rainfall-button rainfall-button-increase"
-              type="button"
-              data-rainfall-action="IncreaseRainfall"
-              aria-label="增加降雨 +8 毫米/格/Tick"
-              data-message-aria-label="rainfallIncrease"
-              aria-describedby="rainfall-status"
+              data-tool-category="climate"
+              aria-label="气候"
+              data-message-aria-label="toolCategoryClimate"
+              aria-controls="contextual-tool-tray"
               aria-pressed="false"
               disabled
             >
               <span class="tool-button-icon" aria-hidden="true">☂</span>
-              <span>增雨</span>
+              <span data-message="toolCategoryClimate">气候</span>
             </button>
             <button
-              class="zoom-button rainfall-button rainfall-button-decrease"
+              class="zoom-button tool-button tool-category-button"
               type="button"
-              data-rainfall-action="DecreaseRainfall"
-              aria-label="减少降雨 −8 毫米/格/Tick"
-              data-message-aria-label="rainfallDecrease"
-              aria-describedby="rainfall-status"
-              aria-pressed="false"
-              disabled
-            >
-              <span class="tool-button-icon" aria-hidden="true">☀</span>
-              <span>减雨</span>
-            </button>
-            <output
-              class="rainfall-status"
-              id="rainfall-status"
-              data-rainfall-status
-              data-state="unavailable"
-              data-message="rainfallUnavailable"
-              aria-live="polite"
-            >
-              降雨工具：世界未启动
-            </output>
-          </div>
-          <div
-            class="pioneer-plant-sowing-toolbar"
-            role="group"
-            aria-label="生灵匣播种"
-            data-message-aria-label="pioneerPlantSowingControlsLabel"
-          >
-            <b data-message="pioneerPlantSowingLabel">生灵匣</b>
-            <button
-              class="zoom-button pioneer-plant-sowing-button"
-              type="button"
-              data-pioneer-plant-sowing-action
-              aria-label="播种先锋草本"
-              data-message-aria-label="pioneerPlantSow"
-              aria-describedby="pioneer-plant-sowing-status"
+              data-tool-category="life"
+              aria-label="生灵"
+              data-message-aria-label="toolCategoryLife"
+              aria-controls="contextual-tool-tray"
               aria-pressed="false"
               disabled
             >
               <span class="tool-button-icon" aria-hidden="true">♧</span>
-              <span>播种</span>
+              <span data-message="toolCategoryLife">生灵</span>
             </button>
-            <output
-              class="pioneer-plant-sowing-status"
-              id="pioneer-plant-sowing-status"
-              data-pioneer-plant-sowing-status
-              data-state="unavailable"
-              data-message="pioneerPlantSowingUnavailable"
-              aria-live="polite"
+          </div>
+          <div
+            class="contextual-tool-tray"
+            id="contextual-tool-tray"
+            aria-label="当前创造工具"
+            data-message-aria-label="contextualToolTrayLabel"
+            data-contextual-tool-tray
+            hidden
+          >
+            <div
+              class="brush-toolbar"
+              role="group"
+              aria-label="画笔范围预览"
+              data-message-aria-label="brushControlsLabel"
             >
-              播种工具：世界未启动
-            </output>
+              <span class="brush-label" data-message="brushLabel"
+                >画笔范围</span
+              >
+              <button
+                class="zoom-button brush-button"
+                type="button"
+                data-brush-size="1"
+                data-message="brushSize1"
+                aria-keyshortcuts="1"
+                aria-pressed="true"
+                disabled
+              >
+                1×1
+              </button>
+              <button
+                class="zoom-button brush-button"
+                type="button"
+                data-brush-size="3"
+                data-message="brushSize3"
+                aria-keyshortcuts="3"
+                aria-pressed="false"
+                disabled
+              >
+                3×3
+              </button>
+              <button
+                class="zoom-button brush-button"
+                type="button"
+                data-brush-size="5"
+                data-message="brushSize5"
+                aria-keyshortcuts="5"
+                aria-pressed="false"
+                disabled
+              >
+                5×5
+              </button>
+              <output
+                class="brush-status"
+                id="brush-status"
+                data-brush-status
+                aria-live="polite"
+              >
+                画笔预览：世界未启动
+              </output>
+              <output
+                class="pointer-status"
+                data-pointer-status
+                data-state="unavailable"
+                data-message="pointerUnavailable"
+                aria-live="off"
+              >
+                指针位置：世界未启动
+              </output>
+            </div>
+            <div
+              class="terrain-toolbar"
+              role="group"
+              aria-label="地形改造"
+              data-message-aria-label="terrainControlsLabel"
+              data-tool-panel="terrain"
+              hidden
+            >
+              <b class="brush-label" data-message="terrainLabel">地形改造</b>
+              <button
+                class="zoom-button terrain-button terrain-button-raise"
+                type="button"
+                data-terrain-action="RaiseTerrain"
+                aria-label="抬高 +100 米"
+                data-message-aria-label="terrainRaise"
+                aria-describedby="terrain-status"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">▲</span>
+                <span>抬高</span>
+              </button>
+              <button
+                class="zoom-button terrain-button terrain-button-lower"
+                type="button"
+                data-terrain-action="LowerTerrain"
+                aria-label="降低 −100 米"
+                data-message-aria-label="terrainLower"
+                aria-describedby="terrain-status"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">▼</span>
+                <span>挖低</span>
+              </button>
+              <output
+                class="terrain-status"
+                id="terrain-status"
+                data-terrain-status
+                data-state="unavailable"
+                data-message="terrainUnavailable"
+                aria-live="polite"
+              >
+                地形工具：世界未启动
+              </output>
+            </div>
+            <div
+              class="surface-water-toolbar"
+              role="group"
+              aria-label="地表水改造"
+              data-message-aria-label="surfaceWaterControlsLabel"
+              data-tool-panel="water"
+              hidden
+            >
+              <b class="brush-label" data-message="surfaceWaterLabel">地表水</b>
+              <button
+                class="zoom-button surface-water-button surface-water-button-add"
+                type="button"
+                data-surface-water-action="AddSurfaceWater"
+                aria-label="加水 +64 毫米"
+                data-message-aria-label="surfaceWaterAdd"
+                aria-describedby="surface-water-status"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">≋</span>
+                <span>加水</span>
+              </button>
+              <button
+                class="zoom-button surface-water-button surface-water-button-remove"
+                type="button"
+                data-surface-water-action="RemoveSurfaceWater"
+                aria-label="排水 −64 毫米"
+                data-message-aria-label="surfaceWaterRemove"
+                aria-describedby="surface-water-status"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">⌁</span>
+                <span>排水</span>
+              </button>
+              <output
+                class="surface-water-status"
+                id="surface-water-status"
+                data-surface-water-status
+                data-state="unavailable"
+                data-message="surfaceWaterUnavailable"
+                aria-live="polite"
+              >
+                地表水工具：世界未启动
+              </output>
+            </div>
+            <div
+              class="rainfall-toolbar"
+              role="group"
+              aria-label="降雨改造"
+              data-message-aria-label="rainfallControlsLabel"
+              data-tool-panel="climate"
+              hidden
+            >
+              <b class="brush-label" data-message="rainfallLabel">降雨改造</b>
+              <button
+                class="zoom-button rainfall-button rainfall-button-increase"
+                type="button"
+                data-rainfall-action="IncreaseRainfall"
+                aria-label="增加降雨 +8 毫米/格/Tick"
+                data-message-aria-label="rainfallIncrease"
+                aria-describedby="rainfall-status"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">☂</span>
+                <span>增雨</span>
+              </button>
+              <button
+                class="zoom-button rainfall-button rainfall-button-decrease"
+                type="button"
+                data-rainfall-action="DecreaseRainfall"
+                aria-label="减少降雨 −8 毫米/格/Tick"
+                data-message-aria-label="rainfallDecrease"
+                aria-describedby="rainfall-status"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">☀</span>
+                <span>减雨</span>
+              </button>
+              <output
+                class="rainfall-status"
+                id="rainfall-status"
+                data-rainfall-status
+                data-state="unavailable"
+                data-message="rainfallUnavailable"
+                aria-live="polite"
+              >
+                降雨工具：世界未启动
+              </output>
+            </div>
+            <div
+              class="pioneer-plant-sowing-toolbar"
+              role="group"
+              aria-label="生灵匣播种"
+              data-message-aria-label="pioneerPlantSowingControlsLabel"
+              data-tool-panel="life"
+              hidden
+            >
+              <b data-message="pioneerPlantSowingLabel">生灵匣</b>
+              <button
+                class="zoom-button pioneer-plant-sowing-button"
+                type="button"
+                data-pioneer-plant-sowing-action
+                aria-label="播种先锋草本"
+                data-message-aria-label="pioneerPlantSow"
+                aria-describedby="pioneer-plant-sowing-status"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">♧</span>
+                <span>播种</span>
+              </button>
+              <output
+                class="pioneer-plant-sowing-status"
+                id="pioneer-plant-sowing-status"
+                data-pioneer-plant-sowing-status
+                data-state="unavailable"
+                data-message="pioneerPlantSowingUnavailable"
+                aria-live="polite"
+              >
+                播种工具：世界未启动
+              </output>
+            </div>
           </div>
         </div>
         <details class="world-menu" data-world-menu>
@@ -1007,7 +1088,7 @@
         data-message-aria-label="previewFooterLabel"
       >
         <p>
-          <strong data-message="previewVersion">公开预览 0.14.0</strong>
+          <strong data-message="previewVersion">公开预览 0.15.0</strong>
           <span aria-hidden="true"> · </span>
           <span data-message="previewPrivacy">
             世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
