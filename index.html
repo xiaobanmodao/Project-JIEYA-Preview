@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-sFO0IW6d.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-C9G81s1R.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DStjMzkZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-Qe_yMrWG.css">
   </head>
   <body>
     <main class="app-shell">
@@ -757,7 +757,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.24.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.25.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
@@ -1111,6 +1111,26 @@
           </form>
         </details>
         <div class="world-workspace" data-world-workspace>
+          <section
+            class="ecology-world-pulse"
+            data-ecology-world-pulse
+            aria-labelledby="ecology-world-pulse-label"
+            hidden
+          >
+            <strong class="ecology-world-pulse-label">
+              <span aria-hidden="true">◉</span>
+              <span
+                id="ecology-world-pulse-label"
+                data-message="ecologyWorldPulseLabel"
+                >世界脉搏</span
+              >
+            </strong>
+            <output
+              class="ecology-world-pulse-message"
+              data-ecology-world-pulse-message
+              aria-describedby="simulation-status"
+            ></output>
+          </section>
           <div
             class="world-viewport"
             data-world-viewport
