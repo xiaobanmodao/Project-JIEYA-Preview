@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-D0R5wg-K.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-CcTiXvqn.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-B7qcnNJ2.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DTLnyl-2.css">
   </head>
   <body>
     <main class="app-shell">
@@ -757,7 +757,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.28.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.29.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
@@ -1130,6 +1130,87 @@
               data-ecology-world-pulse-message
               aria-describedby="simulation-status"
             ></output>
+            <div
+              class="ecology-world-pulse-layers"
+              data-ecology-world-pulse-layers
+              role="group"
+              aria-label="筛选世界脉搏变化"
+              data-message-aria-label="ecologyWorldPulseLayerFilterLabel"
+              hidden
+            >
+              <button
+                class="ecology-world-pulse-layer"
+                type="button"
+                data-ecology-world-pulse-layer="all"
+                aria-pressed="true"
+                disabled
+              >
+                <span
+                  data-message="ecologyWorldPulseLayerAll"
+                  data-compact-label="全"
+                  >全部</span
+                >
+                <span
+                  class="ecology-world-pulse-layer-count"
+                  data-ecology-world-pulse-layer-count="all"
+                  >0</span
+                >
+              </button>
+              <button
+                class="ecology-world-pulse-layer"
+                type="button"
+                data-ecology-world-pulse-layer="plant"
+                aria-pressed="false"
+                disabled
+              >
+                <span
+                  data-message="ecologyWorldPulseLayerPlant"
+                  data-compact-label="草"
+                  >草本</span
+                >
+                <span
+                  class="ecology-world-pulse-layer-count"
+                  data-ecology-world-pulse-layer-count="plant"
+                  >0</span
+                >
+              </button>
+              <button
+                class="ecology-world-pulse-layer"
+                type="button"
+                data-ecology-world-pulse-layer="grazer"
+                aria-pressed="false"
+                disabled
+              >
+                <span
+                  data-message="ecologyWorldPulseLayerGrazer"
+                  data-compact-label="兽"
+                  >绒芽兽</span
+                >
+                <span
+                  class="ecology-world-pulse-layer-count"
+                  data-ecology-world-pulse-layer-count="grazer"
+                  >0</span
+                >
+              </button>
+              <button
+                class="ecology-world-pulse-layer"
+                type="button"
+                data-ecology-world-pulse-layer="fox"
+                aria-pressed="false"
+                disabled
+              >
+                <span
+                  data-message="ecologyWorldPulseLayerFox"
+                  data-compact-label="狐"
+                  >影尾狐</span
+                >
+                <span
+                  class="ecology-world-pulse-layer-count"
+                  data-ecology-world-pulse-layer-count="fox"
+                  >0</span
+                >
+              </button>
+            </div>
             <button
               class="ecology-world-pulse-next"
               type="button"
