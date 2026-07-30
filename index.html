@@ -33,14 +33,14 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DwXVoC3A.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-EQYIoyOy.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DpMmezGJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-npcft-Br.css">
   </head>
   <body>
     <main class="app-shell">
       <header class="intro game-topbar">
         <div class="game-brand">
-          <p class="eyebrow" data-message="eyebrow">本地世界实验室</p>
+          <p class="eyebrow" data-message="eyebrow">塑界师 · 本地星球</p>
           <h1 data-message="title">界芽：星球观测局</h1>
           <p class="description" data-message="description">
             选择工具，直接创造和改造世界。
@@ -48,35 +48,15 @@
         </div>
         <div
           class="game-hud-stats"
-          aria-label="世界实时状态"
+          aria-label="世界时间"
           data-message-aria-label="hudStatusLabel"
         >
-          <span class="game-hud-stat">
+          <span class="game-hud-stat game-hud-time">
             <span aria-hidden="true">◷</span>
-            Tick <b data-hud-tick>—</b>
-          </span>
-          <span class="game-hud-stat">
-            <span aria-hidden="true">◇</span>
-            版本 <b data-hud-revision>—</b>
-          </span>
-          <span
-            class="game-hud-stat game-hud-selection"
-            data-hud-selection
-            data-message="hudSelectionUnavailable"
-          >
-            当前格：—
+            <span data-message="worldTime">世界时间</span>
+            <b data-hud-tick>—</b>
           </span>
         </div>
-        <p
-          class="offline-status"
-          role="status"
-          aria-live="polite"
-          data-offline-status
-          data-state="unavailable"
-          data-message="offlineUnavailable"
-        >
-          离线能力：当前不可用
-        </p>
         <div
           class="install-offer"
           aria-label="安装界芽应用"
@@ -712,6 +692,59 @@
             aria-label="本地世界保存"
             data-message-aria-label="persistenceControlsLabel"
           >
+            <section
+              class="world-status-panel"
+              aria-label="世界与应用状态"
+              data-message-aria-label="worldStatusLabel"
+              data-world-status
+            >
+              <b data-message="worldStatusTitle">世界状态</b>
+              <dl class="world-status-list">
+                <div>
+                  <dt data-message="observationRevisionLabel">世界版本</dt>
+                  <dd data-hud-revision>—</dd>
+                </div>
+                <div>
+                  <dt data-message="observationLabel">当前格观测</dt>
+                  <dd
+                    class="game-hud-selection"
+                    data-hud-selection
+                    data-message="hudSelectionUnavailable"
+                  >
+                    —
+                  </dd>
+                </div>
+              </dl>
+              <p
+                class="offline-status"
+                role="status"
+                aria-live="polite"
+                data-offline-status
+                data-state="unavailable"
+                data-message="offlineUnavailable"
+              >
+                离线能力：当前不可用
+              </p>
+              <footer
+                class="preview-footer"
+                aria-label="公开预览说明"
+                data-message-aria-label="previewFooterLabel"
+              >
+                <p>
+                  <strong data-message="previewVersion">公开预览 0.20.0</strong>
+                  <span aria-hidden="true"> · </span>
+                  <span data-message="previewPrivacy">
+                    世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
+                  </span>
+                </p>
+                <p data-message="previewRecovery">
+                  若页面异常，请先刷新；清空本地世界需要二次确认且无法恢复。
+                </p>
+                <a href="./feedback.html" data-message="previewFeedback">
+                  查看版本说明或反馈问题
+                </a>
+              </footer>
+            </section>
             <b data-message="persistenceLabel">本地世界</b>
             <button
               class="zoom-button persistence-reset-button"
@@ -1258,25 +1291,6 @@
           世界尚未启动；如果此状态持续，请刷新页面并确认浏览器允许 JavaScript。
         </p>
       </section>
-      <footer
-        class="preview-footer"
-        aria-label="公开预览说明"
-        data-message-aria-label="previewFooterLabel"
-      >
-        <p>
-          <strong data-message="previewVersion">公开预览 0.19.0</strong>
-          <span aria-hidden="true"> · </span>
-          <span data-message="previewPrivacy">
-            世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
-          </span>
-        </p>
-        <p data-message="previewRecovery">
-          若页面异常，请先刷新；清空本地世界需要二次确认且无法恢复。
-        </p>
-        <a href="./feedback.html" data-message="previewFeedback">
-          查看版本说明或反馈问题
-        </a>
-      </footer>
     </main>
 
   </body>
