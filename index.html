@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-D--85Tlf.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-BA2JVuy9.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-BEYztRAq.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-C9G81s1R.css">
   </head>
   <body>
     <main class="app-shell">
@@ -681,6 +681,19 @@
                 <span class="tool-button-icon" aria-hidden="true">♞</span>
                 <span>投放</span>
               </button>
+              <button
+                class="zoom-button shadowtail-fox-release-button"
+                type="button"
+                data-shadowtail-fox-release-action
+                aria-label="投放影尾狐"
+                data-message-aria-label="shadowtailFoxRelease"
+                aria-describedby="pioneer-plant-sowing-status"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">⌁</span>
+                <span>影尾狐</span>
+              </button>
               <output
                 class="pioneer-plant-sowing-status"
                 id="pioneer-plant-sowing-status"
@@ -744,7 +757,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.22.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.23.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
@@ -1175,6 +1188,13 @@
                   >
                   <strong data-observation-readout-sprout-grazer>—</strong>
                 </span>
+                <span>
+                  <b aria-hidden="true">⌁</b>
+                  <span data-message="observationShadowtailFoxLabel"
+                    >影尾狐</span
+                  >
+                  <strong data-observation-readout-shadowtail-fox>—</strong>
+                </span>
               </span>
             </summary>
             <section
@@ -1249,6 +1269,10 @@
                 <div>
                   <dt data-message="observationSproutGrazerLabel">绒芽兽</dt>
                   <dd data-observation-sprout-grazer>—</dd>
+                </div>
+                <div>
+                  <dt data-message="observationShadowtailFoxLabel">影尾狐</dt>
+                  <dd data-observation-shadowtail-fox>—</dd>
                 </div>
                 <div>
                   <dt data-message="observationTickLabel">世界 Tick</dt>
