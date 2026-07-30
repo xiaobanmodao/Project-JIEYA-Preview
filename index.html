@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DPTDroNE.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-C7VC32i_.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-B4vz3MPF.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DDk4rHor.css">
   </head>
   <body>
     <main class="app-shell">
@@ -204,7 +204,7 @@
             放大后可拖动画布；聚焦世界视窗后可用方向键或翻页键滚动。
           </li>
           <li data-message="guideZoom">
-            使用缩小、放大、恢复 100% 和定位当前格控制世界视图。
+            在世界上滚轮缩放；按住空格加左键或使用鼠标中键拖动地图，不会切走当前工具。左侧按钮和世界视窗键盘操作继续可用。
           </li>
           <li data-message="guideJump">
             输入第 1～64 行和第 1～64 列，可直接跳转到指定格子。
@@ -292,6 +292,9 @@
           >
             <span aria-hidden="true">⌾</span>
           </button>
+          <p class="camera-hint" data-message="cameraHint">
+            滚轮缩放 · 空格/中键拖动
+          </p>
         </div>
         <div class="game-tool-dock" aria-label="创造工具坞">
           <div class="tool-mode-toolbar" role="group" aria-label="地图操作模式">
@@ -971,7 +974,7 @@
           id="pan-instructions"
           data-message="panInstructions"
         >
-          放大后可拖动画布；也可聚焦视窗，用方向键或翻页键滚动。
+          在世界上滚轮缩放；按住空格加左键或用鼠标中键拖动视图。观测工具可直接左键拖动，也可聚焦视窗后用方向键或翻页键滚动。
         </p>
         <p
           class="selection-instructions"
@@ -1004,7 +1007,7 @@
         data-message-aria-label="previewFooterLabel"
       >
         <p>
-          <strong data-message="previewVersion">公开预览 0.13.0</strong>
+          <strong data-message="previewVersion">公开预览 0.14.0</strong>
           <span aria-hidden="true"> · </span>
           <span data-message="previewPrivacy">
             世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
