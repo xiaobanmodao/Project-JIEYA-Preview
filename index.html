@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-C2Gnhelc.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DZNrpEV5.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DwXVoC3A.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-EQYIoyOy.css">
   </head>
   <body>
     <main class="app-shell">
@@ -1076,13 +1076,53 @@
               当前浏览器无法显示 Canvas 世界网格。
             </canvas>
           </div>
-          <details class="observation-shell" data-observation-shell>
-            <summary
-              class="observation-toggle"
-              data-observation-toggle
-              data-message="observationToggle"
-            >
-              格子观测
+          <details
+            class="observation-shell"
+            data-observation-shell
+            data-state="unavailable"
+          >
+            <summary class="observation-toggle" data-observation-toggle>
+              <span class="visually-hidden" data-message="observationToggle"
+                >格子观测</span
+              >
+              <span class="observation-readout-heading">
+                <strong
+                  data-observation-readout-coordinate
+                  data-message="observationReadoutUnavailable"
+                  >格子读数未就绪</strong
+                >
+                <span
+                  class="observation-readout-action"
+                  data-message="observationReadoutAction"
+                  >展开详细观测</span
+                >
+              </span>
+              <span class="observation-readout-values">
+                <span>
+                  <b aria-hidden="true">△</b>
+                  <span data-message="observationElevationLabel">海拔</span>
+                  <strong data-observation-readout-elevation>—</strong>
+                </span>
+                <span>
+                  <b aria-hidden="true">≋</b>
+                  <span data-message="observationSurfaceWaterLabel"
+                    >地表水</span
+                  >
+                  <strong data-observation-readout-surface-water>—</strong>
+                </span>
+                <span>
+                  <b aria-hidden="true">◌</b>
+                  <span data-message="observationSoilWaterLabel">土壤水</span>
+                  <strong data-observation-readout-soil-water>—</strong>
+                </span>
+                <span>
+                  <b aria-hidden="true">♧</b>
+                  <span data-message="observationPioneerPlantLabel"
+                    >先锋草本</span
+                  >
+                  <strong data-observation-readout-pioneer-plant>—</strong>
+                </span>
+              </span>
             </summary>
             <section
               class="cell-observation"
@@ -1224,7 +1264,7 @@
         data-message-aria-label="previewFooterLabel"
       >
         <p>
-          <strong data-message="previewVersion">公开预览 0.18.0</strong>
+          <strong data-message="previewVersion">公开预览 0.19.0</strong>
           <span aria-hidden="true"> · </span>
           <span data-message="previewPrivacy">
             世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
