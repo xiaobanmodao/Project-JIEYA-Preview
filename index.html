@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-Dud56kkC.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-BaxWdMko.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CLulxeJI.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-CpAzckoK.css">
   </head>
   <body>
     <main class="app-shell">
@@ -229,6 +229,47 @@
             需要启用 JavaScript 才能创建和改造世界。启用后请刷新此页。
           </p>
         </noscript>
+        <aside
+          class="first-creation-guide"
+          aria-label="第一次塑界游戏内引导"
+          aria-labelledby="first-creation-guide-title"
+          data-message-aria-label="firstCreationGuideLabel"
+          data-first-creation-guide
+          data-state="needs-lowland"
+          hidden
+        >
+          <div class="first-creation-guide-heading">
+            <p
+              class="first-creation-guide-eyebrow"
+              data-message="firstCreationGuideEyebrow"
+            >
+              第一次塑界
+            </p>
+            <strong data-first-creation-progress>1 / 3</strong>
+          </div>
+          <h2
+            class="first-creation-guide-title"
+            id="first-creation-guide-title"
+            data-message="firstCreationGuideTitle"
+          >
+            亲手让世界回应
+          </h2>
+          <p
+            class="first-creation-guide-instruction"
+            data-first-creation-instruction
+            aria-live="polite"
+          >
+            先从底部工具坞选择“地形”。
+          </p>
+          <button
+            class="first-creation-guide-action"
+            type="button"
+            data-first-creation-action
+            data-message="firstCreationGuideSkip"
+          >
+            跳过引导
+          </button>
+        </aside>
         <div
           class="active-tool-chip"
           role="status"
@@ -1138,7 +1179,7 @@
         data-message-aria-label="previewFooterLabel"
       >
         <p>
-          <strong data-message="previewVersion">公开预览 0.16.0</strong>
+          <strong data-message="previewVersion">公开预览 0.17.0</strong>
           <span aria-hidden="true"> · </span>
           <span data-message="previewPrivacy">
             世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
