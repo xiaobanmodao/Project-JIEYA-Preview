@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-OtXDdGEt.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-iV9EzjGl.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DuEfJ7oX.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-ENSgToVO.css">
   </head>
   <body>
     <main class="app-shell">
@@ -198,8 +198,8 @@
             快速切换。
           </li>
           <li data-message="guideSimulation">
-            亲手播下先锋草本、改变降雨，再推进 1 Tick
-            或运行时间，观察地表水、土壤水和新芽如何回应；暂停后可撤销或重做改造，切到其他应用时会自动暂停。
+            亲手加水、排水、播下先锋草本或改变降雨，再推进 1
+            Tick，观察水流、土壤水和新芽如何回应；暂停后可撤销或重做改造，切到其他应用时会自动暂停。
           </li>
           <li data-message="guideNavigate">
             放大后可拖动画布；聚焦世界视窗后可用方向键或翻页键滚动。
@@ -410,6 +410,50 @@
               aria-live="polite"
             >
               地形工具：世界未启动
+            </output>
+          </div>
+          <div
+            class="surface-water-toolbar"
+            role="group"
+            aria-label="地表水改造"
+            data-message-aria-label="surfaceWaterControlsLabel"
+          >
+            <b class="brush-label" data-message="surfaceWaterLabel">地表水</b>
+            <button
+              class="zoom-button surface-water-button surface-water-button-add"
+              type="button"
+              data-surface-water-action="AddSurfaceWater"
+              aria-label="加水 +64 毫米"
+              data-message-aria-label="surfaceWaterAdd"
+              aria-describedby="surface-water-status"
+              aria-pressed="false"
+              disabled
+            >
+              <span class="tool-button-icon" aria-hidden="true">≋</span>
+              <span>加水</span>
+            </button>
+            <button
+              class="zoom-button surface-water-button surface-water-button-remove"
+              type="button"
+              data-surface-water-action="RemoveSurfaceWater"
+              aria-label="排水 −64 毫米"
+              data-message-aria-label="surfaceWaterRemove"
+              aria-describedby="surface-water-status"
+              aria-pressed="false"
+              disabled
+            >
+              <span class="tool-button-icon" aria-hidden="true">⌁</span>
+              <span>排水</span>
+            </button>
+            <output
+              class="surface-water-status"
+              id="surface-water-status"
+              data-surface-water-status
+              data-state="unavailable"
+              data-message="surfaceWaterUnavailable"
+              aria-live="polite"
+            >
+              地表水工具：世界未启动
             </output>
           </div>
           <div
@@ -805,7 +849,7 @@
               height="640"
               role="group"
               tabindex="0"
-              aria-describedby="selection-instructions selection-status zoom-status brush-status terrain-status rainfall-status simulation-status"
+              aria-describedby="selection-instructions selection-status zoom-status brush-status terrain-status surface-water-status rainfall-status simulation-status"
               aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Enter Space Escape"
               aria-label="可选择的 64×64 世界网格"
               data-message-aria-label="canvasLabel"
@@ -961,7 +1005,7 @@
         data-message-aria-label="previewFooterLabel"
       >
         <p>
-          <strong data-message="previewVersion">公开预览 0.6.0</strong>
+          <strong data-message="previewVersion">公开预览 0.7.0</strong>
           <span aria-hidden="true"> · </span>
           <span data-message="previewPrivacy">
             世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
