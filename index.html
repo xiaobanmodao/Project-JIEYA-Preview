@@ -33,17 +33,40 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CFcmIJSi.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DzSQIFwM.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-OtXDdGEt.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-iV9EzjGl.css">
   </head>
   <body>
     <main class="app-shell">
-      <header class="intro">
-        <p class="eyebrow" data-message="eyebrow">本地世界实验室</p>
-        <h1 data-message="title">界芽：星球观测局</h1>
-        <p class="description" data-message="description">
-          选择世界中的任意格子，开始观察和改造这片空白界域。
-        </p>
+      <header class="intro game-topbar">
+        <div class="game-brand">
+          <p class="eyebrow" data-message="eyebrow">本地世界实验室</p>
+          <h1 data-message="title">界芽：星球观测局</h1>
+          <p class="description" data-message="description">
+            选择工具，直接创造和改造世界。
+          </p>
+        </div>
+        <div
+          class="game-hud-stats"
+          aria-label="世界实时状态"
+          data-message-aria-label="hudStatusLabel"
+        >
+          <span class="game-hud-stat">
+            <span aria-hidden="true">◷</span>
+            Tick <b data-hud-tick>—</b>
+          </span>
+          <span class="game-hud-stat">
+            <span aria-hidden="true">◇</span>
+            版本 <b data-hud-revision>—</b>
+          </span>
+          <span
+            class="game-hud-stat game-hud-selection"
+            data-hud-selection
+            data-message="hudSelectionUnavailable"
+          >
+            当前格：—
+          </span>
+        </div>
         <p
           class="offline-status"
           role="status"
@@ -85,13 +108,17 @@
         </div>
       </header>
 
-      <section
+      <details
         class="dry-valley-guide"
         aria-label="让干谷重新流动并长出新芽引导任务"
         data-message-aria-label="dryValleyCardLabel"
         data-dry-valley-guide
         data-state="unavailable"
+        open
       >
+        <summary class="dry-valley-guide-toggle" data-message="dryValleyToggle">
+          当前任务
+        </summary>
         <div class="dry-valley-guide-copy">
           <p class="dry-valley-guide-eyebrow" data-message="dryValleyEyebrow">
             首次生态任务 · 可选
@@ -151,7 +178,7 @@
         >
           干谷任务：世界尚未启动
         </output>
-      </section>
+      </details>
 
       <details class="operation-guide" data-operation-guide>
         <summary
@@ -163,12 +190,12 @@
         </summary>
         <ol class="operation-guide-list">
           <li data-message="guideSelect">
-            点击或触摸格子进行选择；聚焦画布后可用方向键移动选择。
+            先在底部选择观测或创造工具，再点击或触摸世界；聚焦画布后可用方向键移动选择。
           </li>
           <li data-message="guideBrush">
             选择 1×1、3×3 或 5×5
-            画笔；选中格子后，可改造地形、降雨或播种先锋草本。画布聚焦后可按
-            1、3、5 快速切换。
+            画笔，再直接点击或拖过世界完成一次改造；画布聚焦后可按 1、3、5
+            快速切换。
           </li>
           <li data-message="guideSimulation">
             亲手播下先锋草本、改变降雨，再推进 1 Tick
@@ -204,6 +231,15 @@
           </p>
         </noscript>
         <div
+          class="active-tool-chip"
+          role="status"
+          aria-live="polite"
+          data-active-tool-status
+          data-message="activeToolInspect"
+        >
+          当前工具：观测 · 拖动地图，点击查看
+        </div>
+        <div
           class="zoom-toolbar"
           role="group"
           aria-label="世界视图缩放"
@@ -213,10 +249,11 @@
             class="zoom-button"
             type="button"
             data-zoom-out
-            data-message="zoomOut"
+            aria-label="缩小"
+            data-message-aria-label="zoomOut"
             disabled
           >
-            缩小
+            <span aria-hidden="true">−</span>
           </button>
           <output
             class="zoom-status"
@@ -230,478 +267,527 @@
             class="zoom-button"
             type="button"
             data-zoom-in
-            data-message="zoomIn"
+            aria-label="放大"
+            data-message-aria-label="zoomIn"
             disabled
           >
-            放大
+            <span aria-hidden="true">＋</span>
           </button>
           <button
             class="zoom-button zoom-reset"
             type="button"
             data-zoom-reset
-            data-message="zoomReset"
+            aria-label="恢复 100%"
+            data-message-aria-label="zoomReset"
             disabled
           >
-            恢复 100%
+            <span aria-hidden="true">1:1</span>
           </button>
           <button
             class="zoom-button"
             type="button"
             data-center-selection
-            data-message="centerSelection"
+            aria-label="定位当前格"
+            data-message-aria-label="centerSelection"
             disabled
           >
-            定位当前格
+            <span aria-hidden="true">⌾</span>
           </button>
         </div>
-        <div
-          class="brush-toolbar"
-          role="group"
-          aria-label="画笔范围预览"
-          data-message-aria-label="brushControlsLabel"
-        >
-          <span class="brush-label" data-message="brushLabel">画笔范围</span>
-          <button
-            class="zoom-button brush-button"
-            type="button"
-            data-brush-size="1"
-            data-message="brushSize1"
-            aria-keyshortcuts="1"
-            aria-pressed="true"
-            disabled
+        <div class="game-tool-dock" aria-label="创造工具坞">
+          <div class="tool-mode-toolbar" role="group" aria-label="地图操作模式">
+            <button
+              class="zoom-button tool-button tool-button-inspect"
+              type="button"
+              data-tool-action="Inspect"
+              aria-label="观测"
+              data-message-aria-label="inspectTool"
+              aria-pressed="true"
+              aria-keyshortcuts="I"
+              disabled
+            >
+              <span class="tool-button-icon" aria-hidden="true">⌖</span>
+              <span data-message="inspectTool">观测</span>
+            </button>
+          </div>
+          <div
+            class="brush-toolbar"
+            role="group"
+            aria-label="画笔范围预览"
+            data-message-aria-label="brushControlsLabel"
           >
-            1×1
-          </button>
-          <button
-            class="zoom-button brush-button"
-            type="button"
-            data-brush-size="3"
-            data-message="brushSize3"
-            aria-keyshortcuts="3"
-            aria-pressed="false"
-            disabled
+            <span class="brush-label" data-message="brushLabel">画笔范围</span>
+            <button
+              class="zoom-button brush-button"
+              type="button"
+              data-brush-size="1"
+              data-message="brushSize1"
+              aria-keyshortcuts="1"
+              aria-pressed="true"
+              disabled
+            >
+              1×1
+            </button>
+            <button
+              class="zoom-button brush-button"
+              type="button"
+              data-brush-size="3"
+              data-message="brushSize3"
+              aria-keyshortcuts="3"
+              aria-pressed="false"
+              disabled
+            >
+              3×3
+            </button>
+            <button
+              class="zoom-button brush-button"
+              type="button"
+              data-brush-size="5"
+              data-message="brushSize5"
+              aria-keyshortcuts="5"
+              aria-pressed="false"
+              disabled
+            >
+              5×5
+            </button>
+            <output
+              class="brush-status"
+              id="brush-status"
+              data-brush-status
+              aria-live="polite"
+            >
+              画笔预览：世界未启动
+            </output>
+            <output
+              class="pointer-status"
+              data-pointer-status
+              data-state="unavailable"
+              data-message="pointerUnavailable"
+              aria-live="off"
+            >
+              指针位置：世界未启动
+            </output>
+          </div>
+          <div
+            class="terrain-toolbar"
+            role="group"
+            aria-label="地形改造"
+            data-message-aria-label="terrainControlsLabel"
           >
-            3×3
-          </button>
-          <button
-            class="zoom-button brush-button"
-            type="button"
-            data-brush-size="5"
-            data-message="brushSize5"
-            aria-keyshortcuts="5"
-            aria-pressed="false"
-            disabled
+            <b class="brush-label" data-message="terrainLabel">地形改造</b>
+            <button
+              class="zoom-button terrain-button terrain-button-raise"
+              type="button"
+              data-terrain-action="RaiseTerrain"
+              aria-label="抬高 +100 米"
+              data-message-aria-label="terrainRaise"
+              aria-describedby="terrain-status"
+              aria-pressed="false"
+              disabled
+            >
+              <span class="tool-button-icon" aria-hidden="true">▲</span>
+              <span>抬高</span>
+            </button>
+            <button
+              class="zoom-button terrain-button terrain-button-lower"
+              type="button"
+              data-terrain-action="LowerTerrain"
+              aria-label="降低 −100 米"
+              data-message-aria-label="terrainLower"
+              aria-describedby="terrain-status"
+              aria-pressed="false"
+              disabled
+            >
+              <span class="tool-button-icon" aria-hidden="true">▼</span>
+              <span>挖低</span>
+            </button>
+            <output
+              class="terrain-status"
+              id="terrain-status"
+              data-terrain-status
+              data-state="unavailable"
+              data-message="terrainUnavailable"
+              aria-live="polite"
+            >
+              地形工具：世界未启动
+            </output>
+          </div>
+          <div
+            class="rainfall-toolbar"
+            role="group"
+            aria-label="降雨改造"
+            data-message-aria-label="rainfallControlsLabel"
           >
-            5×5
-          </button>
-          <output
-            class="brush-status"
-            id="brush-status"
-            data-brush-status
-            aria-live="polite"
+            <b class="brush-label" data-message="rainfallLabel">降雨改造</b>
+            <button
+              class="zoom-button rainfall-button rainfall-button-increase"
+              type="button"
+              data-rainfall-action="IncreaseRainfall"
+              aria-label="增加降雨 +8 毫米/格/Tick"
+              data-message-aria-label="rainfallIncrease"
+              aria-describedby="rainfall-status"
+              aria-pressed="false"
+              disabled
+            >
+              <span class="tool-button-icon" aria-hidden="true">☂</span>
+              <span>增雨</span>
+            </button>
+            <button
+              class="zoom-button rainfall-button rainfall-button-decrease"
+              type="button"
+              data-rainfall-action="DecreaseRainfall"
+              aria-label="减少降雨 −8 毫米/格/Tick"
+              data-message-aria-label="rainfallDecrease"
+              aria-describedby="rainfall-status"
+              aria-pressed="false"
+              disabled
+            >
+              <span class="tool-button-icon" aria-hidden="true">☀</span>
+              <span>减雨</span>
+            </button>
+            <output
+              class="rainfall-status"
+              id="rainfall-status"
+              data-rainfall-status
+              data-state="unavailable"
+              data-message="rainfallUnavailable"
+              aria-live="polite"
+            >
+              降雨工具：世界未启动
+            </output>
+          </div>
+          <div
+            class="pioneer-plant-sowing-toolbar"
+            role="group"
+            aria-label="生灵匣播种"
+            data-message-aria-label="pioneerPlantSowingControlsLabel"
           >
-            画笔预览：世界未启动
-          </output>
-          <output
-            class="pointer-status"
-            data-pointer-status
-            data-state="unavailable"
-            data-message="pointerUnavailable"
-            aria-live="off"
-          >
-            指针位置：世界未启动
-          </output>
+            <b data-message="pioneerPlantSowingLabel">生灵匣</b>
+            <button
+              class="zoom-button pioneer-plant-sowing-button"
+              type="button"
+              data-pioneer-plant-sowing-action
+              aria-label="播种先锋草本"
+              data-message-aria-label="pioneerPlantSow"
+              aria-describedby="pioneer-plant-sowing-status"
+              aria-pressed="false"
+              disabled
+            >
+              <span class="tool-button-icon" aria-hidden="true">♧</span>
+              <span>播种</span>
+            </button>
+            <output
+              class="pioneer-plant-sowing-status"
+              id="pioneer-plant-sowing-status"
+              data-pioneer-plant-sowing-status
+              data-state="unavailable"
+              data-message="pioneerPlantSowingUnavailable"
+              aria-live="polite"
+            >
+              播种工具：世界未启动
+            </output>
+          </div>
         </div>
-        <div
-          class="terrain-toolbar"
-          role="group"
-          aria-label="地形改造"
-          data-message-aria-label="terrainControlsLabel"
-        >
-          <span class="brush-label" data-message="terrainLabel">地形改造</span>
-          <button
-            class="zoom-button terrain-button terrain-button-raise"
-            type="button"
-            data-terrain-action="RaiseTerrain"
-            data-message="terrainRaise"
-            aria-describedby="terrain-status"
-            disabled
+        <details class="world-menu" data-world-menu>
+          <summary class="world-menu-toggle">
+            <span aria-hidden="true">◎</span>
+            <span data-message="worldMenu">世界</span>
+          </summary>
+          <div
+            class="persistence-toolbar"
+            role="group"
+            aria-label="本地世界保存"
+            data-message-aria-label="persistenceControlsLabel"
           >
-            抬高 +100 米
-          </button>
-          <button
-            class="zoom-button terrain-button terrain-button-lower"
-            type="button"
-            data-terrain-action="LowerTerrain"
-            data-message="terrainLower"
-            aria-describedby="terrain-status"
-            disabled
-          >
-            降低 −100 米
-          </button>
-          <output
-            class="terrain-status"
-            id="terrain-status"
-            data-terrain-status
-            data-state="unavailable"
-            data-message="terrainUnavailable"
-            aria-live="polite"
-          >
-            地形工具：世界未启动
-          </output>
-        </div>
-        <div
-          class="rainfall-toolbar"
-          role="group"
-          aria-label="降雨改造"
-          data-message-aria-label="rainfallControlsLabel"
-        >
-          <span class="brush-label" data-message="rainfallLabel">降雨改造</span>
-          <button
-            class="zoom-button rainfall-button rainfall-button-increase"
-            type="button"
-            data-rainfall-action="IncreaseRainfall"
-            data-message="rainfallIncrease"
-            aria-describedby="rainfall-status"
-            disabled
-          >
-            增加降雨 +8 毫米/格/Tick
-          </button>
-          <button
-            class="zoom-button rainfall-button rainfall-button-decrease"
-            type="button"
-            data-rainfall-action="DecreaseRainfall"
-            data-message="rainfallDecrease"
-            aria-describedby="rainfall-status"
-            disabled
-          >
-            减少降雨 −8 毫米/格/Tick
-          </button>
-          <output
-            class="rainfall-status"
-            id="rainfall-status"
-            data-rainfall-status
-            data-state="unavailable"
-            data-message="rainfallUnavailable"
-            aria-live="polite"
-          >
-            降雨工具：世界未启动
-          </output>
-        </div>
-        <div
-          class="pioneer-plant-sowing-toolbar"
-          role="group"
-          aria-label="生灵匣播种"
-          data-message-aria-label="pioneerPlantSowingControlsLabel"
-        >
-          <b data-message="pioneerPlantSowingLabel">生灵匣</b>
-          <button
-            class="zoom-button pioneer-plant-sowing-button"
-            type="button"
-            data-pioneer-plant-sowing-action
-            data-message="pioneerPlantSow"
-            aria-describedby="pioneer-plant-sowing-status"
-            disabled
-          >
-            播种先锋草本
-          </button>
-          <output
-            class="pioneer-plant-sowing-status"
-            id="pioneer-plant-sowing-status"
-            data-pioneer-plant-sowing-status
-            data-state="unavailable"
-            data-message="pioneerPlantSowingUnavailable"
-            aria-live="polite"
-          >
-            播种工具：世界未启动
-          </output>
-        </div>
-        <div
-          class="persistence-toolbar"
-          role="group"
-          aria-label="本地世界保存"
-          data-message-aria-label="persistenceControlsLabel"
-        >
-          <b data-message="persistenceLabel">本地世界</b>
-          <button
-            class="zoom-button persistence-reset-button"
-            type="button"
-            data-persistence-reset
-            data-message="persistenceReset"
-            aria-describedby="persistence-status"
-            disabled
-          >
-            清空本地世界
-          </button>
-          <button
-            class="zoom-button"
-            type="button"
-            data-world-file-export
-            data-message="worldFileExport"
-            aria-describedby="world-file-disclosure world-file-status"
-            disabled
-          >
-            导出 .jieya
-          </button>
-          <button
-            class="zoom-button"
-            type="button"
-            data-world-file-choose
-            data-message="worldFileChoose"
-            aria-describedby="world-file-disclosure world-file-status"
-            disabled
-          >
-            选择 .jieya
-          </button>
-          <input
-            class="visually-hidden"
-            type="file"
-            accept=".jieya,application/json"
-            data-world-file-input
-            aria-label="选择 .jieya 世界文件"
-            data-message-aria-label="worldFileChoose"
-            disabled
-          />
-          <button
-            class="zoom-button world-file-confirm"
-            type="button"
-            data-world-file-confirm
-            data-message="worldFileConfirm"
-            aria-describedby="world-file-disclosure world-file-status"
-            hidden
-            disabled
-          >
-            确认导入并替换
-          </button>
-          <p
-            class="world-file-disclosure"
-            id="world-file-disclosure"
-            data-message="worldFileDisclosure"
-          >
-            完整备份包含世界名称、worldId 和
-            seed，只在本机下载或读取，不会上传。
-          </p>
-          <output
-            class="persistence-status"
-            id="persistence-status"
-            data-persistence-status
-            data-state="unavailable"
-            data-message="persistenceUnavailable"
-            aria-live="polite"
-          >
-            本地世界：世界未启动
-          </output>
-          <output
-            class="world-file-status"
-            id="world-file-status"
-            data-world-file-status
-            data-state="unavailable"
-            data-message="worldFileUnavailable"
-            aria-live="polite"
-          >
-            世界文件：当前不可用
-          </output>
-        </div>
-        <div
-          class="history-toolbar"
-          role="group"
-          aria-label="世界改造回溯"
-          data-message-aria-label="historyControlsLabel"
-        >
-          <b data-message="historyLabel">改造回溯</b>
-          <button
-            class="zoom-button history-button"
-            type="button"
-            data-history-action="UndoLatestPlayerOperation"
-            data-message="historyUndo"
-            aria-describedby="history-status"
-            aria-keyshortcuts="Control+Z Meta+Z"
-            disabled
-          >
-            撤销
-          </button>
-          <button
-            class="zoom-button history-button"
-            type="button"
-            data-history-action="RedoLatestPlayerOperation"
-            data-message="historyRedo"
-            aria-describedby="history-status"
-            aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z"
-            disabled
-          >
-            重做
-          </button>
-          <output
-            class="history-status"
-            id="history-status"
-            data-history-status
-            data-state="unavailable"
-            data-message="historyUnavailable"
-            aria-live="polite"
-          >
-            回溯：世界未启动
-          </output>
-        </div>
-        <div
-          class="simulation-toolbar"
-          role="group"
-          aria-label="世界时间控制"
-          data-message-aria-label="simulationControlsLabel"
-        >
-          <b data-message="simulationLabel">世界时间</b>
-          <button
-            class="zoom-button simulation-button"
-            type="button"
-            data-simulation-action="StepSimulation"
-            data-message="simulationStep"
-            aria-describedby="simulation-status"
-            disabled
-          >
-            推进 1 Tick
-          </button>
-          <button
-            class="zoom-button simulation-button"
-            type="button"
-            data-simulation-action="RunSimulation"
-            data-message="simulationRun"
-            aria-describedby="simulation-status"
-            disabled
-          >
-            运行
-          </button>
-          <button
-            class="zoom-button simulation-button"
-            type="button"
-            data-simulation-action="PauseSimulation"
-            data-message="simulationPause"
-            aria-describedby="simulation-status"
-            disabled
-          >
-            暂停
-          </button>
-          <button
-            class="zoom-button simulation-button"
-            type="button"
-            data-simulation-action="ResetSimulationRunControl"
-            data-message="simulationReset"
-            aria-describedby="simulation-status"
-            disabled
-          >
-            恢复时间控制
-          </button>
-          <button
-            class="zoom-button simulation-speed-button"
-            type="button"
-            data-simulation-speed="1"
-            data-message="simulationSpeed1"
-            aria-pressed="true"
-            aria-describedby="simulation-status"
-            disabled
-          >
-            1×
-          </button>
-          <button
-            class="zoom-button simulation-speed-button"
-            type="button"
-            data-simulation-speed="2"
-            data-message="simulationSpeed2"
-            aria-pressed="false"
-            aria-describedby="simulation-status"
-            disabled
-          >
-            2×
-          </button>
-          <button
-            class="zoom-button simulation-speed-button"
-            type="button"
-            data-simulation-speed="4"
-            data-message="simulationSpeed4"
-            aria-pressed="false"
-            aria-describedby="simulation-status"
-            disabled
-          >
-            4×
-          </button>
-          <button
-            class="zoom-button simulation-speed-button"
-            type="button"
-            data-simulation-speed="8"
-            data-message="simulationSpeed8"
-            aria-pressed="false"
-            aria-describedby="simulation-status"
-            disabled
-          >
-            8×
-          </button>
-          <output
-            class="simulation-status"
-            id="simulation-status"
-            data-simulation-status
-            data-state="unavailable"
-            data-message="simulationUnavailable"
-            aria-live="polite"
-          >
-            时间：世界未启动
-          </output>
-        </div>
-        <form
-          class="coordinate-jump"
-          data-coordinate-jump
-          aria-label="跳转到指定格子"
-          data-message-aria-label="jumpControlsLabel"
-          novalidate
-        >
-          <label class="coordinate-jump-field" for="jump-row">
-            <span data-message="jumpRowLabel">行（1～64）</span>
+            <b data-message="persistenceLabel">本地世界</b>
+            <button
+              class="zoom-button persistence-reset-button"
+              type="button"
+              data-persistence-reset
+              data-message="persistenceReset"
+              aria-describedby="persistence-status"
+              disabled
+            >
+              清空本地世界
+            </button>
+            <button
+              class="zoom-button"
+              type="button"
+              data-world-file-export
+              data-message="worldFileExport"
+              aria-describedby="world-file-disclosure world-file-status"
+              disabled
+            >
+              导出 .jieya
+            </button>
+            <button
+              class="zoom-button"
+              type="button"
+              data-world-file-choose
+              data-message="worldFileChoose"
+              aria-describedby="world-file-disclosure world-file-status"
+              disabled
+            >
+              选择 .jieya
+            </button>
             <input
-              class="coordinate-jump-input"
-              id="jump-row"
-              type="text"
-              inputmode="numeric"
-              autocomplete="off"
-              maxlength="3"
-              value="1"
-              aria-describedby="jump-feedback"
-              aria-invalid="false"
-              data-jump-row
+              class="visually-hidden"
+              type="file"
+              accept=".jieya,application/json"
+              data-world-file-input
+              aria-label="选择 .jieya 世界文件"
+              data-message-aria-label="worldFileChoose"
               disabled
             />
-          </label>
-          <label class="coordinate-jump-field" for="jump-column">
-            <span data-message="jumpColumnLabel">列（1～64）</span>
-            <input
-              class="coordinate-jump-input"
-              id="jump-column"
-              type="text"
-              inputmode="numeric"
-              autocomplete="off"
-              maxlength="3"
-              value="1"
-              aria-describedby="jump-feedback"
-              aria-invalid="false"
-              data-jump-column
+            <button
+              class="zoom-button world-file-confirm"
+              type="button"
+              data-world-file-confirm
+              data-message="worldFileConfirm"
+              aria-describedby="world-file-disclosure world-file-status"
+              hidden
               disabled
-            />
-          </label>
-          <button
-            class="zoom-button"
-            type="submit"
-            data-jump-submit
-            data-message="jumpSubmit"
-            disabled
+            >
+              确认导入并替换
+            </button>
+            <p
+              class="world-file-disclosure"
+              id="world-file-disclosure"
+              data-message="worldFileDisclosure"
+            >
+              完整备份包含世界名称、worldId 和
+              seed，只在本机下载或读取，不会上传。
+            </p>
+            <output
+              class="persistence-status"
+              id="persistence-status"
+              data-persistence-status
+              data-state="unavailable"
+              data-message="persistenceUnavailable"
+              aria-live="polite"
+            >
+              本地世界：世界未启动
+            </output>
+            <output
+              class="world-file-status"
+              id="world-file-status"
+              data-world-file-status
+              data-state="unavailable"
+              data-message="worldFileUnavailable"
+              aria-live="polite"
+            >
+              世界文件：当前不可用
+            </output>
+          </div>
+        </details>
+        <div class="game-time-dock">
+          <div
+            class="history-toolbar"
+            role="group"
+            aria-label="世界改造回溯"
+            data-message-aria-label="historyControlsLabel"
           >
-            前往
-          </button>
-          <output
-            class="jump-feedback"
-            id="jump-feedback"
-            data-jump-feedback
-            data-state="error"
-            aria-live="polite"
+            <b data-message="historyLabel">改造回溯</b>
+            <button
+              class="zoom-button history-button"
+              type="button"
+              data-history-action="UndoLatestPlayerOperation"
+              data-message="historyUndo"
+              aria-describedby="history-status"
+              aria-keyshortcuts="Control+Z Meta+Z"
+              disabled
+            >
+              撤销
+            </button>
+            <button
+              class="zoom-button history-button"
+              type="button"
+              data-history-action="RedoLatestPlayerOperation"
+              data-message="historyRedo"
+              aria-describedby="history-status"
+              aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z"
+              disabled
+            >
+              重做
+            </button>
+            <output
+              class="history-status"
+              id="history-status"
+              data-history-status
+              data-state="unavailable"
+              data-message="historyUnavailable"
+              aria-live="polite"
+            >
+              回溯：世界未启动
+            </output>
+          </div>
+          <div
+            class="simulation-toolbar"
+            role="group"
+            aria-label="世界时间控制"
+            data-message-aria-label="simulationControlsLabel"
           >
-            坐标跳转：世界未启动
-          </output>
-        </form>
+            <b data-message="simulationLabel">世界时间</b>
+            <button
+              class="zoom-button simulation-button"
+              type="button"
+              data-simulation-action="StepSimulation"
+              data-message="simulationStep"
+              aria-describedby="simulation-status"
+              disabled
+            >
+              推进 1 Tick
+            </button>
+            <button
+              class="zoom-button simulation-button"
+              type="button"
+              data-simulation-action="RunSimulation"
+              data-message="simulationRun"
+              aria-describedby="simulation-status"
+              disabled
+            >
+              运行
+            </button>
+            <button
+              class="zoom-button simulation-button"
+              type="button"
+              data-simulation-action="PauseSimulation"
+              data-message="simulationPause"
+              aria-describedby="simulation-status"
+              disabled
+            >
+              暂停
+            </button>
+            <button
+              class="zoom-button simulation-button"
+              type="button"
+              data-simulation-action="ResetSimulationRunControl"
+              data-message="simulationReset"
+              aria-describedby="simulation-status"
+              disabled
+            >
+              恢复时间控制
+            </button>
+            <button
+              class="zoom-button simulation-speed-button"
+              type="button"
+              data-simulation-speed="1"
+              data-message="simulationSpeed1"
+              aria-pressed="true"
+              aria-describedby="simulation-status"
+              disabled
+            >
+              1×
+            </button>
+            <button
+              class="zoom-button simulation-speed-button"
+              type="button"
+              data-simulation-speed="2"
+              data-message="simulationSpeed2"
+              aria-pressed="false"
+              aria-describedby="simulation-status"
+              disabled
+            >
+              2×
+            </button>
+            <button
+              class="zoom-button simulation-speed-button"
+              type="button"
+              data-simulation-speed="4"
+              data-message="simulationSpeed4"
+              aria-pressed="false"
+              aria-describedby="simulation-status"
+              disabled
+            >
+              4×
+            </button>
+            <button
+              class="zoom-button simulation-speed-button"
+              type="button"
+              data-simulation-speed="8"
+              data-message="simulationSpeed8"
+              aria-pressed="false"
+              aria-describedby="simulation-status"
+              disabled
+            >
+              8×
+            </button>
+            <output
+              class="simulation-status"
+              id="simulation-status"
+              data-simulation-status
+              data-state="unavailable"
+              data-message="simulationUnavailable"
+              aria-live="polite"
+            >
+              时间：世界未启动
+            </output>
+          </div>
+        </div>
+        <details class="coordinate-menu" data-coordinate-menu>
+          <summary class="coordinate-menu-toggle">
+            <span aria-hidden="true">⌖</span>
+            <span data-message="coordinateMenu">定位格子</span>
+          </summary>
+          <form
+            class="coordinate-jump"
+            data-coordinate-jump
+            aria-label="跳转到指定格子"
+            data-message-aria-label="jumpControlsLabel"
+            novalidate
+          >
+            <label class="coordinate-jump-field" for="jump-row">
+              <span data-message="jumpRowLabel">行（1～64）</span>
+              <input
+                class="coordinate-jump-input"
+                id="jump-row"
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                maxlength="3"
+                value="1"
+                aria-describedby="jump-feedback"
+                aria-invalid="false"
+                data-jump-row
+                disabled
+              />
+            </label>
+            <label class="coordinate-jump-field" for="jump-column">
+              <span data-message="jumpColumnLabel">列（1～64）</span>
+              <input
+                class="coordinate-jump-input"
+                id="jump-column"
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                maxlength="3"
+                value="1"
+                aria-describedby="jump-feedback"
+                aria-invalid="false"
+                data-jump-column
+                disabled
+              />
+            </label>
+            <button
+              class="zoom-button"
+              type="submit"
+              data-jump-submit
+              data-message="jumpSubmit"
+              disabled
+            >
+              前往
+            </button>
+            <output
+              class="jump-feedback"
+              id="jump-feedback"
+              data-jump-feedback
+              data-state="error"
+              aria-live="polite"
+            >
+              坐标跳转：世界未启动
+            </output>
+          </form>
+        </details>
         <div class="world-workspace" data-world-workspace>
           <div
             class="world-viewport"
@@ -720,7 +806,7 @@
               role="group"
               tabindex="0"
               aria-describedby="selection-instructions selection-status zoom-status brush-status terrain-status rainfall-status simulation-status"
-              aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight"
+              aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Enter Space Escape"
               aria-label="可选择的 64×64 世界网格"
               data-message-aria-label="canvasLabel"
             >
@@ -875,7 +961,7 @@
         data-message-aria-label="previewFooterLabel"
       >
         <p>
-          <strong data-message="previewVersion">公开预览 0.5.0</strong>
+          <strong data-message="previewVersion">公开预览 0.6.0</strong>
           <span aria-hidden="true"> · </span>
           <span data-message="previewPrivacy">
             世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
