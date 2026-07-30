@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CtuO5-B5.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-BSkJQENn.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CJSjj-DZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-zucvGpo5.css">
   </head>
   <body>
     <main class="app-shell">
@@ -84,6 +84,74 @@
           </button>
         </div>
       </header>
+
+      <section
+        class="dry-valley-guide"
+        aria-label="让干谷重新流动引导任务"
+        data-message-aria-label="dryValleyCardLabel"
+        data-dry-valley-guide
+        data-state="unavailable"
+      >
+        <div class="dry-valley-guide-copy">
+          <p class="dry-valley-guide-eyebrow" data-message="dryValleyEyebrow">
+            首次任务 · 可选
+          </p>
+          <h2 class="dry-valley-guide-title" data-message="dryValleyTitle">
+            让干谷重新流动
+          </h2>
+          <p
+            class="dry-valley-guide-summary"
+            data-dry-valley-summary
+            data-message="dryValleySandboxSummary"
+          >
+            进入一座固定的干谷，用现有降雨和时间工具把水送到谷底。开始前会再次确认替换当前本地世界。
+          </p>
+        </div>
+        <div class="dry-valley-guide-actions">
+          <button
+            class="dry-valley-guide-action"
+            type="button"
+            data-dry-valley-start
+            data-message="dryValleyStart"
+            aria-describedby="dry-valley-status"
+            disabled
+          >
+            开始干谷挑战
+          </button>
+          <button
+            class="dry-valley-guide-action"
+            type="button"
+            data-dry-valley-locate
+            data-message="dryValleyLocateSource"
+            aria-describedby="dry-valley-status"
+            hidden
+            disabled
+          >
+            定位源头
+          </button>
+          <button
+            class="dry-valley-guide-dismiss"
+            type="button"
+            data-dry-valley-dismiss
+            data-message="dryValleyDismiss"
+            aria-describedby="dry-valley-status"
+            hidden
+            disabled
+          >
+            隐藏本次引导
+          </button>
+        </div>
+        <output
+          class="dry-valley-guide-status"
+          id="dry-valley-status"
+          data-dry-valley-status
+          data-state="unavailable"
+          data-message="dryValleyUnavailable"
+          aria-live="polite"
+        >
+          干谷任务：世界尚未启动
+        </output>
+      </section>
 
       <details class="operation-guide" data-operation-guide>
         <summary
@@ -775,7 +843,7 @@
         data-message-aria-label="previewFooterLabel"
       >
         <p>
-          <strong data-message="previewVersion">公开预览 0.1.0</strong>
+          <strong data-message="previewVersion">公开预览 0.2.0</strong>
           <span aria-hidden="true"> · </span>
           <span data-message="previewPrivacy">
             世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
