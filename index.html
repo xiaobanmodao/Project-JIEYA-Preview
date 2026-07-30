@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CLulxeJI.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-CpAzckoK.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-C2Gnhelc.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DZNrpEV5.css">
   </head>
   <body>
     <main class="app-shell">
@@ -275,6 +275,8 @@
           role="status"
           aria-live="polite"
           data-active-tool-status
+          data-observation-lens-legend
+          data-active-observation-lens="world"
           data-message="activeToolInspect"
         >
           当前工具：观测 · 拖动地图，点击查看
@@ -418,16 +420,59 @@
           <div
             class="contextual-tool-tray"
             id="contextual-tool-tray"
-            aria-label="当前创造工具"
+            aria-label="当前游戏工具"
             data-message-aria-label="contextualToolTrayLabel"
             data-contextual-tool-tray
             hidden
           >
             <div
+              class="observation-lens-toolbar"
+              role="group"
+              aria-label="观测镜片"
+              data-message-aria-label="observationLensControlsLabel"
+              data-tool-panel="inspect"
+              hidden
+            >
+              <b class="brush-label" data-message="observationLensLabel"
+                >观测镜片</b
+              >
+              <button
+                class="zoom-button observation-lens-button"
+                type="button"
+                data-observation-lens-action="world"
+                aria-pressed="true"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">◎</span>
+                <span data-message="observationLensWorld">世界</span>
+              </button>
+              <button
+                class="zoom-button observation-lens-button"
+                type="button"
+                data-observation-lens-action="water"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">≋</span>
+                <span data-message="observationLensWater">水文</span>
+              </button>
+              <button
+                class="zoom-button observation-lens-button"
+                type="button"
+                data-observation-lens-action="life"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">♧</span>
+                <span data-message="observationLensLife">生灵</span>
+              </button>
+            </div>
+            <div
               class="brush-toolbar"
               role="group"
               aria-label="画笔范围预览"
               data-message-aria-label="brushControlsLabel"
+              data-brush-toolbar
             >
               <span class="brush-label" data-message="brushLabel"
                 >画笔范围</span
@@ -1179,7 +1224,7 @@
         data-message-aria-label="previewFooterLabel"
       >
         <p>
-          <strong data-message="previewVersion">公开预览 0.17.0</strong>
+          <strong data-message="previewVersion">公开预览 0.18.0</strong>
           <span aria-hidden="true"> · </span>
           <span data-message="previewPrivacy">
             世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
