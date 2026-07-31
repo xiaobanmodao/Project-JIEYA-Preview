@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DMyE25KH.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-SIKunl1W.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-B9BxLi6j.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-B45PeYHx.css">
   </head>
   <body>
     <main class="app-shell">
@@ -1120,7 +1120,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.59.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.60.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
@@ -1227,23 +1227,27 @@
               class="zoom-button history-button"
               type="button"
               data-history-action="UndoLatestPlayerOperation"
-              data-message="historyUndo"
               aria-describedby="history-status"
               aria-keyshortcuts="Control+Z Meta+Z"
               disabled
             >
-              撤销
+              <span data-message="historyUndo">撤销</span>
+              <kbd class="history-shortcut-hint" aria-hidden="true"
+                >Ctrl/⌘ Z</kbd
+              >
             </button>
             <button
               class="zoom-button history-button"
               type="button"
               data-history-action="RedoLatestPlayerOperation"
-              data-message="historyRedo"
               aria-describedby="history-status"
               aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z"
               disabled
             >
-              重做
+              <span data-message="historyRedo">重做</span>
+              <kbd class="history-shortcut-hint" aria-hidden="true"
+                >Ctrl/⌘ ⇧ Z</kbd
+              >
             </button>
             <output
               class="history-status"
