@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-B9BxLi6j.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-B45PeYHx.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DJ7xzeV8.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-B6qUA42j.css">
   </head>
   <body>
     <main class="app-shell">
@@ -1120,7 +1120,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.60.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.61.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
@@ -1267,6 +1267,15 @@
             data-message-aria-label="simulationControlsLabel"
           >
             <b data-message="simulationLabel">世界时间</b>
+            <output
+              class="simulation-state-beacon"
+              data-simulation-state-beacon
+              data-state="unavailable"
+              data-message="simulationBeaconUnavailable"
+              aria-live="off"
+            >
+              不可
+            </output>
             <button
               class="zoom-button simulation-button simulation-step-button"
               type="button"
