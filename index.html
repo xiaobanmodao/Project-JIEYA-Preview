@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-C0EwJOeE.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DREE1ju7.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-BkPw9bPN.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-BvgHwUAO.css">
   </head>
   <body>
     <main class="app-shell">
@@ -106,22 +106,44 @@
           data-ecology-challenge-modes
         >
           <button
+            class="ecology-challenge-mode-card"
             type="button"
             data-ecology-challenge-mode="dry-valley"
-            data-message="ecologyChallengeDryValley"
             aria-pressed="true"
             disabled
           >
-            干谷
+            <span
+              class="ecology-challenge-mode-name"
+              data-message="ecologyChallengeDryValley"
+            >
+              干谷
+            </span>
+            <span
+              class="ecology-challenge-mode-status"
+              data-ecology-challenge-mode-status="dry-valley"
+            >
+              可选 · 复苏干谷
+            </span>
           </button>
           <button
+            class="ecology-challenge-mode-card"
             type="button"
             data-ecology-challenge-mode="food-chain"
-            data-message="ecologyChallengeFoodChain"
             aria-pressed="false"
             disabled
           >
-            食物链
+            <span
+              class="ecology-challenge-mode-name"
+              data-message="ecologyChallengeFoodChain"
+            >
+              食物链
+            </span>
+            <span
+              class="ecology-challenge-mode-status"
+              data-ecology-challenge-mode-status="food-chain"
+            >
+              可选 · 建立生态
+            </span>
           </button>
         </div>
         <section class="ecology-challenge-panel" data-dry-valley-panel>
@@ -850,7 +872,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.32.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.33.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
