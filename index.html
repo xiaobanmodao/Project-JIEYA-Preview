@@ -33,7 +33,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CLUFTQAj.js"></script>
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CUF852oG.js"></script>
     <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-Cbw4rkAz.css">
   </head>
   <body>
@@ -210,6 +210,24 @@
             >
               可选 · 亲手造湖
             </span>
+          </button>
+          <button
+            class="ecology-challenge-mode-card"
+            type="button"
+            data-ecology-challenge-mode="oasis"
+            aria-pressed="false"
+            disabled
+          >
+            <span
+              class="ecology-challenge-mode-name"
+              data-message="ecologyChallengeOasis"
+              >绿洲</span
+            >
+            <span
+              class="ecology-challenge-mode-status"
+              data-ecology-challenge-mode-status="oasis"
+              >可选 · 亲手造绿洲</span
+            >
           </button>
         </div>
         <section class="ecology-challenge-panel" data-dry-valley-panel>
@@ -402,6 +420,70 @@
           >
             造湖任务：世界或当前格不可用
           </output>
+        </section>
+        <section
+          class="ecology-challenge-panel"
+          aria-label="从选中格亲手造出绿洲的挑战"
+          data-message-aria-label="oasisCardLabel"
+          data-oasis-challenge
+          data-state="inactive"
+          hidden
+        >
+          <div class="dry-valley-guide-copy">
+            <p class="dry-valley-guide-eyebrow" data-message="oasisEyebrow">
+              新任务 · 让一格土地复苏
+            </p>
+            <h2 class="dry-valley-guide-title" data-message="oasisTitle">
+              从一格土地造出绿洲
+            </h2>
+            <p class="dry-valley-guide-summary" data-message="oasisSummary">
+              从当前仍可播种的土地开始：亲手加水、播种，再推进一个
+              Tick。不会替换或自动修改世界。
+            </p>
+          </div>
+          <div class="dry-valley-guide-actions">
+            <button
+              class="dry-valley-guide-action"
+              type="button"
+              data-oasis-start
+              data-message="oasisStart"
+              aria-describedby="oasis-status"
+              disabled
+            >
+              以当前格开始造绿洲
+            </button>
+            <button
+              class="dry-valley-guide-action"
+              type="button"
+              data-oasis-action
+              data-message="oasisActionWater"
+              aria-describedby="oasis-status"
+              hidden
+              disabled
+            >
+              定位并装备加水
+            </button>
+            <button
+              class="dry-valley-guide-dismiss"
+              type="button"
+              data-oasis-cancel
+              data-message="oasisCancel"
+              aria-describedby="oasis-status"
+              hidden
+              disabled
+            >
+              结束本次挑战
+            </button>
+          </div>
+          <output
+            class="dry-valley-guide-status"
+            id="oasis-status"
+            data-oasis-status
+            data-state="unavailable"
+            data-message="oasisUnavailable"
+            aria-live="polite"
+            >绿洲任务：请选择一格仍可播种的土地</output
+          >
         </section>
       </details>
 
@@ -1019,7 +1101,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.48.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.49.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
