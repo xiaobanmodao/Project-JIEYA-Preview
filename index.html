@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-lrMd34j2.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-C4QKPa5C.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-B9FLRoZJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-CzeLEFaf.css">
   </head>
   <body>
     <main class="app-shell">
@@ -60,42 +60,48 @@
             <span data-message="worldTime">世界时间</span>
             <b data-hud-tick>—</b>
           </span>
-          <span
+          <button
             class="game-hud-stat ecology-hud-stat"
-            data-hud-ecology="plant"
+            type="button"
+            data-hud-ecology-focus="plant"
             data-state="unavailable"
             aria-label="草本活跃格：世界未启动"
+            disabled
           >
             <span aria-hidden="true">♧</span>
             <span class="ecology-hud-label" data-message="worldOverviewPlant"
               >草本</span
             >
             <b data-hud-ecology-plant>—</b>
-          </span>
-          <span
+          </button>
+          <button
             class="game-hud-stat ecology-hud-stat"
-            data-hud-ecology="grazer"
+            type="button"
+            data-hud-ecology-focus="grazer"
             data-state="unavailable"
             aria-label="绒芽兽活跃格：世界未启动"
+            disabled
           >
             <span aria-hidden="true">♞</span>
             <span class="ecology-hud-label" data-message="worldOverviewGrazer"
               >绒芽兽</span
             >
             <b data-hud-ecology-grazer>—</b>
-          </span>
-          <span
+          </button>
+          <button
             class="game-hud-stat ecology-hud-stat"
-            data-hud-ecology="fox"
+            type="button"
+            data-hud-ecology-focus="fox"
             data-state="unavailable"
             aria-label="影尾狐活跃格：世界未启动"
+            disabled
           >
             <span aria-hidden="true">⌁</span>
             <span class="ecology-hud-label" data-message="worldOverviewFox"
               >影尾狐</span
             >
             <b data-hud-ecology-fox>—</b>
-          </span>
+          </button>
         </div>
         <div
           class="install-offer"
@@ -912,7 +918,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.36.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.37.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
