@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CpM-fhxP.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-BvgHwUAO.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-4L6LEWbR.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-CZZ8TWTh.css">
   </head>
   <body>
     <main class="app-shell">
@@ -872,7 +872,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.34.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.35.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
@@ -1396,6 +1396,50 @@
               </button>
             </div>
           </section>
+          <button
+            class="world-discovery-journal-toggle"
+            type="button"
+            data-world-discovery-journal-toggle
+            aria-controls="world-discovery-journal"
+            aria-expanded="false"
+            hidden
+            disabled
+          >
+            <span aria-hidden="true">✦</span>
+            <span data-message="worldDiscoveryJournalToggle">本局发现</span>
+            <output
+              class="world-discovery-journal-count"
+              data-world-discovery-journal-count
+              >0</output
+            >
+          </button>
+          <aside
+            id="world-discovery-journal"
+            class="world-discovery-journal"
+            data-world-discovery-journal
+            aria-labelledby="world-discovery-journal-title"
+            hidden
+          >
+            <div class="world-discovery-journal-heading">
+              <div>
+                <p class="world-discovery-eyebrow">本局记录</p>
+                <h2 id="world-discovery-journal-title">世界发现簿</h2>
+              </div>
+              <button
+                class="world-discovery-journal-close"
+                type="button"
+                data-world-discovery-journal-close
+                aria-label="收起世界发现簿"
+                disabled
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <ol
+              class="world-discovery-journal-list"
+              data-world-discovery-journal-list
+            ></ol>
+          </aside>
           <output
             id="ecology-world-pulse-map-message"
             class="visually-hidden"
