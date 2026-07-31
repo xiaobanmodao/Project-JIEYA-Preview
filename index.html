@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CHguzS7w.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DTZs4zcB.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CHtuptRC.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DC_QaDkY.css">
   </head>
   <body>
     <main class="app-shell">
@@ -850,7 +850,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.30.1</strong>
+                  <strong data-message="previewVersion">公开预览 0.31.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
@@ -1317,6 +1317,57 @@
               <span aria-hidden="true">⌖</span>
               <span data-message="ecologyWorldPulseNext">下一处变化</span>
             </button>
+          </section>
+          <section
+            class="world-discovery-card"
+            data-world-discovery-card
+            aria-labelledby="world-discovery-title"
+            hidden
+          >
+            <p
+              class="world-discovery-eyebrow"
+              data-message="worldDiscoveryEyebrow"
+            >
+              世界发现
+            </p>
+            <h2 id="world-discovery-title" data-message="worldDiscoveryTitle">
+              发现：捕食关系
+            </h2>
+            <p
+              class="world-discovery-chain"
+              aria-label="食物链：先锋草本到绒芽兽到影尾狐"
+            >
+              <span data-message="worldDiscoveryPlant">先锋草本</span>
+              <span aria-hidden="true">→</span>
+              <span data-message="worldDiscoveryGrazer">绒芽兽</span>
+              <span aria-hidden="true">→</span>
+              <span data-message="worldDiscoveryFox">影尾狐</span>
+            </p>
+            <output
+              class="world-discovery-message"
+              data-world-discovery-message
+              aria-live="polite"
+            ></output>
+            <div class="world-discovery-actions">
+              <button
+                class="world-discovery-observe"
+                type="button"
+                data-world-discovery-observe
+                data-message="worldDiscoveryObserve"
+                disabled
+              >
+                前往观察格
+              </button>
+              <button
+                class="world-discovery-dismiss"
+                type="button"
+                data-world-discovery-dismiss
+                data-message="worldDiscoveryDismiss"
+                disabled
+              >
+                收起
+              </button>
+            </div>
           </section>
           <output
             id="ecology-world-pulse-map-message"
