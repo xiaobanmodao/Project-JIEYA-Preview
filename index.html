@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DyF8YIXW.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-C0YrQ6Ag.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-BgqPl6Es.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-C6_m-4T0.css">
   </head>
   <body>
     <main class="app-shell">
@@ -1147,7 +1147,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.74.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.75.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
@@ -2039,6 +2039,63 @@
                   <dd data-observation-revision>—</dd>
                 </div>
               </dl>
+              <div class="observation-comparison-start-row">
+                <button
+                  class="observation-comparison-start"
+                  type="button"
+                  data-observation-comparison-start
+                  data-message="observationComparisonStart"
+                  disabled
+                >
+                  设为对照起点
+                </button>
+              </div>
+              <div
+                class="observation-comparison"
+                data-observation-comparison
+                role="region"
+                aria-labelledby="observation-comparison-title"
+                hidden
+              >
+                <h3
+                  id="observation-comparison-title"
+                  data-observation-comparison-title
+                  data-message="observationComparisonTitle"
+                >
+                  格子对照
+                </h3>
+                <p
+                  class="observation-comparison-status"
+                  data-observation-comparison-status
+                  data-message="observationComparisonUnavailable"
+                >
+                  建立起点后，可比较这格之后的世界回应
+                </p>
+                <ul
+                  class="observation-comparison-list"
+                  data-observation-comparison-list
+                ></ul>
+                <div class="observation-comparison-actions">
+                  <button
+                    class="observation-comparison-focus"
+                    type="button"
+                    data-observation-comparison-focus
+                    data-message="observationComparisonFocus"
+                    disabled
+                  >
+                    回到对照格
+                  </button>
+                  <button
+                    class="observation-comparison-clear"
+                    type="button"
+                    data-observation-comparison-clear
+                    data-message="observationComparisonClear"
+                    disabled
+                  >
+                    清除对照
+                  </button>
+                </div>
+              </div>
               <p class="cell-observation-summary" data-observation-summary>
                 世界未启动
               </p>
