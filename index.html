@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-gF5Tsugm.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DChOD7fm.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-ClHUuTqV.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-BfSD41P0.css">
   </head>
   <body>
     <main class="app-shell">
@@ -590,16 +590,33 @@
         >
           当前工具：观测 · 拖动地图，点击查看
         </div>
-        <output
+        <section
           class="world-action-ribbon"
           data-world-action-ribbon
           data-state="unavailable"
-          data-message="worldActionRibbonUnavailable"
-          aria-live="off"
+          aria-label="世界回应"
+          data-message-aria-label="worldActionRibbonLabel"
           hidden
         >
-          世界回应：等待创造
-        </output>
+          <output
+            class="world-action-ribbon-message"
+            data-world-action-ribbon-message
+            data-message="worldActionRibbonUnavailable"
+            aria-live="off"
+            >世界回应：等待创造</output
+          >
+          <button
+            class="world-action-ribbon-step"
+            type="button"
+            data-world-action-ribbon-step
+            aria-label="推进 1 Tick，观察世界变化"
+            data-message-aria-label="worldActionRibbonStepLabel"
+            disabled
+          >
+            <span data-message="worldActionRibbonStep">推进 1 Tick</span>
+            <kbd aria-hidden="true">.</kbd>
+          </button>
+        </section>
         <div
           class="zoom-toolbar"
           role="group"
@@ -1130,7 +1147,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.63.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.64.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
