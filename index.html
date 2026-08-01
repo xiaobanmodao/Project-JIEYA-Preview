@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-ClHUuTqV.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-BfSD41P0.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-dej82GdS.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-CiX16oIt.css">
   </head>
   <body>
     <main class="app-shell">
@@ -1147,7 +1147,7 @@
                 data-message-aria-label="previewFooterLabel"
               >
                 <p>
-                  <strong data-message="previewVersion">公开预览 0.64.0</strong>
+                  <strong data-message="previewVersion">公开预览 0.65.0</strong>
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
                     世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
@@ -1781,6 +1781,54 @@
             <ol
               class="world-discovery-journal-list"
               data-world-discovery-journal-list
+            ></ol>
+          </aside>
+          <button
+            class="world-creation-log-toggle"
+            type="button"
+            data-world-creation-log-toggle
+            aria-controls="world-creation-log"
+            aria-expanded="false"
+            aria-label="最近创造：0 条"
+            data-message-aria-label="worldCreationLogEmptyLabel"
+            hidden
+            disabled
+          >
+            <span aria-hidden="true">✦</span>
+            <span data-message="worldCreationLogToggle">最近创造</span>
+            <output data-world-creation-log-count>0</output>
+          </button>
+          <aside
+            id="world-creation-log"
+            class="world-creation-log"
+            data-world-creation-log
+            aria-labelledby="world-creation-log-title"
+            hidden
+          >
+            <div class="world-creation-log-heading">
+              <div>
+                <p data-message="worldCreationLogEyebrow">本局痕迹</p>
+                <h2
+                  id="world-creation-log-title"
+                  data-message="worldCreationLogTitle"
+                >
+                  最近创造
+                </h2>
+              </div>
+              <button
+                class="world-creation-log-close"
+                type="button"
+                data-world-creation-log-close
+                aria-label="收起最近创造"
+                data-message-aria-label="worldCreationLogClose"
+                disabled
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <ol
+              class="world-creation-log-list"
+              data-world-creation-log-list
             ></ol>
           </aside>
           <output
