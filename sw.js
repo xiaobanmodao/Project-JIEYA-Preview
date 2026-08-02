@@ -1,7 +1,7 @@
 const CACHE_PREFIX = "jieya-app-shell-";
-const CACHE_NAME = "jieya-app-shell-19643e023d848c7d";
+const CACHE_NAME = "jieya-app-shell-14b60180706e18d4";
 const ROOT_PATH = "/Project-JIEYA-Preview/";
-const PRECACHE_PATHS = Object.freeze(["/Project-JIEYA-Preview/","/Project-JIEYA-Preview/index.html","/Project-JIEYA-Preview/manifest.webmanifest","/Project-JIEYA-Preview/jieya-icon.svg","/Project-JIEYA-Preview/jieya-icon-192.png","/Project-JIEYA-Preview/jieya-icon-512.png","/Project-JIEYA-Preview/assets/index-BxIxANoI.js","/Project-JIEYA-Preview/assets/index-CxlDdJSU.css"]);
+const PRECACHE_PATHS = Object.freeze(["/Project-JIEYA-Preview/","/Project-JIEYA-Preview/index.html","/Project-JIEYA-Preview/manifest.webmanifest","/Project-JIEYA-Preview/jieya-icon.svg","/Project-JIEYA-Preview/jieya-icon-192.png","/Project-JIEYA-Preview/jieya-icon-512.png","/Project-JIEYA-Preview/assets/index-CTmREN2A.js","/Project-JIEYA-Preview/assets/index-CxlDdJSU.css"]);
 const PRECACHE_PATH_SET = new Set(PRECACHE_PATHS);
 
 self.addEventListener("install", (event) => {
