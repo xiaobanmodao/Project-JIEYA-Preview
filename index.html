@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-Dhd4hAgG.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-CBXYGuNI.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-Hn0QJ207.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-D-vKOheh.css">
   </head>
   <body>
     <main class="app-shell">
@@ -1211,7 +1211,7 @@
               >
                 <p>
                   <strong data-message="previewVersion"
-                    >公开预览 0.121.0</strong
+                    >公开预览 0.122.0</strong
                   >
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
@@ -2038,6 +2038,59 @@
                 <span aria-hidden="true">×</span>
               </button>
             </div>
+            <div
+              class="world-discovery-journal-filters"
+              role="group"
+              data-message-aria-label="worldDiscoveryJournalFilterLabel"
+            >
+              <button
+                class="world-discovery-journal-filter"
+                type="button"
+                data-world-discovery-journal-filter="all"
+                aria-pressed="true"
+              >
+                <span data-message="worldDiscoveryJournalFilterAll">全部</span>
+                <output data-world-discovery-journal-filter-count="all"
+                  >0</output
+                >
+              </button>
+              <button
+                class="world-discovery-journal-filter"
+                type="button"
+                data-world-discovery-journal-filter="ecology"
+                aria-pressed="false"
+              >
+                <span data-message="worldDiscoveryJournalFilterEcology"
+                  >生态</span
+                >
+                <output data-world-discovery-journal-filter-count="ecology"
+                  >0</output
+                >
+              </button>
+              <button
+                class="world-discovery-journal-filter"
+                type="button"
+                data-world-discovery-journal-filter="terrain-water"
+                aria-pressed="false"
+              >
+                <span data-message="worldDiscoveryJournalFilterTerrainWater"
+                  >地形与水文</span
+                >
+                <output
+                  data-world-discovery-journal-filter-count="terrain-water"
+                  >0</output
+                >
+              </button>
+            </div>
+            <p
+              class="world-discovery-journal-empty"
+              data-world-discovery-journal-empty
+              hidden
+            >
+              <span data-message="worldDiscoveryJournalFilterEmpty"
+                >本分类暂无本局发现。</span
+              >
+            </p>
             <ol
               class="world-discovery-journal-list"
               data-world-discovery-journal-list
