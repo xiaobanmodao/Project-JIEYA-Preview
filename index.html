@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-B2R_czLz.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-Bclydc5U.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-mawx2qRs.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-BeZdzIIf.css">
   </head>
   <body>
     <main class="app-shell">
@@ -867,6 +867,16 @@
               <button
                 class="zoom-button observation-lens-button"
                 type="button"
+                data-observation-lens-action="climate"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">▲≈</span>
+                <span data-message="observationLensClimate">气候</span>
+              </button>
+              <button
+                class="zoom-button observation-lens-button"
+                type="button"
                 data-observation-lens-action="life"
                 aria-pressed="false"
                 disabled
@@ -1082,6 +1092,62 @@
                 <span>减雨</span>
                 <kbd class="tool-shortcut-hint" aria-hidden="true">H</kbd>
               </button>
+              <button
+                class="zoom-button rainfall-button"
+                type="button"
+                data-climate-action="IncreaseTemperature"
+                aria-label="升温 +1.0 摄氏度"
+                aria-describedby="rainfall-status"
+                aria-keyshortcuts="U"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">▲</span
+                ><span>升温</span
+                ><kbd class="tool-shortcut-hint" aria-hidden="true">U</kbd>
+              </button>
+              <button
+                class="zoom-button rainfall-button"
+                type="button"
+                data-climate-action="DecreaseTemperature"
+                aria-label="降温 −1.0 摄氏度"
+                aria-describedby="rainfall-status"
+                aria-keyshortcuts="J"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">▼</span
+                ><span>降温</span
+                ><kbd class="tool-shortcut-hint" aria-hidden="true">J</kbd>
+              </button>
+              <button
+                class="zoom-button rainfall-button"
+                type="button"
+                data-climate-action="IncreaseHumidity"
+                aria-label="增湿 +10 百分点"
+                aria-describedby="rainfall-status"
+                aria-keyshortcuts="Y"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">≈</span
+                ><span>增湿</span
+                ><kbd class="tool-shortcut-hint" aria-hidden="true">Y</kbd>
+              </button>
+              <button
+                class="zoom-button rainfall-button"
+                type="button"
+                data-climate-action="DecreaseHumidity"
+                aria-label="除湿 −10 百分点"
+                aria-describedby="rainfall-status"
+                aria-keyshortcuts="K"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">≋</span
+                ><span>除湿</span
+                ><kbd class="tool-shortcut-hint" aria-hidden="true">K</kbd>
+              </button>
               <output
                 class="rainfall-status"
                 id="rainfall-status"
@@ -1211,7 +1277,7 @@
               >
                 <p>
                   <strong data-message="previewVersion"
-                    >公开预览 0.123.0</strong
+                    >公开预览 0.124.0</strong
                   >
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
@@ -2389,6 +2455,14 @@
                 <div>
                   <dt data-message="observationRainfallRateLabel">降雨率</dt>
                   <dd data-observation-rainfall-rate>—</dd>
+                </div>
+                <div>
+                  <dt data-message="observationTemperatureLabel">温度</dt>
+                  <dd data-observation-temperature>—</dd>
+                </div>
+                <div>
+                  <dt data-message="observationAirHumidityLabel">空气湿度</dt>
+                  <dd data-observation-air-humidity>—</dd>
                 </div>
                 <div>
                   <dt data-message="observationSurfaceWaterLabel">地表水</dt>
