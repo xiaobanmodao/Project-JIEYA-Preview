@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-Hn0QJ207.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-D-vKOheh.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-B2R_czLz.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-Bclydc5U.css">
   </head>
   <body>
     <main class="app-shell">
@@ -1211,7 +1211,7 @@
               >
                 <p>
                   <strong data-message="previewVersion"
-                    >公开预览 0.122.0</strong
+                    >公开预览 0.123.0</strong
                   >
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
@@ -1227,6 +1227,73 @@
               </footer>
             </section>
             <b data-message="persistenceLabel">本地世界</b>
+            <section
+              class="seed-world-picker"
+              aria-labelledby="seed-world-title"
+              data-seed-world-picker
+            >
+              <h3 id="seed-world-title" data-message="seedWorldTitle">
+                播下界芽
+              </h3>
+              <p data-message="seedWorldDisclosure">
+                选择或输入已发布的固定世界种子。创建会替换当前本地世界，未发布种子不会生成世界。
+              </p>
+              <label>
+                <span data-message="seedWorldPresetLabel">世界预设</span>
+                <select data-seed-world-select disabled>
+                  <option value="">手动输入已发布种子</option>
+                  <option value="JIEYA-LOCAL-FIRST-1">初始界芽</option>
+                  <option value="JIEYA-NEWBORN-CONTINENT-1" selected>
+                    新生大陆
+                  </option>
+                  <option value="JIEYA-FLOATING-BASIN-1">浮岛盆地</option>
+                </select>
+              </label>
+              <label>
+                <span data-message="seedWorldSeedLabel">世界种子</span>
+                <input
+                  type="text"
+                  value="JIEYA-NEWBORN-CONTINENT-1"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-seed-world-input
+                  disabled
+                />
+              </label>
+              <div class="seed-world-picker-actions">
+                <button
+                  class="zoom-button"
+                  type="button"
+                  data-seed-world-copy
+                  data-message="seedWorldCopy"
+                  disabled
+                >
+                  复制种子
+                </button>
+                <button
+                  class="zoom-button"
+                  type="button"
+                  data-seed-world-create
+                  data-message="seedWorldCreate"
+                  aria-describedby="seed-world-disclosure seed-world-status"
+                  disabled
+                >
+                  创建这个世界
+                </button>
+              </div>
+              <p id="seed-world-disclosure" data-message="seedWorldDisclosure">
+                选择或输入已发布的固定世界种子。创建会替换当前本地世界，未发布种子不会生成世界。
+              </p>
+              <output
+                class="seed-world-status"
+                id="seed-world-status"
+                data-seed-world-status
+                data-state="unavailable"
+                aria-live="polite"
+                data-message="seedWorldUnavailable"
+                >世界种子：等待世界启动</output
+              >
+            </section>
             <button
               class="zoom-button persistence-reset-button"
               type="button"
