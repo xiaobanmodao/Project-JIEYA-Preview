@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DkvvyJDD.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DjFc9Rn3.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-4toNLWto.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-BculZdZK.css">
   </head>
   <body>
     <main class="app-shell">
@@ -1184,6 +1184,21 @@
                 <kbd class="tool-shortcut-hint" aria-hidden="true">B</kbd>
               </button>
               <button
+                class="zoom-button flowering-sprout-planting-button"
+                type="button"
+                data-flowering-sprout-planting-action
+                aria-label="种植花株"
+                data-message-aria-label="floweringSproutPlant"
+                aria-describedby="pioneer-plant-sowing-status"
+                aria-keyshortcuts="F"
+                aria-pressed="false"
+                disabled
+              >
+                <span class="tool-button-icon" aria-hidden="true">✿</span>
+                <span>花株</span>
+                <kbd class="tool-shortcut-hint" aria-hidden="true">F</kbd>
+              </button>
+              <button
                 class="zoom-button sprout-grazer-release-button"
                 type="button"
                 data-sprout-grazer-release-action
@@ -1277,7 +1292,7 @@
               >
                 <p>
                   <strong data-message="previewVersion"
-                    >公开预览 0.132.0</strong
+                    >公开预览 0.133.0</strong
                   >
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
@@ -2405,6 +2420,11 @@
                   <strong data-observation-readout-pioneer-plant>—</strong>
                 </span>
                 <span>
+                  <b aria-hidden="true">✿</b>
+                  <span>花株</span>
+                  <strong data-observation-readout-flowering-sprout>—</strong>
+                </span>
+                <span>
                   <b aria-hidden="true">♞</b>
                   <span data-message="observationSproutGrazerLabel"
                     >绒芽兽</span
@@ -2505,6 +2525,10 @@
                 <div>
                   <dt data-message="observationPioneerPlantLabel">先锋草本</dt>
                   <dd data-observation-pioneer-plant>—</dd>
+                </div>
+                <div>
+                  <dt>花株</dt>
+                  <dd data-observation-flowering-sprout>—</dd>
                 </div>
                 <div>
                   <dt data-message="observationSproutGrazerLabel">绒芽兽</dt>
