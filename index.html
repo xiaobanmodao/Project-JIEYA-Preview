@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DIi0IsBJ.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-tXTWX6sW.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-B634R7BB.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-CAaFEkrz.css">
   </head>
   <body>
     <main class="app-shell">
@@ -1367,7 +1367,7 @@
               >
                 <p>
                   <strong data-message="previewVersion"
-                    >公开预览 0.145.0</strong
+                    >公开预览 0.146.0</strong
                   >
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
@@ -1382,6 +1382,116 @@
                 </a>
               </footer>
             </section>
+            <details class="player-settings" data-player-settings>
+              <summary data-message="playerSettingsTitle">设备设置</summary>
+              <div class="player-settings-grid">
+                <p data-message="playerSettingsDisclosure">
+                  设置和引导状态只保存在当前设备，不进入世界存档或 .jieya 文件。
+                </p>
+                <label>
+                  <span data-message="playerVolumeLabel">主音量</span>
+                  <span class="player-volume-control">
+                    <input
+                      type="range"
+                      min="0"
+                      max="100"
+                      step="1"
+                      value="70"
+                      data-player-volume
+                    />
+                    <output data-player-volume-output>70%</output>
+                  </span>
+                </label>
+                <label class="player-setting-checkbox">
+                  <input type="checkbox" data-player-muted />
+                  <span data-message="playerMutedLabel">静音</span>
+                </label>
+                <label>
+                  <span data-message="playerMotionLabel">动态效果</span>
+                  <select data-player-motion-control>
+                    <option value="system" data-message="playerMotionSystem">
+                      跟随系统
+                    </option>
+                    <option value="full" data-message="playerMotionFull">
+                      完整动态
+                    </option>
+                    <option value="reduced" data-message="playerMotionReduced">
+                      减少动态
+                    </option>
+                  </select>
+                </label>
+                <label>
+                  <span data-message="playerTextScaleLabel">文字大小</span>
+                  <select data-player-text-scale>
+                    <option value="100">100%</option>
+                    <option value="112">112%</option>
+                    <option value="125">125%</option>
+                  </select>
+                </label>
+                <label>
+                  <span data-message="playerColorVisionLabel">配色辨识</span>
+                  <select data-player-color-vision-control>
+                    <option value="standard" data-message="playerColorStandard">
+                      标准
+                    </option>
+                    <option
+                      value="red-green"
+                      data-message="playerColorRedGreen"
+                    >
+                      红绿色弱辅助
+                    </option>
+                    <option
+                      value="blue-yellow"
+                      data-message="playerColorBlueYellow"
+                    >
+                      蓝黄色弱辅助
+                    </option>
+                    <option
+                      value="high-contrast"
+                      data-message="playerColorHighContrast"
+                    >
+                      高对比
+                    </option>
+                  </select>
+                </label>
+                <label>
+                  <span data-message="playerPerformanceLabel">显示性能</span>
+                  <select data-player-performance-control>
+                    <option
+                      value="standard"
+                      data-message="playerPerformanceStandard"
+                    >
+                      标准
+                    </option>
+                    <option
+                      value="reduced"
+                      data-message="playerPerformanceReduced"
+                    >
+                      低性能
+                    </option>
+                  </select>
+                </label>
+                <button
+                  class="zoom-button player-profile-reset"
+                  type="button"
+                  data-player-profile-reset
+                  data-message="playerProfileReset"
+                  aria-describedby="player-profile-status"
+                >
+                  重置本地资料
+                </button>
+                <output
+                  id="player-profile-status"
+                  class="player-profile-status"
+                  data-player-profile-status
+                  data-state="saving"
+                  aria-live="polite"
+                  data-message="playerProfileSaving"
+                >
+                  设备资料：正在保存
+                </output>
+              </div>
+            </details>
             <b data-message="persistenceLabel">本地世界</b>
             <section
               class="seed-world-picker"
