@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-BgKJebEh.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-ChvaWq0B.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DIi0IsBJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-tXTWX6sW.css">
   </head>
   <body>
     <main class="app-shell">
@@ -1217,16 +1217,29 @@
                 class="zoom-button decomposer-release-button"
                 type="button"
                 data-decomposer-release-action
-                aria-label="投放分解者"
+                aria-label="投放腐光菌"
                 aria-describedby="pioneer-plant-sowing-status"
                 aria-keyshortcuts="M"
                 aria-pressed="false"
                 disabled
-                title="投放分解者（M）"
+                title="投放腐光菌（M）"
               >
                 <span class="tool-button-icon" aria-hidden="true">❧</span>
-                <span>分解者</span>
+                <span>腐光菌</span>
                 <kbd class="tool-shortcut-hint" aria-hidden="true">M</kbd>
+              </button>
+              <button
+                class="zoom-button woody-sapling-planting-button"
+                type="button"
+                data-woody-sapling-planting-action
+                aria-label="种下芽木"
+                aria-describedby="pioneer-plant-sowing-status"
+                aria-pressed="false"
+                disabled
+                title="种下芽木；装备后在画布按 Enter 种植"
+              >
+                <span class="tool-button-icon" aria-hidden="true">♠</span>
+                <span>芽木</span>
               </button>
               <button
                 class="zoom-button shrub-release-button"
@@ -1283,6 +1296,23 @@
               >
                 播种工具：世界未启动
               </output>
+              <section
+                class="forest-floor-challenge"
+                data-forest-floor-challenge
+              >
+                <b>挑战：林地复苏</b>
+                <p data-forest-floor-challenge-status>
+                  在当前格开始，依次培育芽木、制造枯落、分解回肥并让芽木续长。
+                </p>
+                <button
+                  class="zoom-button"
+                  type="button"
+                  data-forest-floor-challenge-action
+                  disabled
+                >
+                  从当前格开始
+                </button>
+              </section>
             </div>
           </div>
         </div>
@@ -1337,7 +1367,7 @@
               >
                 <p>
                   <strong data-message="previewVersion"
-                    >公开预览 0.144.0</strong
+                    >公开预览 0.145.0</strong
                   >
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
@@ -1898,6 +1928,24 @@
                 <span
                   class="ecology-world-pulse-layer-count"
                   data-ecology-world-pulse-layer-count="fox"
+                  >0</span
+                >
+              </button>
+              <button
+                class="ecology-world-pulse-layer"
+                type="button"
+                data-ecology-world-pulse-layer="forest-floor"
+                aria-pressed="false"
+                disabled
+              >
+                <span
+                  data-message="ecologyWorldPulseLayerForestFloor"
+                  data-compact-label="林"
+                  >林地循环</span
+                >
+                <span
+                  class="ecology-world-pulse-layer-count"
+                  data-ecology-world-pulse-layer-count="forest-floor"
                   >0</span
                 >
               </button>
@@ -2516,8 +2564,23 @@
                 </span>
                 <span>
                   <b aria-hidden="true">❧</b>
-                  <span>分解者</span>
+                  <span>腐光菌</span>
                   <strong data-observation-readout-decomposer>—</strong>
+                </span>
+                <span>
+                  <b aria-hidden="true">◇</b>
+                  <span>土壤肥力</span>
+                  <strong data-observation-readout-soil-fertility>—</strong>
+                </span>
+                <span>
+                  <b aria-hidden="true">⋰</b>
+                  <span>腐殖物</span>
+                  <strong data-observation-readout-detritus-mass>—</strong>
+                </span>
+                <span>
+                  <b aria-hidden="true">♠</b>
+                  <span>芽木</span>
+                  <strong data-observation-readout-woody-plant>—</strong>
                 </span>
                 <span>
                   <b aria-hidden="true">♣</b>
@@ -2635,8 +2698,20 @@
                   <dd data-observation-pollinator>—</dd>
                 </div>
                 <div>
-                  <dt>分解者</dt>
+                  <dt>腐光菌</dt>
                   <dd data-observation-decomposer>—</dd>
+                </div>
+                <div>
+                  <dt>土壤肥力</dt>
+                  <dd data-observation-soil-fertility>—</dd>
+                </div>
+                <div>
+                  <dt>腐殖物</dt>
+                  <dd data-observation-detritus-mass>—</dd>
+                </div>
+                <div>
+                  <dt>芽木覆盖</dt>
+                  <dd data-observation-woody-plant>—</dd>
                 </div>
                 <div>
                   <dt>灌木</dt>
