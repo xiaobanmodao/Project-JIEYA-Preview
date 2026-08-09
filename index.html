@@ -33,8 +33,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./jieya-icon.svg" type="image/svg+xml" />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-kT0GOnbz.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DpnL_iig.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-BgKJebEh.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-ChvaWq0B.css">
   </head>
   <body>
     <main class="app-shell">
@@ -1214,6 +1214,36 @@
                 <kbd class="tool-shortcut-hint" aria-hidden="true">P</kbd>
               </button>
               <button
+                class="zoom-button decomposer-release-button"
+                type="button"
+                data-decomposer-release-action
+                aria-label="投放分解者"
+                aria-describedby="pioneer-plant-sowing-status"
+                aria-keyshortcuts="M"
+                aria-pressed="false"
+                disabled
+                title="投放分解者（M）"
+              >
+                <span class="tool-button-icon" aria-hidden="true">❧</span>
+                <span>分解者</span>
+                <kbd class="tool-shortcut-hint" aria-hidden="true">M</kbd>
+              </button>
+              <button
+                class="zoom-button shrub-release-button"
+                type="button"
+                data-shrub-release-action
+                aria-label="投放灌木"
+                aria-describedby="pioneer-plant-sowing-status"
+                aria-keyshortcuts="V"
+                aria-pressed="false"
+                disabled
+                title="投放灌木（V）"
+              >
+                <span class="tool-button-icon" aria-hidden="true">♣</span>
+                <span>灌木</span>
+                <kbd class="tool-shortcut-hint" aria-hidden="true">V</kbd>
+              </button>
+              <button
                 class="zoom-button sprout-grazer-release-button"
                 type="button"
                 data-sprout-grazer-release-action
@@ -1307,7 +1337,7 @@
               >
                 <p>
                   <strong data-message="previewVersion"
-                    >公开预览 0.141.0</strong
+                    >公开预览 0.144.0</strong
                   >
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
@@ -2172,6 +2202,16 @@
                 继续造一片湖
               </button>
               <button
+                class="world-discovery-next-challenge"
+                type="button"
+                data-world-discovery-next-oasis-from-pond
+                data-message="worldDiscoveryNextOasisFromPond"
+                hidden
+                disabled
+              >
+                继续造一片绿洲
+              </button>
+              <button
                 class="world-discovery-migration-trail"
                 type="button"
                 data-world-discovery-migration-trail
@@ -2475,6 +2515,16 @@
                   <strong data-observation-readout-pollinator>—</strong>
                 </span>
                 <span>
+                  <b aria-hidden="true">❧</b>
+                  <span>分解者</span>
+                  <strong data-observation-readout-decomposer>—</strong>
+                </span>
+                <span>
+                  <b aria-hidden="true">♣</b>
+                  <span>灌木</span>
+                  <strong data-observation-readout-shrub>—</strong>
+                </span>
+                <span>
                   <b aria-hidden="true">♞</b>
                   <span data-message="observationSproutGrazerLabel"
                     >绒芽兽</span
@@ -2583,6 +2633,14 @@
                 <div>
                   <dt>花粉蜂</dt>
                   <dd data-observation-pollinator>—</dd>
+                </div>
+                <div>
+                  <dt>分解者</dt>
+                  <dd data-observation-decomposer>—</dd>
+                </div>
+                <div>
+                  <dt>灌木</dt>
+                  <dd data-observation-shrub>—</dd>
                 </div>
                 <div>
                   <dt data-message="observationSproutGrazerLabel">绒芽兽</dt>
