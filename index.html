@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="亲手创造和改造世界：塑造地形、制造降雨并观察水流的本地优先 2D 沙盒。"
+      content="亲手创造和改造世界：塑造地形、制造降雨并观察水流。"
+      data-message-content="pageDescription"
     />
-    <meta name="application-name" content="界芽：星球观测局" />
+    <meta
+      name="application-name"
+      content="界芽：星球观测局"
+      data-message-content="title"
+    />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#18352f" />
     <meta
@@ -16,10 +21,15 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
-    <meta property="og:title" content="界芽：星球观测局" />
+    <meta
+      property="og:title"
+      content="界芽：星球观测局"
+      data-message-content="title"
+    />
     <meta
       property="og:description"
       content="亲手创造和改造世界：塑造地形、制造降雨并观察水流。"
+      data-message-content="pageDescription"
     />
     <meta property="og:url" content="./" />
     <meta property="og:image" content="./og.png" />
@@ -28,6 +38,7 @@
     <meta
       property="og:image:alt"
       content="界芽方格世界中，绿色手掌形地形被水道与降雨环绕"
+      data-message-content="pageImageAlt"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="manifest" href="./manifest.webmanifest" />
@@ -39,9 +50,9 @@
       type="font/woff2"
       crossorigin
     />
-    <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-BheYw3h_.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DyrA1GEt.css">
+    <title data-message="title">界芽：星球观测局</title>
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-32vrOc1h.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-CWOGoLpn.css">
   </head>
   <body>
     <section
@@ -53,7 +64,11 @@
       hidden
     >
       <div class="home-screen-shade" aria-hidden="true"></div>
-      <nav class="home-utility-nav" aria-label="主页工具">
+      <nav
+        class="home-utility-nav"
+        aria-label="主页工具"
+        data-message-aria-label="homeToolsLabel"
+      >
         <button
           class="home-utility-button"
           type="button"
@@ -62,7 +77,7 @@
           aria-controls="home-settings-panel"
         >
           <i class="ph ph-gear" aria-hidden="true"></i>
-          <span>设置</span>
+          <span data-message="homeSettingsAction">设置</span>
         </button>
         <button
           class="home-utility-button"
@@ -72,7 +87,11 @@
           aria-controls="home-language-panel"
         >
           <i class="ph ph-translate" aria-hidden="true"></i>
-          <span>语言 · 简体中文</span>
+          <span
+            data-home-language-action
+            data-message="homeLanguageActionDefault"
+            >语言 · 简体中文</span
+          >
         </button>
       </nav>
 
@@ -86,30 +105,39 @@
           role="heading"
           aria-level="1"
         >
-          界芽
+          <span data-message="homeBrandName">界芽</span>
         </div>
         <p>
-          <span aria-hidden="true">✦</span> 星球观测局
+          <span aria-hidden="true">✦</span>
+          <span data-message="homeBrandSubtitle">星球观测局</span>
           <span aria-hidden="true">✦</span>
         </p>
       </header>
 
       <button class="home-continue" type="button" data-home-continue hidden>
         <i class="ph ph-plant" aria-hidden="true"></i>
-        <span data-home-continue-label>尚无可继续的世界</span>
+        <span data-home-continue-label data-message="homeNoWorldToContinue"
+          >尚无可继续的世界</span
+        >
         <i class="ph ph-arrow-right" aria-hidden="true"></i>
       </button>
 
-      <section class="home-world-rail" aria-label="选择要前往的世界">
+      <section
+        class="home-world-rail"
+        aria-label="选择要前往的世界"
+        data-message-aria-label="homeWorldRailLabel"
+      >
         <button
           class="home-world-card home-world-card-start"
           type="button"
           data-home-world-seed="JIEYA-LOCAL-FIRST-1"
         >
           <i class="ph ph-plant" aria-hidden="true"></i>
-          <strong>开始冒险</strong>
+          <strong data-message="homeStartCreating">开始冒险</strong>
           <span class="home-card-divider" aria-hidden="true"></span>
-          <small>从空白界域开始亲手创造</small>
+          <small data-message="homeStartCreatingSummary"
+            >从空白界域开始亲手创造</small
+          >
         </button>
         <button
           class="home-world-card home-world-card-image home-world-card-dry-valley"
@@ -117,8 +145,10 @@
           data-home-world-seed="JIEYA-DRY-VALLEY-RESCUE-2"
         >
           <span class="home-world-card-copy">
-            <strong>干谷救援</strong>
-            <small>10–15 分钟 · 三幕生态复苏</small>
+            <strong data-message="homeDryValleyRescue">干谷救援</strong>
+            <small data-message="homeDryValleySummary"
+              >10–15 分钟 · 三幕生态复苏</small
+            >
           </span>
         </button>
         <button
@@ -127,8 +157,8 @@
           data-home-world-seed="JIEYA-NEWBORN-CONTINENT-2"
         >
           <span class="home-world-card-copy">
-            <strong>新生大陆</strong>
-            <small>引水与首次创造</small>
+            <strong data-message="homeNewbornContinent">新生大陆</strong>
+            <small data-message="homeNewbornSummary">引水与首次创造</small>
           </span>
         </button>
         <button
@@ -137,8 +167,10 @@
           data-home-world-seed="JIEYA-THRIVING-MEADOW-1"
         >
           <span class="home-world-card-copy">
-            <strong>丰境湖原</strong>
-            <small>观察三层生命互相回应</small>
+            <strong data-message="homeThrivingLakePlain">丰境湖原</strong>
+            <small data-message="homeThrivingLakeSummary"
+              >观察三层生命互相回应</small
+            >
           </span>
         </button>
         <button
@@ -148,12 +180,14 @@
           aria-expanded="false"
           aria-controls="home-catalog-panel"
         >
-          <span>查看全部</span>
+          <span data-message="homeViewAll">查看全部</span>
           <i class="ph ph-arrow-right" aria-hidden="true"></i>
         </button>
       </section>
 
-      <p class="home-preview-version">公开预览 0.156.0</p>
+      <p class="home-preview-version" data-message="homePreviewVersion">
+        公开预览 0.157.0
+      </p>
       <output
         class="home-local-status"
         data-home-local-status
@@ -162,7 +196,9 @@
         aria-atomic="true"
       >
         <i class="ph ph-plant" aria-hidden="true"></i>
-        <span>本地存档 · 离线检查中</span>
+        <span data-message="homeLocalSavedOfflineChecking"
+          >本地存档 · 离线检查中</span
+        >
       </output>
 
       <section
@@ -174,21 +210,24 @@
       >
         <header class="home-panel-header">
           <div>
-            <p>当前设备</p>
-            <h2 id="home-settings-title">设备设置</h2>
+            <p data-message="homeSettingsEyebrow">当前设备</p>
+            <h2 id="home-settings-title" data-message="homeSettingsTitle">
+              设备设置
+            </h2>
           </div>
           <button
             class="home-panel-close"
             type="button"
             data-home-panel-close
             aria-label="关闭设置"
+            data-message-aria-label="homeSettingsClose"
           >
             <i class="ph ph-x" aria-hidden="true"></i>
           </button>
         </header>
         <div class="home-settings-grid">
           <label>
-            <span>主音量</span>
+            <span data-message="homeMasterVolume">主音量</span>
             <span class="home-setting-inline">
               <input
                 type="range"
@@ -203,18 +242,24 @@
           </label>
           <label class="home-setting-check">
             <input type="checkbox" data-home-player-muted />
-            <span>静音</span>
+            <span data-message="homeMuted">静音</span>
           </label>
           <label>
-            <span>动态效果</span>
+            <span data-message="homeMotion">动态效果</span>
             <select data-home-player-motion>
-              <option value="system">跟随系统</option>
-              <option value="full">完整动态</option>
-              <option value="reduced">减少动态</option>
+              <option value="system" data-message="homeMotionSystem">
+                跟随系统
+              </option>
+              <option value="full" data-message="homeMotionFull">
+                完整动态
+              </option>
+              <option value="reduced" data-message="homeMotionReduced">
+                减少动态
+              </option>
             </select>
           </label>
           <label>
-            <span>文字大小</span>
+            <span data-message="homeTextScale">文字大小</span>
             <select data-home-player-text-scale>
               <option value="100">100%</option>
               <option value="112">112%</option>
@@ -222,23 +267,38 @@
             </select>
           </label>
           <label>
-            <span>配色辨识</span>
+            <span data-message="homeColorVision">配色辨识</span>
             <select data-home-player-color-vision>
-              <option value="standard">标准</option>
-              <option value="red-green">红绿色弱辅助</option>
-              <option value="blue-yellow">蓝黄色弱辅助</option>
-              <option value="high-contrast">高对比</option>
+              <option value="standard" data-message="homeColorStandard">
+                标准
+              </option>
+              <option value="red-green" data-message="homeColorRedGreen">
+                红绿色弱辅助
+              </option>
+              <option value="blue-yellow" data-message="homeColorBlueYellow">
+                蓝黄色弱辅助
+              </option>
+              <option
+                value="high-contrast"
+                data-message="homeColorHighContrast"
+              >
+                高对比
+              </option>
             </select>
           </label>
           <label>
-            <span>显示性能</span>
+            <span data-message="homePerformance">显示性能</span>
             <select data-home-player-performance>
-              <option value="standard">标准</option>
-              <option value="reduced">低性能</option>
+              <option value="standard" data-message="homePerformanceStandard">
+                标准
+              </option>
+              <option value="reduced" data-message="homePerformanceReduced">
+                低性能
+              </option>
             </select>
           </label>
         </div>
-        <p class="home-panel-note">
+        <p class="home-panel-note" data-message="homePreferencesNote">
           偏好只保存在当前设备，不进入世界存档或 .jieya。
         </p>
       </section>
@@ -252,23 +312,51 @@
       >
         <header class="home-panel-header">
           <div>
-            <p>界面语言</p>
-            <h2 id="home-language-title">语言</h2>
+            <p data-message="homeLanguageEyebrow">界面语言</p>
+            <h2 id="home-language-title" data-message="homeLanguageTitle">
+              语言
+            </h2>
           </div>
           <button
             class="home-panel-close"
             type="button"
             data-home-panel-close
             aria-label="关闭语言选择"
+            data-message-aria-label="homeLanguageClose"
           >
             <i class="ph ph-x" aria-hidden="true"></i>
           </button>
         </header>
-        <button class="home-language-option" type="button" aria-pressed="true">
-          <span>简体中文</span>
-          <small>当前可用</small>
+        <button
+          class="home-language-option"
+          type="button"
+          data-home-locale="zh-CN"
+          aria-pressed="true"
+        >
+          <span data-message="homeLanguageSimplifiedChinese">简体中文</span>
+          <small data-home-language-selected data-message="homeLanguageSelected"
+            >当前语言</small
+          >
         </button>
-        <p class="home-panel-note">更多语言将在后续版本提供。</p>
+        <button
+          class="home-language-option"
+          type="button"
+          data-home-locale="en-US"
+          aria-pressed="false"
+        >
+          <span data-message="homeLanguageEnglish">English</span>
+          <small data-home-language-selected hidden></small>
+        </button>
+        <p class="home-panel-note" data-message="homeLanguageChoose">
+          选择后主页与游戏会立即同步。
+        </p>
+        <output
+          class="home-panel-note"
+          data-home-language-status
+          data-message="homeLanguageSaved"
+          aria-live="polite"
+          >语言偏好已保存到当前设备。</output
+        >
       </section>
 
       <section
@@ -280,34 +368,54 @@
       >
         <header class="home-panel-header">
           <div>
-            <p>本地世界目录</p>
-            <h2 id="home-catalog-title">查看全部世界</h2>
+            <p data-message="homeCatalogEyebrow">本地世界目录</p>
+            <h2 id="home-catalog-title" data-message="homeCatalogTitle">
+              查看全部世界
+            </h2>
           </div>
           <button
             class="home-panel-close"
             type="button"
             data-home-panel-close
             aria-label="关闭世界目录"
+            data-message-aria-label="homeCatalogClose"
           >
             <i class="ph ph-x" aria-hidden="true"></i>
           </button>
         </header>
         <div class="home-catalog-scroll">
           <section aria-labelledby="home-featured-worlds-title">
-            <h3 id="home-featured-worlds-title">可玩世界</h3>
+            <h3
+              id="home-featured-worlds-title"
+              data-message="homeCatalogPlayable"
+            >
+              可玩世界
+            </h3>
             <div class="home-catalog-grid" data-home-catalog-featured></div>
           </section>
           <section aria-labelledby="home-classic-worlds-title">
-            <h3 id="home-classic-worlds-title">经典世界</h3>
+            <h3
+              id="home-classic-worlds-title"
+              data-message="homeCatalogClassic"
+            >
+              经典世界
+            </h3>
             <div class="home-catalog-grid" data-home-catalog-legacy></div>
           </section>
           <section
             class="home-manual-world"
             aria-labelledby="home-manual-seed-title"
           >
-            <h3 id="home-manual-seed-title">手动种子</h3>
+            <h3
+              id="home-manual-seed-title"
+              data-message="homeCatalogManualSeed"
+            >
+              手动种子
+            </h3>
             <label>
-              <span>已发布世界种子</span>
+              <span data-message="homeCatalogPublishedSeed"
+                >已发布世界种子</span
+              >
               <input
                 type="text"
                 autocomplete="off"
@@ -315,24 +423,40 @@
                 data-home-seed-input
               />
             </label>
-            <button type="button" data-home-seed-start>打开这个世界</button>
+            <button
+              type="button"
+              data-home-seed-start
+              data-message="homeCatalogOpenWorld"
+            >
+              打开这个世界
+            </button>
           </section>
           <section
             class="home-import-world"
             aria-labelledby="home-import-title"
           >
-            <h3 id="home-import-title">导入本地世界</h3>
-            <p>只在本机读取 `.jieya`；解析失败不会覆盖当前世界。</p>
+            <h3 id="home-import-title" data-message="homeCatalogImportTitle">
+              导入本地世界
+            </h3>
+            <p data-message="homeCatalogImportNote">
+              只在本机读取 `.jieya`；解析失败不会覆盖当前世界。
+            </p>
             <div class="home-import-actions">
               <button type="button" data-home-world-file-choose>
                 <i class="ph ph-upload-simple" aria-hidden="true"></i>
-                <span>选择 .jieya</span>
+                <span data-message="homeCatalogChooseFile">选择 .jieya</span>
               </button>
               <button type="button" data-home-world-file-confirm hidden>
-                确认导入并替换
+                <span data-message="homeCatalogConfirmImport"
+                  >确认导入并替换</span
+                >
               </button>
             </div>
-            <output data-home-world-file-status aria-live="polite"
+            <output
+              data-home-world-file-status
+              data-message="homeCatalogFileReady"
+              data-state="ready"
+              aria-live="polite"
               >世界文件：当前可用</output
             >
           </section>
@@ -347,23 +471,52 @@
       >
         <i class="ph ph-map-trifold" aria-hidden="true"></i>
         <div>
-          <h2 id="home-replacement-title">替换当前本地世界？</h2>
+          <h2 id="home-replacement-title" data-message="homeReplacementTitle">
+            替换当前本地世界？
+          </h2>
           <p id="home-replacement-message" data-home-replacement-message>
-            新世界只会在你确认后准备。
+            <span data-message="homeReplacementDefault"
+              >新世界只会在你确认后准备。</span
+            >
           </p>
         </div>
-        <button type="button" data-home-replacement-cancel>取消</button>
-        <button type="button" data-home-replacement-accept>确认替换</button>
+        <button
+          type="button"
+          data-home-replacement-cancel
+          data-message="homeCancel"
+        >
+          取消
+        </button>
+        <button
+          type="button"
+          data-home-replacement-accept
+          data-message="homeConfirmReplacement"
+        >
+          确认替换
+        </button>
       </dialog>
     </section>
 
     <section class="unsupported-screen" data-app-screen="unsupported-3d" hidden>
       <i class="ph ph-mountains" aria-hidden="true"></i>
-      <div class="unsupported-title" role="heading" aria-level="1">
+      <div
+        class="unsupported-title"
+        role="heading"
+        aria-level="1"
+        data-message="homeUnsupportedTitle"
+      >
         当前设备暂不支持 3D 地貌
       </div>
-      <p>你的本地世界仍安全保存在浏览器中。</p>
-      <button type="button" data-unsupported-return-home>返回主页</button>
+      <p data-message="homeUnsupportedWorldSafe">
+        你的本地世界仍安全保存在浏览器中。
+      </p>
+      <button
+        type="button"
+        data-unsupported-return-home
+        data-message="homeReturn"
+      >
+        返回主页
+      </button>
     </section>
 
     <main class="app-shell" data-app-screen="game">
@@ -373,8 +526,10 @@
           <h1 class="visually-hidden" data-message="title">界芽：星球观测局</h1>
           <div class="game-world-identity" aria-hidden="true">
             <i class="ph ph-plant" aria-hidden="true"></i>
-            <span>界芽</span>
-            <output data-hud-world-name>世界未启动</output>
+            <span data-message="homeBrandName">界芽</span>
+            <output data-hud-world-name data-message="worldNotStarted"
+              >世界未启动</output
+            >
           </div>
           <p class="description" data-message="description">
             选择工具，直接创造和改造世界。
@@ -387,7 +542,7 @@
           hidden
         >
           <i class="ph ph-arrow-left" aria-hidden="true"></i>
-          <span>返回主页</span>
+          <span data-message="homeReturn">返回主页</span>
         </button>
         <div
           class="game-hud-stats"
@@ -409,6 +564,7 @@
             data-hud-ecology-focus="plant"
             data-state="unavailable"
             aria-label="草本活跃格：世界未启动"
+            data-message-aria-label="worldOverviewPlantUnavailable"
             disabled
           >
             <span aria-hidden="true">♧</span>
@@ -423,6 +579,7 @@
             data-hud-ecology-focus="grazer"
             data-state="unavailable"
             aria-label="绒芽兽活跃格：世界未启动"
+            data-message-aria-label="worldOverviewGrazerUnavailable"
             disabled
           >
             <span aria-hidden="true">♞</span>
@@ -437,6 +594,7 @@
             data-hud-ecology-focus="fox"
             data-state="unavailable"
             aria-label="影尾狐活跃格：世界未启动"
+            data-message-aria-label="worldOverviewFoxUnavailable"
             disabled
           >
             <span aria-hidden="true">⌁</span>
@@ -510,6 +668,7 @@
             <span
               class="ecology-challenge-mode-status"
               data-ecology-challenge-mode-status="dry-valley"
+              data-message="challengeDryValleyOptional"
             >
               可选 · 复苏干谷
             </span>
@@ -530,6 +689,7 @@
             <span
               class="ecology-challenge-mode-status"
               data-ecology-challenge-mode-status="food-chain"
+              data-message="challengeFoodChainOptional"
             >
               可选 · 建立生态
             </span>
@@ -550,6 +710,7 @@
             <span
               class="ecology-challenge-mode-status"
               data-ecology-challenge-mode-status="pond"
+              data-message="challengePondOptional"
             >
               可选 · 亲手造湖
             </span>
@@ -569,6 +730,7 @@
             <span
               class="ecology-challenge-mode-status"
               data-ecology-challenge-mode-status="oasis"
+              data-message="challengeOasisOptional"
               >可选 · 亲手造绿洲</span
             >
           </button>
@@ -653,7 +815,11 @@
             <h3 data-dry-valley-adventure-crisis-title></h3>
             <p data-dry-valley-adventure-crisis-delta></p>
             <p data-dry-valley-adventure-crisis-cause></p>
-            <button type="button" data-dry-valley-adventure-crisis-acknowledge>
+            <button
+              type="button"
+              data-dry-valley-adventure-crisis-acknowledge
+              data-message="adventureCrisisRepair"
+            >
               我来修复
             </button>
           </section>
@@ -670,63 +836,85 @@
               <div
                 class="dry-valley-adventure-comparison"
                 aria-label="干谷复苏前后鹰眼对比"
+                data-message-aria-label="dryValleyComparisonLabel"
               >
                 <figure>
-                  <figcaption>初始干谷</figcaption>
+                  <figcaption data-message="dryValleyComparisonInitial">
+                    初始干谷
+                  </figcaption>
                   <canvas
                     width="256"
                     height="256"
                     data-dry-valley-adventure-initial-canvas
                     aria-label="初始干谷鹰眼图"
+                    data-message-aria-label="dryValleyComparisonInitialMap"
                   ></canvas>
                 </figure>
                 <figure>
-                  <figcaption>当前世界</figcaption>
+                  <figcaption data-message="dryValleyComparisonCurrent">
+                    当前世界
+                  </figcaption>
                   <canvas
                     width="256"
                     height="256"
                     data-dry-valley-adventure-current-canvas
                     aria-label="当前复苏世界鹰眼图"
+                    data-message-aria-label="dryValleyComparisonCurrentMap"
                   ></canvas>
                 </figure>
               </div>
               <dl class="dry-valley-adventure-stats">
                 <div>
-                  <dt>用时</dt>
+                  <dt data-message="dryValleyResultTicks">用时</dt>
                   <dd data-dry-valley-adventure-stat-ticks>—</dd>
                 </div>
                 <div>
-                  <dt>湿润水道</dt>
+                  <dt data-message="dryValleyResultWetChannel">湿润水道</dt>
                   <dd data-dry-valley-adventure-stat-water>—</dd>
                 </div>
                 <div>
-                  <dt>达标草甸</dt>
+                  <dt data-message="dryValleyResultMeadow">达标草甸</dt>
                   <dd data-dry-valley-adventure-stat-meadow>—</dd>
                 </div>
                 <div>
-                  <dt>真实取食</dt>
+                  <dt data-message="dryValleyResultFeeding">真实取食</dt>
                   <dd data-dry-valley-adventure-stat-feeding>—</dd>
                 </div>
                 <div>
-                  <dt>真实捕猎</dt>
+                  <dt data-message="dryValleyResultHunting">真实捕猎</dt>
                   <dd data-dry-valley-adventure-stat-hunting>—</dd>
                 </div>
               </dl>
               <p
                 class="dry-valley-adventure-emblem"
                 data-dry-valley-adventure-emblem
+                data-message="dryValleyEmblem"
               >
                 界芽印记 · 干谷复苏
               </p>
             </div>
             <div class="dry-valley-adventure-actions">
-              <button type="button" data-dry-valley-adventure-continue>
+              <button
+                type="button"
+                data-dry-valley-adventure-continue
+                data-message="adventureContinue"
+              >
                 继续
               </button>
-              <button type="button" data-dry-valley-adventure-forest hidden>
+              <button
+                type="button"
+                data-dry-valley-adventure-forest
+                data-message="dryValleyGoToForestRecovery"
+                hidden
+              >
                 前往林地复苏
               </button>
-              <button type="button" data-dry-valley-adventure-replay hidden>
+              <button
+                type="button"
+                data-dry-valley-adventure-replay
+                data-message="adventureReplay"
+                hidden
+              >
                 重新挑战
               </button>
             </div>
@@ -1038,7 +1226,12 @@
         data-message-aria-label="panelLabel"
       >
         <noscript>
-          <p class="status" data-noscript data-state="error">
+          <p
+            class="status"
+            data-noscript
+            data-state="error"
+            data-message="javascriptRequired"
+          >
             需要启用 JavaScript 才能创建和改造世界。启用后请刷新此页。
           </p>
         </noscript>
@@ -1070,22 +1263,27 @@
           <p
             class="first-creation-guide-instruction"
             data-first-creation-instruction
+            data-message="firstCreationGuideChooseTerrain"
             aria-live="polite"
           >
             先从底部工具坞选择“地形”。
           </p>
-          <ol class="first-creation-steps" aria-label="首次塑界三步">
+          <ol
+            class="first-creation-steps"
+            aria-label="首次塑界三步"
+            data-message-aria-label="firstCreationGuideStepsLabel"
+          >
             <li data-first-creation-step="lowland">
               <i class="ph ph-mountains" aria-hidden="true"></i>
-              <span>挖出低地</span>
+              <span data-message="firstCreationGuideStepDig">挖出低地</span>
             </li>
             <li data-first-creation-step="time">
               <i class="ph ph-clock" aria-hidden="true"></i>
-              <span>推动 +1</span>
+              <span data-message="firstCreationGuideStepAdvance">推动 +1</span>
             </li>
             <li data-first-creation-step="water">
               <i class="ph ph-drop" aria-hidden="true"></i>
-              <span>打开水文</span>
+              <span data-message="firstCreationGuideStepObserve">打开水文</span>
             </li>
           </ol>
           <button
@@ -1100,13 +1298,18 @@
         <aside
           class="world-wish-strip"
           aria-label="世界愿望条"
+          data-message-aria-label="worldWishStripLabel"
           data-world-wish-strip
           data-state="idle"
           hidden
         >
           <button type="button" data-world-wish-strip-action>
             <span aria-hidden="true">✦</span>
-            <strong data-world-wish-strip-label>选择下一愿望</strong>
+            <strong
+              data-world-wish-strip-label
+              data-message="adventureChooseWish"
+              >选择下一愿望</strong
+            >
           </button>
         </aside>
         <aside
@@ -1148,6 +1351,7 @@
               class="first-session-experiment-primary"
               type="button"
               data-first-session-experiment-action
+              data-message="firstSessionExperimentNext"
               disabled
             >
               下一实验
@@ -1222,6 +1426,7 @@
             class="zoom-status"
             id="zoom-status"
             data-zoom-status
+            data-message="zoomUnavailable"
             aria-live="polite"
           >
             当前缩放：世界未启动
@@ -1467,6 +1672,7 @@
                 class="brush-status"
                 id="brush-status"
                 data-brush-status
+                data-message="brushUnavailable"
                 aria-live="polite"
               >
                 画笔预览：世界未启动
@@ -1502,7 +1708,7 @@
                 disabled
               >
                 <span class="tool-button-icon" aria-hidden="true">▲</span>
-                <span>抬高</span>
+                <span data-message="terrainRaiseShort">抬高</span>
                 <kbd class="tool-shortcut-hint" aria-hidden="true">R</kbd>
               </button>
               <button
@@ -1517,7 +1723,7 @@
                 disabled
               >
                 <span class="tool-button-icon" aria-hidden="true">▼</span>
-                <span>挖低</span>
+                <span data-message="terrainLowerShort">挖低</span>
                 <kbd class="tool-shortcut-hint" aria-hidden="true">D</kbd>
               </button>
               <output
@@ -1552,7 +1758,7 @@
                 disabled
               >
                 <span class="tool-button-icon" aria-hidden="true">≋</span>
-                <span>加水</span>
+                <span data-message="surfaceWaterAddShort">加水</span>
                 <kbd class="tool-shortcut-hint" aria-hidden="true">A</kbd>
               </button>
               <button
@@ -1567,7 +1773,7 @@
                 disabled
               >
                 <span class="tool-button-icon" aria-hidden="true">⌁</span>
-                <span>排水</span>
+                <span data-message="surfaceWaterRemoveShort">排水</span>
                 <kbd class="tool-shortcut-hint" aria-hidden="true">S</kbd>
               </button>
               <output
@@ -1602,7 +1808,7 @@
                 disabled
               >
                 <span class="tool-button-icon" aria-hidden="true">☂</span>
-                <span>增雨</span>
+                <span data-message="rainfallIncreaseShort">增雨</span>
                 <kbd class="tool-shortcut-hint" aria-hidden="true">G</kbd>
               </button>
               <button
@@ -1617,7 +1823,7 @@
                 disabled
               >
                 <span class="tool-button-icon" aria-hidden="true">☀</span>
-                <span>减雨</span>
+                <span data-message="rainfallDecreaseShort">减雨</span>
                 <kbd class="tool-shortcut-hint" aria-hidden="true">H</kbd>
               </button>
               <button
@@ -1625,13 +1831,14 @@
                 type="button"
                 data-climate-action="IncreaseTemperature"
                 aria-label="升温 +1.0 摄氏度"
+                data-message-aria-label="temperatureIncrease"
                 aria-describedby="rainfall-status"
                 aria-keyshortcuts="U"
                 aria-pressed="false"
                 disabled
               >
                 <span class="tool-button-icon" aria-hidden="true">▲</span
-                ><span>升温</span
+                ><span data-message="temperatureIncreaseShort">升温</span
                 ><kbd class="tool-shortcut-hint" aria-hidden="true">U</kbd>
               </button>
               <button
@@ -1639,13 +1846,14 @@
                 type="button"
                 data-climate-action="DecreaseTemperature"
                 aria-label="降温 −1.0 摄氏度"
+                data-message-aria-label="temperatureDecrease"
                 aria-describedby="rainfall-status"
                 aria-keyshortcuts="J"
                 aria-pressed="false"
                 disabled
               >
                 <span class="tool-button-icon" aria-hidden="true">▼</span
-                ><span>降温</span
+                ><span data-message="temperatureDecreaseShort">降温</span
                 ><kbd class="tool-shortcut-hint" aria-hidden="true">J</kbd>
               </button>
               <button
@@ -1653,13 +1861,14 @@
                 type="button"
                 data-climate-action="IncreaseHumidity"
                 aria-label="增湿 +10 百分点"
+                data-message-aria-label="humidityIncrease"
                 aria-describedby="rainfall-status"
                 aria-keyshortcuts="Y"
                 aria-pressed="false"
                 disabled
               >
                 <span class="tool-button-icon" aria-hidden="true">≈</span
-                ><span>增湿</span
+                ><span data-message="humidityIncreaseShort">增湿</span
                 ><kbd class="tool-shortcut-hint" aria-hidden="true">Y</kbd>
               </button>
               <button
@@ -1667,13 +1876,14 @@
                 type="button"
                 data-climate-action="DecreaseHumidity"
                 aria-label="除湿 −10 百分点"
+                data-message-aria-label="humidityDecrease"
                 aria-describedby="rainfall-status"
                 aria-keyshortcuts="K"
                 aria-pressed="false"
                 disabled
               >
                 <span class="tool-button-icon" aria-hidden="true">≋</span
-                ><span>除湿</span
+                ><span data-message="humidityDecreaseShort">除湿</span
                 ><kbd class="tool-shortcut-hint" aria-hidden="true">K</kbd>
               </button>
               <output
@@ -1737,11 +1947,13 @@
                 type="button"
                 data-pollinator-release-action
                 aria-label="投放花粉蜂"
+                data-message-aria-label="lifeToolPollinatorRelease"
                 aria-describedby="pioneer-plant-sowing-status"
                 aria-keyshortcuts="P"
                 aria-pressed="false"
                 disabled
                 title="投放花粉蜂（P）"
+                data-message-title="lifeToolPollinatorTitle"
               >
                 <span class="tool-button-icon" aria-hidden="true">✦</span>
                 <span data-life-tool-name data-message="lifeToolPollinatorName"
@@ -1754,11 +1966,13 @@
                 type="button"
                 data-decomposer-release-action
                 aria-label="投放腐光菌"
+                data-message-aria-label="lifeToolDecomposerRelease"
                 aria-describedby="pioneer-plant-sowing-status"
                 aria-keyshortcuts="M"
                 aria-pressed="false"
                 disabled
                 title="投放腐光菌（M）"
+                data-message-title="lifeToolDecomposerTitle"
               >
                 <span class="tool-button-icon" aria-hidden="true">❧</span>
                 <span data-life-tool-name data-message="lifeToolDecomposerName"
@@ -1771,10 +1985,12 @@
                 type="button"
                 data-woody-sapling-planting-action
                 aria-label="种下芽木"
+                data-message-aria-label="lifeToolWoodyPlant"
                 aria-describedby="pioneer-plant-sowing-status"
                 aria-pressed="false"
                 disabled
                 title="种下芽木；装备后在画布按 Enter 种植"
+                data-message-title="lifeToolWoodyTitle"
               >
                 <span class="tool-button-icon" aria-hidden="true">♠</span>
                 <span data-life-tool-name data-message="lifeToolWoodyName"
@@ -1786,11 +2002,13 @@
                 type="button"
                 data-shrub-release-action
                 aria-label="投放灌木"
+                data-message-aria-label="lifeToolShrubRelease"
                 aria-describedby="pioneer-plant-sowing-status"
                 aria-keyshortcuts="V"
                 aria-pressed="false"
                 disabled
                 title="投放灌木（V）"
+                data-message-title="lifeToolShrubTitle"
               >
                 <span class="tool-button-icon" aria-hidden="true">♣</span>
                 <span data-life-tool-name data-message="lifeToolShrubName"
@@ -1857,19 +2075,23 @@
             data-message-aria-label="persistenceControlsLabel"
           >
             <section class="hud-history-home" data-hud-history-home>
-              <b>历史与工具</b>
+              <b data-message="historyToolsTitle">历史与工具</b>
               <section
                 class="forest-floor-challenge"
                 data-forest-floor-challenge
               >
-                <b>挑战：林地复苏</b>
-                <p data-forest-floor-challenge-status>
+                <b data-message="forestChallengeTitle">挑战：林地复苏</b>
+                <p
+                  data-forest-floor-challenge-status
+                  data-message="forestReadyDescription"
+                >
                   在当前格开始，依次培育芽木、制造枯落、分解回肥并让芽木续长。
                 </p>
                 <button
                   class="zoom-button"
                   type="button"
                   data-forest-floor-challenge-action
+                  data-message="forestReadyAction"
                   disabled
                 >
                   从当前格开始
@@ -1916,7 +2138,7 @@
               >
                 <p>
                   <strong data-message="previewVersion"
-                    >公开预览 0.156.0 · MVP Candidate</strong
+                    >公开预览 0.157.0 · MVP Candidate</strong
                   >
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
@@ -2065,6 +2287,7 @@
               <output
                 class="local-codex-status"
                 data-local-codex-status
+                data-message="localCodexEmpty"
                 aria-live="polite"
               >
                 尚未解锁图鉴
@@ -2086,12 +2309,28 @@
               <label>
                 <span data-message="seedWorldPresetLabel">世界预设</span>
                 <select data-seed-world-select disabled>
-                  <option value="">手动输入已发布种子</option>
-                  <option value="JIEYA-LOCAL-FIRST-1">初始界芽</option>
-                  <option value="JIEYA-NEWBORN-CONTINENT-1" selected>
+                  <option value="" data-message="seedWorldManualOption">
+                    手动输入已发布种子
+                  </option>
+                  <option
+                    value="JIEYA-LOCAL-FIRST-1"
+                    data-message="seedWorldInitialName"
+                  >
+                    初始界芽
+                  </option>
+                  <option
+                    value="JIEYA-NEWBORN-CONTINENT-1"
+                    data-message="seedWorldNewbornName"
+                    selected
+                  >
                     新生大陆
                   </option>
-                  <option value="JIEYA-FLOATING-BASIN-1">浮岛盆地</option>
+                  <option
+                    value="JIEYA-FLOATING-BASIN-1"
+                    data-message="seedWorldFloatingBasinName"
+                  >
+                    浮岛盆地
+                  </option>
                 </select>
               </label>
               <label>
@@ -2294,6 +2533,7 @@
                   class="session-time-anchor-list"
                   data-session-time-anchor-list
                   aria-label="本次会话的时间锚"
+                  data-message-aria-label="sessionTimeAnchorsListLabel"
                 ></ol>
                 <output
                   class="session-time-anchor-status"
@@ -2550,6 +2790,7 @@
               id="jump-feedback"
               data-jump-feedback
               data-state="error"
+              data-message="jumpUnavailable"
               aria-live="polite"
             >
               坐标跳转：世界未启动
@@ -2607,6 +2848,7 @@
                 <span
                   data-message="ecologyWorldPulseLayerAll"
                   data-compact-label="全"
+                  data-message-compact-label="ecologyWorldPulseLayerAllCompact"
                   >全部</span
                 >
                 <span
@@ -2625,6 +2867,7 @@
                 <span
                   data-message="ecologyWorldPulseLayerPlant"
                   data-compact-label="草"
+                  data-message-compact-label="ecologyWorldPulseLayerPlantCompact"
                   >草本</span
                 >
                 <span
@@ -2643,6 +2886,7 @@
                 <span
                   data-message="ecologyWorldPulseLayerGrazer"
                   data-compact-label="兽"
+                  data-message-compact-label="ecologyWorldPulseLayerGrazerCompact"
                   >绒芽兽</span
                 >
                 <span
@@ -2661,6 +2905,7 @@
                 <span
                   data-message="ecologyWorldPulseLayerFox"
                   data-compact-label="狐"
+                  data-message-compact-label="ecologyWorldPulseLayerFoxCompact"
                   >影尾狐</span
                 >
                 <span
@@ -2679,6 +2924,7 @@
                 <span
                   data-message="ecologyWorldPulseLayerForestFloor"
                   data-compact-label="林"
+                  data-message-compact-label="ecologyWorldPulseLayerForestFloorCompact"
                   >林地循环</span
                 >
                 <span
@@ -2721,16 +2967,22 @@
               type="button"
               data-world-goal-tracker-action
               aria-label="世界目标：当前不可用"
+              data-message-aria-label="worldGoalUnavailable"
               aria-keyshortcuts="F"
               disabled
             >
-              <span data-world-goal-tracker-action-label>前往目标</span>
+              <span
+                data-world-goal-tracker-action-label
+                data-message="goToTarget"
+                >前往目标</span
+              >
               <kbd aria-hidden="true">F</kbd>
             </button>
             <button
               class="world-goal-tracker-action grazer-migration-observe-next"
               type="button"
               data-grazer-migration-observe-next
+              data-message="worldGoalContinueObservation"
               hidden
               disabled
             >
@@ -2871,6 +3123,7 @@
               <summary
                 class="grazer-migration-invalidation-toggle"
                 data-grazer-migration-invalidation-toggle
+                data-message="worldGoalTrackChanges"
               >
                 追踪变化
               </summary>
@@ -2918,6 +3171,7 @@
               class="world-discovery-chain"
               data-world-discovery-chain
               aria-label="食物链：先锋草本到绒芽兽到影尾狐"
+              data-message-aria-label="worldDiscoveryFoodChainLabel"
             >
               <span data-message="worldDiscoveryPlant">先锋草本</span>
               <span aria-hidden="true">→</span>
@@ -3044,6 +3298,7 @@
               class="world-discovery-observe"
               type="button"
               data-climate-grazer-food-repair
+              data-message="climateGrazerFoodRepairAction"
             >
               提高湿度并修复
             </button>
@@ -3074,14 +3329,25 @@
           >
             <div class="world-discovery-journal-heading">
               <div>
-                <p class="world-discovery-eyebrow">本局记录</p>
-                <h2 id="world-discovery-journal-title">世界发现簿</h2>
+                <p
+                  class="world-discovery-eyebrow"
+                  data-message="worldDiscoveryJournalEyebrow"
+                >
+                  本局记录
+                </p>
+                <h2
+                  id="world-discovery-journal-title"
+                  data-message="worldDiscoveryJournalTitle"
+                >
+                  世界发现簿
+                </h2>
               </div>
               <button
                 class="world-discovery-journal-close"
                 type="button"
                 data-world-discovery-journal-close
                 aria-label="收起世界发现簿"
+                data-message-aria-label="worldDiscoveryJournalClose"
                 disabled
               >
                 <span aria-hidden="true">×</span>
@@ -3214,6 +3480,7 @@
               <canvas
                 class="world-minimap-canvas"
                 data-world-minimap-canvas
+                data-message="worldMinimapUnavailable"
                 width="144"
                 height="144"
               >
@@ -3246,6 +3513,7 @@
               aria-describedby="selection-instructions selection-status zoom-status brush-status terrain-status surface-water-status rainfall-status simulation-status ecology-world-pulse-map-message"
               aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Enter Space Escape . Q P F I T W C L R D A S G H B N X 1 3 5 [ ]"
               aria-label="可选择的 64×64 世界网格"
+              data-message="canvasUnavailable"
               data-message-aria-label="canvasLabel"
             >
               当前浏览器无法显示 Canvas 世界网格。
@@ -3303,37 +3571,39 @@
                 </span>
                 <span>
                   <b aria-hidden="true">✿</b>
-                  <span>花株</span>
+                  <span data-message="observationFlowerLabel">花株</span>
                   <strong data-observation-readout-flowering-sprout>—</strong>
                 </span>
                 <span>
                   <b aria-hidden="true">✦</b>
-                  <span>花粉蜂</span>
+                  <span data-message="observationPollinatorLabel">花粉蜂</span>
                   <strong data-observation-readout-pollinator>—</strong>
                 </span>
                 <span>
                   <b aria-hidden="true">❧</b>
-                  <span>腐光菌</span>
+                  <span data-message="observationDecomposerLabel">腐光菌</span>
                   <strong data-observation-readout-decomposer>—</strong>
                 </span>
                 <span>
                   <b aria-hidden="true">◇</b>
-                  <span>土壤肥力</span>
+                  <span data-message="observationSoilFertilityLabel"
+                    >土壤肥力</span
+                  >
                   <strong data-observation-readout-soil-fertility>—</strong>
                 </span>
                 <span>
                   <b aria-hidden="true">⋰</b>
-                  <span>腐殖物</span>
+                  <span data-message="observationDetritusLabel">腐殖物</span>
                   <strong data-observation-readout-detritus-mass>—</strong>
                 </span>
                 <span>
                   <b aria-hidden="true">♠</b>
-                  <span>芽木</span>
+                  <span data-message="observationWoodyLabel">芽木</span>
                   <strong data-observation-readout-woody-plant>—</strong>
                 </span>
                 <span>
                   <b aria-hidden="true">♣</b>
-                  <span>灌木</span>
+                  <span data-message="observationShrubLabel">灌木</span>
                   <strong data-observation-readout-shrub>—</strong>
                 </span>
                 <span>
@@ -3404,6 +3674,7 @@
                 <output
                   class="density-status"
                   data-density-status
+                  data-message="densityUnavailable"
                   aria-live="polite"
                 >
                   信息密度：世界未启动
@@ -3439,31 +3710,31 @@
                   <dd data-observation-pioneer-plant>—</dd>
                 </div>
                 <div>
-                  <dt>花株</dt>
+                  <dt data-message="observationFlowerLabel">花株</dt>
                   <dd data-observation-flowering-sprout>—</dd>
                 </div>
                 <div>
-                  <dt>花粉蜂</dt>
+                  <dt data-message="observationPollinatorLabel">花粉蜂</dt>
                   <dd data-observation-pollinator>—</dd>
                 </div>
                 <div>
-                  <dt>腐光菌</dt>
+                  <dt data-message="observationDecomposerLabel">腐光菌</dt>
                   <dd data-observation-decomposer>—</dd>
                 </div>
                 <div>
-                  <dt>土壤肥力</dt>
+                  <dt data-message="observationSoilFertilityLabel">土壤肥力</dt>
                   <dd data-observation-soil-fertility>—</dd>
                 </div>
                 <div>
-                  <dt>腐殖物</dt>
+                  <dt data-message="observationDetritusLabel">腐殖物</dt>
                   <dd data-observation-detritus-mass>—</dd>
                 </div>
                 <div>
-                  <dt>芽木覆盖</dt>
+                  <dt data-message="observationWoodyCoverLabel">芽木覆盖</dt>
                   <dd data-observation-woody-plant>—</dd>
                 </div>
                 <div>
-                  <dt>灌木</dt>
+                  <dt data-message="observationShrubLabel">灌木</dt>
                   <dd data-observation-shrub>—</dd>
                 </div>
                 <div>
@@ -3569,7 +3840,11 @@
                   </button>
                 </div>
               </div>
-              <p class="cell-observation-summary" data-observation-summary>
+              <p
+                class="cell-observation-summary"
+                data-observation-summary
+                data-message="worldNotStarted"
+              >
                 世界未启动
               </p>
               <dl class="cell-observation-list" data-observation-details hidden>
@@ -3587,7 +3862,9 @@
                 </div>
                 <div>
                   <dt data-message="observationPositionLabel">位置</dt>
-                  <dd data-observation-position>世界未启动</dd>
+                  <dd data-observation-position data-message="worldNotStarted">
+                    世界未启动
+                  </dd>
                 </div>
               </dl>
             </section>
@@ -3611,6 +3888,7 @@
           class="selection-status"
           id="selection-status"
           data-selection-status
+          data-message="selectionUnavailable"
           aria-live="polite"
         >
           当前选择：世界未启动
