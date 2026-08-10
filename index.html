@@ -40,8 +40,8 @@
       crossorigin
     />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-Dd0gCyZo.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-BiEI7kBf.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-0xIjgD0s.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DWtxY0j3.css">
   </head>
   <body>
     <main class="app-shell">
@@ -335,10 +335,77 @@
             <h3 data-dry-valley-adventure-result-title></h3>
             <p data-dry-valley-adventure-result-delta></p>
             <p data-dry-valley-adventure-result-cause></p>
-            <button type="button" data-dry-valley-adventure-continue>
-              继续
-            </button>
+            <div data-dry-valley-adventure-final hidden>
+              <div
+                class="dry-valley-adventure-comparison"
+                aria-label="干谷复苏前后鹰眼对比"
+              >
+                <figure>
+                  <figcaption>初始干谷</figcaption>
+                  <canvas
+                    width="256"
+                    height="256"
+                    data-dry-valley-adventure-initial-canvas
+                    aria-label="初始干谷鹰眼图"
+                  ></canvas>
+                </figure>
+                <figure>
+                  <figcaption>当前世界</figcaption>
+                  <canvas
+                    width="256"
+                    height="256"
+                    data-dry-valley-adventure-current-canvas
+                    aria-label="当前复苏世界鹰眼图"
+                  ></canvas>
+                </figure>
+              </div>
+              <dl class="dry-valley-adventure-stats">
+                <div>
+                  <dt>用时</dt>
+                  <dd data-dry-valley-adventure-stat-ticks>—</dd>
+                </div>
+                <div>
+                  <dt>湿润水道</dt>
+                  <dd data-dry-valley-adventure-stat-water>—</dd>
+                </div>
+                <div>
+                  <dt>达标草甸</dt>
+                  <dd data-dry-valley-adventure-stat-meadow>—</dd>
+                </div>
+                <div>
+                  <dt>真实取食</dt>
+                  <dd data-dry-valley-adventure-stat-feeding>—</dd>
+                </div>
+                <div>
+                  <dt>真实捕猎</dt>
+                  <dd data-dry-valley-adventure-stat-hunting>—</dd>
+                </div>
+              </dl>
+              <p
+                class="dry-valley-adventure-emblem"
+                data-dry-valley-adventure-emblem
+              >
+                界芽印记 · 干谷复苏
+              </p>
+            </div>
+            <div class="dry-valley-adventure-actions">
+              <button type="button" data-dry-valley-adventure-continue>
+                继续
+              </button>
+              <button type="button" data-dry-valley-adventure-forest hidden>
+                前往林地复苏
+              </button>
+              <button type="button" data-dry-valley-adventure-replay hidden>
+                重新挑战
+              </button>
+            </div>
           </section>
+          <output
+            class="dry-valley-adventure-storage-warning"
+            data-dry-valley-adventure-storage-warning
+            aria-live="polite"
+            hidden
+          ></output>
           <output
             class="dry-valley-adventure-feedback"
             data-dry-valley-adventure-feedback
@@ -1518,7 +1585,7 @@
               >
                 <p>
                   <strong data-message="previewVersion"
-                    >公开预览 0.155.0 · MVP Candidate</strong
+                    >公开预览 0.156.0 · MVP Candidate</strong
                   >
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
