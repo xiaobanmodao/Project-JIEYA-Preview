@@ -51,8 +51,8 @@
       crossorigin
     />
     <title data-message="title">界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-32vrOc1h.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-CWOGoLpn.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-BwUpkaEW.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-Bw2HxbT8.css">
   </head>
   <body>
     <section
@@ -186,7 +186,7 @@
       </section>
 
       <p class="home-preview-version" data-message="homePreviewVersion">
-        公开预览 0.157.0
+        公开预览 0.158.0
       </p>
       <output
         class="home-local-status"
@@ -1461,6 +1461,36 @@
           >
             <i class="ph ph-crosshair" aria-hidden="true"></i>
           </button>
+          <div class="world-3d-camera-controls" data-world-3d-camera-controls>
+            <button
+              class="zoom-button"
+              type="button"
+              data-world-3d-rotate="counter-clockwise"
+              aria-label="向左旋转 90°"
+              aria-keyshortcuts="Q"
+              data-message-aria-label="world3dRotateCounterClockwise"
+              disabled
+            >
+              <i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i>
+            </button>
+            <output
+              class="world-3d-mode-status"
+              data-world-3d-mode-status
+              data-message="world3dModeStatus"
+              >3D 开发预览</output
+            >
+            <button
+              class="zoom-button"
+              type="button"
+              data-world-3d-rotate="clockwise"
+              aria-label="向右旋转 90°"
+              aria-keyshortcuts="E"
+              data-message-aria-label="world3dRotateClockwise"
+              disabled
+            >
+              <i class="ph ph-arrow-clockwise" aria-hidden="true"></i>
+            </button>
+          </div>
           <p class="camera-hint" data-message="cameraHint">
             滚轮缩放 · 空格/中键拖动
           </p>
@@ -2138,7 +2168,7 @@
               >
                 <p>
                   <strong data-message="previewVersion"
-                    >公开预览 0.157.0 · MVP Candidate</strong
+                    >公开预览 0.158.0 · MVP Candidate</strong
                   >
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
@@ -3511,7 +3541,7 @@
               role="group"
               tabindex="0"
               aria-describedby="selection-instructions selection-status zoom-status brush-status terrain-status surface-water-status rainfall-status simulation-status ecology-world-pulse-map-message"
-              aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Enter Space Escape . Q P F I T W C L R D A S G H B N X 1 3 5 [ ]"
+              aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Enter Space Escape . Q E P F I T W C L R D A S G H B N X 1 3 5 [ ]"
               aria-label="可选择的 64×64 世界网格"
               data-message="canvasUnavailable"
               data-message-aria-label="canvasLabel"

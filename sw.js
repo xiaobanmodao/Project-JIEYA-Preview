@@ -1,7 +1,7 @@
 const CACHE_PREFIX = "jieya-app-shell-";
-const CACHE_NAME = "jieya-app-shell-beb5826e19755938";
+const CACHE_NAME = "jieya-app-shell-25840a7dc75b8ea0";
 const ROOT_PATH = "/Project-JIEYA-Preview/";
-const PRECACHE_PATHS = Object.freeze(["/Project-JIEYA-Preview/","/Project-JIEYA-Preview/index.html","/Project-JIEYA-Preview/manifest.webmanifest","/Project-JIEYA-Preview/jieya-icon.svg","/Project-JIEYA-Preview/jieya-icon-192.png","/Project-JIEYA-Preview/jieya-icon-512.png","/Project-JIEYA-Preview/assets/Phosphor-DtdjzkpE.woff2","/Project-JIEYA-Preview/assets/index-32vrOc1h.js","/Project-JIEYA-Preview/assets/index-CWOGoLpn.css"]);
+const PRECACHE_PATHS = Object.freeze(["/Project-JIEYA-Preview/","/Project-JIEYA-Preview/index.html","/Project-JIEYA-Preview/manifest.webmanifest","/Project-JIEYA-Preview/jieya-icon.svg","/Project-JIEYA-Preview/jieya-icon-192.png","/Project-JIEYA-Preview/jieya-icon-512.png","/Project-JIEYA-Preview/assets/Phosphor-DtdjzkpE.woff2","/Project-JIEYA-Preview/assets/browser-world-renderer-3d-DldivA_x.js","/Project-JIEYA-Preview/assets/index-Bw2HxbT8.css","/Project-JIEYA-Preview/assets/index-BwUpkaEW.js"]);
 const PRECACHE_PATH_SET = new Set(PRECACHE_PATHS);
 
 self.addEventListener("install", (event) => {
