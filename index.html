@@ -40,11 +40,333 @@
       crossorigin
     />
     <title>界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-0xIjgD0s.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DWtxY0j3.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-BheYw3h_.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-DyrA1GEt.css">
   </head>
   <body>
-    <main class="app-shell">
+    <section
+      class="home-screen"
+      data-app-screen="home"
+      aria-labelledby="home-brand-title"
+      aria-busy="true"
+      inert
+      hidden
+    >
+      <div class="home-screen-shade" aria-hidden="true"></div>
+      <nav class="home-utility-nav" aria-label="主页工具">
+        <button
+          class="home-utility-button"
+          type="button"
+          data-home-panel-toggle="settings"
+          aria-expanded="false"
+          aria-controls="home-settings-panel"
+        >
+          <i class="ph ph-gear" aria-hidden="true"></i>
+          <span>设置</span>
+        </button>
+        <button
+          class="home-utility-button"
+          type="button"
+          data-home-panel-toggle="language"
+          aria-expanded="false"
+          aria-controls="home-language-panel"
+        >
+          <i class="ph ph-translate" aria-hidden="true"></i>
+          <span>语言 · 简体中文</span>
+        </button>
+      </nav>
+
+      <header class="home-brand">
+        <div class="home-brand-mark" aria-hidden="true">
+          <i class="ph ph-plant"></i>
+        </div>
+        <div
+          class="home-brand-title"
+          id="home-brand-title"
+          role="heading"
+          aria-level="1"
+        >
+          界芽
+        </div>
+        <p>
+          <span aria-hidden="true">✦</span> 星球观测局
+          <span aria-hidden="true">✦</span>
+        </p>
+      </header>
+
+      <button class="home-continue" type="button" data-home-continue hidden>
+        <i class="ph ph-plant" aria-hidden="true"></i>
+        <span data-home-continue-label>尚无可继续的世界</span>
+        <i class="ph ph-arrow-right" aria-hidden="true"></i>
+      </button>
+
+      <section class="home-world-rail" aria-label="选择要前往的世界">
+        <button
+          class="home-world-card home-world-card-start"
+          type="button"
+          data-home-world-seed="JIEYA-LOCAL-FIRST-1"
+        >
+          <i class="ph ph-plant" aria-hidden="true"></i>
+          <strong>开始冒险</strong>
+          <span class="home-card-divider" aria-hidden="true"></span>
+          <small>从空白界域开始亲手创造</small>
+        </button>
+        <button
+          class="home-world-card home-world-card-image home-world-card-dry-valley"
+          type="button"
+          data-home-world-seed="JIEYA-DRY-VALLEY-RESCUE-2"
+        >
+          <span class="home-world-card-copy">
+            <strong>干谷救援</strong>
+            <small>10–15 分钟 · 三幕生态复苏</small>
+          </span>
+        </button>
+        <button
+          class="home-world-card home-world-card-image home-world-card-newborn"
+          type="button"
+          data-home-world-seed="JIEYA-NEWBORN-CONTINENT-2"
+        >
+          <span class="home-world-card-copy">
+            <strong>新生大陆</strong>
+            <small>引水与首次创造</small>
+          </span>
+        </button>
+        <button
+          class="home-world-card home-world-card-image home-world-card-lake"
+          type="button"
+          data-home-world-seed="JIEYA-THRIVING-MEADOW-1"
+        >
+          <span class="home-world-card-copy">
+            <strong>丰境湖原</strong>
+            <small>观察三层生命互相回应</small>
+          </span>
+        </button>
+        <button
+          class="home-view-all"
+          type="button"
+          data-home-panel-toggle="catalog"
+          aria-expanded="false"
+          aria-controls="home-catalog-panel"
+        >
+          <span>查看全部</span>
+          <i class="ph ph-arrow-right" aria-hidden="true"></i>
+        </button>
+      </section>
+
+      <p class="home-preview-version">公开预览 0.156.0</p>
+      <output
+        class="home-local-status"
+        data-home-local-status
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <i class="ph ph-plant" aria-hidden="true"></i>
+        <span>本地存档 · 离线检查中</span>
+      </output>
+
+      <section
+        class="home-panel home-settings-panel"
+        id="home-settings-panel"
+        data-home-panel="settings"
+        aria-labelledby="home-settings-title"
+        hidden
+      >
+        <header class="home-panel-header">
+          <div>
+            <p>当前设备</p>
+            <h2 id="home-settings-title">设备设置</h2>
+          </div>
+          <button
+            class="home-panel-close"
+            type="button"
+            data-home-panel-close
+            aria-label="关闭设置"
+          >
+            <i class="ph ph-x" aria-hidden="true"></i>
+          </button>
+        </header>
+        <div class="home-settings-grid">
+          <label>
+            <span>主音量</span>
+            <span class="home-setting-inline">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                value="70"
+                data-home-player-volume
+              />
+              <output data-home-player-volume-output>70%</output>
+            </span>
+          </label>
+          <label class="home-setting-check">
+            <input type="checkbox" data-home-player-muted />
+            <span>静音</span>
+          </label>
+          <label>
+            <span>动态效果</span>
+            <select data-home-player-motion>
+              <option value="system">跟随系统</option>
+              <option value="full">完整动态</option>
+              <option value="reduced">减少动态</option>
+            </select>
+          </label>
+          <label>
+            <span>文字大小</span>
+            <select data-home-player-text-scale>
+              <option value="100">100%</option>
+              <option value="112">112%</option>
+              <option value="125">125%</option>
+            </select>
+          </label>
+          <label>
+            <span>配色辨识</span>
+            <select data-home-player-color-vision>
+              <option value="standard">标准</option>
+              <option value="red-green">红绿色弱辅助</option>
+              <option value="blue-yellow">蓝黄色弱辅助</option>
+              <option value="high-contrast">高对比</option>
+            </select>
+          </label>
+          <label>
+            <span>显示性能</span>
+            <select data-home-player-performance>
+              <option value="standard">标准</option>
+              <option value="reduced">低性能</option>
+            </select>
+          </label>
+        </div>
+        <p class="home-panel-note">
+          偏好只保存在当前设备，不进入世界存档或 .jieya。
+        </p>
+      </section>
+
+      <section
+        class="home-panel home-language-panel"
+        id="home-language-panel"
+        data-home-panel="language"
+        aria-labelledby="home-language-title"
+        hidden
+      >
+        <header class="home-panel-header">
+          <div>
+            <p>界面语言</p>
+            <h2 id="home-language-title">语言</h2>
+          </div>
+          <button
+            class="home-panel-close"
+            type="button"
+            data-home-panel-close
+            aria-label="关闭语言选择"
+          >
+            <i class="ph ph-x" aria-hidden="true"></i>
+          </button>
+        </header>
+        <button class="home-language-option" type="button" aria-pressed="true">
+          <span>简体中文</span>
+          <small>当前可用</small>
+        </button>
+        <p class="home-panel-note">更多语言将在后续版本提供。</p>
+      </section>
+
+      <section
+        class="home-panel home-catalog-panel"
+        id="home-catalog-panel"
+        data-home-panel="catalog"
+        aria-labelledby="home-catalog-title"
+        hidden
+      >
+        <header class="home-panel-header">
+          <div>
+            <p>本地世界目录</p>
+            <h2 id="home-catalog-title">查看全部世界</h2>
+          </div>
+          <button
+            class="home-panel-close"
+            type="button"
+            data-home-panel-close
+            aria-label="关闭世界目录"
+          >
+            <i class="ph ph-x" aria-hidden="true"></i>
+          </button>
+        </header>
+        <div class="home-catalog-scroll">
+          <section aria-labelledby="home-featured-worlds-title">
+            <h3 id="home-featured-worlds-title">可玩世界</h3>
+            <div class="home-catalog-grid" data-home-catalog-featured></div>
+          </section>
+          <section aria-labelledby="home-classic-worlds-title">
+            <h3 id="home-classic-worlds-title">经典世界</h3>
+            <div class="home-catalog-grid" data-home-catalog-legacy></div>
+          </section>
+          <section
+            class="home-manual-world"
+            aria-labelledby="home-manual-seed-title"
+          >
+            <h3 id="home-manual-seed-title">手动种子</h3>
+            <label>
+              <span>已发布世界种子</span>
+              <input
+                type="text"
+                autocomplete="off"
+                spellcheck="false"
+                data-home-seed-input
+              />
+            </label>
+            <button type="button" data-home-seed-start>打开这个世界</button>
+          </section>
+          <section
+            class="home-import-world"
+            aria-labelledby="home-import-title"
+          >
+            <h3 id="home-import-title">导入本地世界</h3>
+            <p>只在本机读取 `.jieya`；解析失败不会覆盖当前世界。</p>
+            <div class="home-import-actions">
+              <button type="button" data-home-world-file-choose>
+                <i class="ph ph-upload-simple" aria-hidden="true"></i>
+                <span>选择 .jieya</span>
+              </button>
+              <button type="button" data-home-world-file-confirm hidden>
+                确认导入并替换
+              </button>
+            </div>
+            <output data-home-world-file-status aria-live="polite"
+              >世界文件：当前可用</output
+            >
+          </section>
+        </div>
+      </section>
+
+      <dialog
+        class="home-replacement-confirm"
+        data-home-replacement-confirm
+        aria-labelledby="home-replacement-title"
+        aria-describedby="home-replacement-message"
+      >
+        <i class="ph ph-map-trifold" aria-hidden="true"></i>
+        <div>
+          <h2 id="home-replacement-title">替换当前本地世界？</h2>
+          <p id="home-replacement-message" data-home-replacement-message>
+            新世界只会在你确认后准备。
+          </p>
+        </div>
+        <button type="button" data-home-replacement-cancel>取消</button>
+        <button type="button" data-home-replacement-accept>确认替换</button>
+      </dialog>
+    </section>
+
+    <section class="unsupported-screen" data-app-screen="unsupported-3d" hidden>
+      <i class="ph ph-mountains" aria-hidden="true"></i>
+      <div class="unsupported-title" role="heading" aria-level="1">
+        当前设备暂不支持 3D 地貌
+      </div>
+      <p>你的本地世界仍安全保存在浏览器中。</p>
+      <button type="button" data-unsupported-return-home>返回主页</button>
+    </section>
+
+    <main class="app-shell" data-app-screen="game">
       <header class="intro game-topbar">
         <div class="game-brand">
           <p class="eyebrow" data-message="eyebrow">塑界师 · 本地星球</p>
@@ -58,6 +380,15 @@
             选择工具，直接创造和改造世界。
           </p>
         </div>
+        <button
+          class="game-return-home"
+          type="button"
+          data-game-return-home
+          hidden
+        >
+          <i class="ph ph-arrow-left" aria-hidden="true"></i>
+          <span>返回主页</span>
+        </button>
         <div
           class="game-hud-stats"
           aria-label="世界总览"
