@@ -51,8 +51,8 @@
       crossorigin
     />
     <title data-message="title">界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-BwUpkaEW.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-Bw2HxbT8.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DbOaJNFI.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-D0KAzRc4.css">
   </head>
   <body>
     <section
@@ -186,7 +186,7 @@
       </section>
 
       <p class="home-preview-version" data-message="homePreviewVersion">
-        公开预览 0.158.0
+        公开预览 0.159.0
       </p>
       <output
         class="home-local-status"
@@ -294,6 +294,21 @@
               </option>
               <option value="reduced" data-message="homePerformanceReduced">
                 低性能
+              </option>
+            </select>
+          </label>
+          <label>
+            <span data-message="graphicsQualityLabel">3D 画质</span>
+            <select data-home-player-graphics-quality>
+              <option value="auto" data-message="graphicsQualityAuto">
+                自动
+              </option>
+              <option value="low" data-message="graphicsQualityLow">低</option>
+              <option value="medium" data-message="graphicsQualityMedium">
+                中
+              </option>
+              <option value="high" data-message="graphicsQualityHigh">
+                高
               </option>
             </select>
           </label>
@@ -567,7 +582,7 @@
             data-message-aria-label="worldOverviewPlantUnavailable"
             disabled
           >
-            <span aria-hidden="true">♧</span>
+            <i class="ph ph-plant" aria-hidden="true"></i>
             <span class="ecology-hud-label" data-message="worldOverviewPlant"
               >草本</span
             >
@@ -582,7 +597,7 @@
             data-message-aria-label="worldOverviewGrazerUnavailable"
             disabled
           >
-            <span aria-hidden="true">♞</span>
+            <i class="ph ph-rabbit" aria-hidden="true"></i>
             <span class="ecology-hud-label" data-message="worldOverviewGrazer"
               >绒芽兽</span
             >
@@ -597,7 +612,7 @@
             data-message-aria-label="worldOverviewFoxUnavailable"
             disabled
           >
-            <span aria-hidden="true">⌁</span>
+            <i class="ph ph-paw-print" aria-hidden="true"></i>
             <span class="ecology-hud-label" data-message="worldOverviewFox"
               >影尾狐</span
             >
@@ -1644,7 +1659,7 @@
                 aria-pressed="false"
                 disabled
               >
-                <span class="tool-button-icon" aria-hidden="true">♧</span>
+                <i class="ph ph-plant tool-button-icon" aria-hidden="true"></i>
                 <span data-message="observationLensLife">生灵</span>
               </button>
             </div>
@@ -1947,7 +1962,7 @@
                 aria-pressed="false"
                 disabled
               >
-                <span class="tool-button-icon" aria-hidden="true">♧</span>
+                <i class="ph ph-plant tool-button-icon" aria-hidden="true"></i>
                 <span
                   data-life-tool-name
                   data-message="lifeToolPioneerPlantName"
@@ -1966,7 +1981,7 @@
                 aria-pressed="false"
                 disabled
               >
-                <span class="tool-button-icon" aria-hidden="true">✿</span>
+                <i class="ph ph-flower tool-button-icon" aria-hidden="true"></i>
                 <span data-life-tool-name data-message="lifeToolFlowerName"
                   >花株</span
                 >
@@ -1985,7 +2000,10 @@
                 title="投放花粉蜂（P）"
                 data-message-title="lifeToolPollinatorTitle"
               >
-                <span class="tool-button-icon" aria-hidden="true">✦</span>
+                <i
+                  class="ph ph-butterfly tool-button-icon"
+                  aria-hidden="true"
+                ></i>
                 <span data-life-tool-name data-message="lifeToolPollinatorName"
                   >花粉蜂</span
                 >
@@ -2004,7 +2022,7 @@
                 title="投放腐光菌（M）"
                 data-message-title="lifeToolDecomposerTitle"
               >
-                <span class="tool-button-icon" aria-hidden="true">❧</span>
+                <i class="ph ph-leaf tool-button-icon" aria-hidden="true"></i>
                 <span data-life-tool-name data-message="lifeToolDecomposerName"
                   >腐光菌</span
                 >
@@ -2022,7 +2040,7 @@
                 title="种下芽木；装备后在画布按 Enter 种植"
                 data-message-title="lifeToolWoodyTitle"
               >
-                <span class="tool-button-icon" aria-hidden="true">♠</span>
+                <i class="ph ph-tree tool-button-icon" aria-hidden="true"></i>
                 <span data-life-tool-name data-message="lifeToolWoodyName"
                   >芽木</span
                 >
@@ -2040,7 +2058,10 @@
                 title="投放灌木（V）"
                 data-message-title="lifeToolShrubTitle"
               >
-                <span class="tool-button-icon" aria-hidden="true">♣</span>
+                <i
+                  class="ph ph-tree-evergreen tool-button-icon"
+                  aria-hidden="true"
+                ></i>
                 <span data-life-tool-name data-message="lifeToolShrubName"
                   >灌木</span
                 >
@@ -2057,7 +2078,7 @@
                 aria-pressed="false"
                 disabled
               >
-                <span class="tool-button-icon" aria-hidden="true">♞</span>
+                <i class="ph ph-rabbit tool-button-icon" aria-hidden="true"></i>
                 <span data-life-tool-name data-message="lifeToolGrazerName"
                   >绒芽兽</span
                 >
@@ -2074,7 +2095,10 @@
                 aria-pressed="false"
                 disabled
               >
-                <span class="tool-button-icon" aria-hidden="true">⌁</span>
+                <i
+                  class="ph ph-paw-print tool-button-icon"
+                  aria-hidden="true"
+                ></i>
                 <span data-life-tool-name data-message="lifeToolFoxName"
                   >影尾狐</span
                 >
@@ -2168,7 +2192,7 @@
               >
                 <p>
                   <strong data-message="previewVersion"
-                    >公开预览 0.158.0 · MVP Candidate</strong
+                    >公开预览 0.159.0 · MVP Candidate</strong
                   >
                   <span aria-hidden="true"> · </span>
                   <span data-message="previewPrivacy">
@@ -2274,6 +2298,23 @@
                       data-message="playerPerformanceReduced"
                     >
                       低性能
+                    </option>
+                  </select>
+                </label>
+                <label>
+                  <span data-message="graphicsQualityLabel">3D 画质</span>
+                  <select data-player-graphics-quality>
+                    <option value="auto" data-message="graphicsQualityAuto">
+                      自动
+                    </option>
+                    <option value="low" data-message="graphicsQualityLow">
+                      低
+                    </option>
+                    <option value="medium" data-message="graphicsQualityMedium">
+                      中
+                    </option>
+                    <option value="high" data-message="graphicsQualityHigh">
+                      高
                     </option>
                   </select>
                 </label>
@@ -3593,7 +3634,7 @@
                   <strong data-observation-readout-soil-water>—</strong>
                 </span>
                 <span>
-                  <b aria-hidden="true">♧</b>
+                  <i class="ph ph-plant" aria-hidden="true"></i>
                   <span data-message="observationPioneerPlantLabel"
                     >先锋草本</span
                   >
@@ -3632,19 +3673,19 @@
                   <strong data-observation-readout-woody-plant>—</strong>
                 </span>
                 <span>
-                  <b aria-hidden="true">♣</b>
+                  <i class="ph ph-tree-evergreen" aria-hidden="true"></i>
                   <span data-message="observationShrubLabel">灌木</span>
                   <strong data-observation-readout-shrub>—</strong>
                 </span>
                 <span>
-                  <b aria-hidden="true">♞</b>
+                  <i class="ph ph-rabbit" aria-hidden="true"></i>
                   <span data-message="observationSproutGrazerLabel"
                     >绒芽兽</span
                   >
                   <strong data-observation-readout-sprout-grazer>—</strong>
                 </span>
                 <span>
-                  <b aria-hidden="true">⌁</b>
+                  <i class="ph ph-paw-print" aria-hidden="true"></i>
                   <span data-message="observationShadowtailFoxLabel"
                     >影尾狐</span
                   >
