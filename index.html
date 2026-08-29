@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="亲手创造和改造世界：塑造地形、制造降雨并观察水流。"
+      content="在连续河谷中规划道路、水电、住宅与就业，经营一座持续运转的城市。"
       data-message-content="pageDescription"
     />
     <meta
       name="application-name"
-      content="界芽：星球观测局"
+      content="界芽：河谷城市"
       data-message-content="title"
     />
     <meta name="robots" content="noindex, nofollow" />
@@ -23,12 +23,12 @@
     <meta property="og:locale" content="zh_CN" />
     <meta
       property="og:title"
-      content="界芽：星球观测局"
+      content="界芽：河谷城市"
       data-message-content="title"
     />
     <meta
       property="og:description"
-      content="亲手创造和改造世界：塑造地形、制造降雨并观察水流。"
+      content="在连续河谷中规划道路、水电、住宅与就业，经营一座持续运转的城市。"
       data-message-content="pageDescription"
     />
     <meta property="og:url" content="./" />
@@ -37,7 +37,7 @@
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="界芽方格世界中，绿色手掌形地形被水道与降雨环绕"
+      content="界芽河谷城市的道路、河流与街区"
       data-message-content="pageImageAlt"
     />
     <meta name="twitter:card" content="summary_large_image" />
@@ -50,54 +50,42 @@
       type="font/woff2"
       crossorigin
     />
-    <title data-message="title">界芽：星球观测局</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DbOaJNFI.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-D0KAzRc4.css">
+    <title>界芽：河谷城市</title>
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DUb6QEeC.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-u-dpbs-y.css">
   </head>
-  <body>
+  <body data-product-surface="city-only" data-app-screen="home">
     <section
       class="home-screen"
       data-app-screen="home"
       aria-labelledby="home-brand-title"
       aria-busy="true"
       inert
-      hidden
     >
       <div class="home-screen-shade" aria-hidden="true"></div>
       <nav
         class="home-utility-nav"
-        aria-label="主页工具"
-        data-message-aria-label="homeToolsLabel"
+        aria-label="界面语言"
+        data-message-aria-label="homeLanguageTitle"
       >
         <button
-          class="home-utility-button"
           type="button"
-          data-home-panel-toggle="settings"
-          aria-expanded="false"
-          aria-controls="home-settings-panel"
+          class="home-utility-button"
+          data-city-locale="zh-CN"
         >
-          <i class="ph ph-gear" aria-hidden="true"></i>
-          <span data-message="homeSettingsAction">设置</span>
+          简体中文
         </button>
         <button
-          class="home-utility-button"
           type="button"
-          data-home-panel-toggle="language"
-          aria-expanded="false"
-          aria-controls="home-language-panel"
+          class="home-utility-button"
+          data-city-locale="en-US"
         >
-          <i class="ph ph-translate" aria-hidden="true"></i>
-          <span
-            data-home-language-action
-            data-message="homeLanguageActionDefault"
-            >语言 · 简体中文</span
-          >
+          English
         </button>
       </nav>
-
       <header class="home-brand">
         <div class="home-brand-mark" aria-hidden="true">
-          <i class="ph ph-plant"></i>
+          <i class="ph ph-buildings"></i>
         </div>
         <div
           class="home-brand-title"
@@ -109,3872 +97,873 @@
         </div>
         <p>
           <span aria-hidden="true">✦</span>
-          <span data-message="homeBrandSubtitle">星球观测局</span>
+          <span data-message="homeBrandSubtitle">河谷城市建设局</span>
           <span aria-hidden="true">✦</span>
         </p>
       </header>
-
-      <button class="home-continue" type="button" data-home-continue hidden>
-        <i class="ph ph-plant" aria-hidden="true"></i>
-        <span data-home-continue-label data-message="homeNoWorldToContinue"
-          >尚无可继续的世界</span
-        >
-        <i class="ph ph-arrow-right" aria-hidden="true"></i>
-      </button>
-
       <section
         class="home-world-rail"
-        aria-label="选择要前往的世界"
+        aria-label="进入城市"
         data-message-aria-label="homeWorldRailLabel"
       >
         <button
-          class="home-world-card home-world-card-start"
+          class="home-world-card home-world-card-city"
           type="button"
-          data-home-world-seed="JIEYA-LOCAL-FIRST-1"
+          data-city-start
         >
-          <i class="ph ph-plant" aria-hidden="true"></i>
-          <strong data-message="homeStartCreating">开始冒险</strong>
+          <i class="ph ph-buildings" aria-hidden="true"></i>
+          <strong data-message="homeBuildCity">建立河谷新城</strong>
           <span class="home-card-divider" aria-hidden="true"></span>
-          <small data-message="homeStartCreatingSummary"
-            >从空白界域开始亲手创造</small
+          <small data-message="homeBuildCitySummary"
+            >铺设道路、接通水电，让第一批居民安家</small
           >
         </button>
         <button
-          class="home-world-card home-world-card-image home-world-card-dry-valley"
+          class="home-world-card home-world-card-city"
           type="button"
-          data-home-world-seed="JIEYA-DRY-VALLEY-RESCUE-2"
+          data-city-upgrade
+          hidden
         >
-          <span class="home-world-card-copy">
-            <strong data-message="homeDryValleyRescue">干谷救援</strong>
-            <small data-message="homeDryValleySummary"
-              >10–15 分钟 · 三幕生态复苏</small
-            >
-          </span>
+          <i class="ph ph-git-fork" aria-hidden="true"></i>
+          <strong data-message="homeUpgradeCity">创建地图扩展副本</strong>
+          <span class="home-card-divider" aria-hidden="true"></span>
+          <small data-message="homeUpgradeCitySummary"
+            >保留现有城市不变，创建可付费购买相邻城区的独立副本</small
+          >
         </button>
         <button
-          class="home-world-card home-world-card-image home-world-card-newborn"
+          class="home-world-card home-world-card-city"
           type="button"
-          data-home-world-seed="JIEYA-NEWBORN-CONTINENT-2"
+          data-city-restart
+          hidden
         >
-          <span class="home-world-card-copy">
-            <strong data-message="homeNewbornContinent">新生大陆</strong>
-            <small data-message="homeNewbornSummary">引水与首次创造</small>
-          </span>
-        </button>
-        <button
-          class="home-world-card home-world-card-image home-world-card-lake"
-          type="button"
-          data-home-world-seed="JIEYA-THRIVING-MEADOW-1"
-        >
-          <span class="home-world-card-copy">
-            <strong data-message="homeThrivingLakePlain">丰境湖原</strong>
-            <small data-message="homeThrivingLakeSummary"
-              >观察三层生命互相回应</small
-            >
-          </span>
-        </button>
-        <button
-          class="home-view-all"
-          type="button"
-          data-home-panel-toggle="catalog"
-          aria-expanded="false"
-          aria-controls="home-catalog-panel"
-        >
-          <span data-message="homeViewAll">查看全部</span>
-          <i class="ph ph-arrow-right" aria-hidden="true"></i>
+          <i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i>
+          <strong data-message="homeRestartCity">重新开始河谷城市</strong>
+          <span class="home-card-divider" aria-hidden="true"></span>
+          <small data-message="homeRestartCitySummary"
+            >再次确认后替换当前 v17 密集网格城市，历史城市保持不变</small
+          >
         </button>
       </section>
-
-      <p class="home-preview-version" data-message="homePreviewVersion">
-        公开预览 0.159.0
-      </p>
-      <output
-        class="home-local-status"
-        data-home-local-status
+      <p
+        class="home-city-status"
+        data-city-home-status
         role="status"
         aria-live="polite"
-        aria-atomic="true"
-      >
-        <i class="ph ph-plant" aria-hidden="true"></i>
-        <span data-message="homeLocalSavedOfflineChecking"
-          >本地存档 · 离线检查中</span
-        >
-      </output>
-
-      <section
-        class="home-panel home-settings-panel"
-        id="home-settings-panel"
-        data-home-panel="settings"
-        aria-labelledby="home-settings-title"
         hidden
-      >
-        <header class="home-panel-header">
-          <div>
-            <p data-message="homeSettingsEyebrow">当前设备</p>
-            <h2 id="home-settings-title" data-message="homeSettingsTitle">
-              设备设置
-            </h2>
+      ></p>
+      <p class="home-preview-version" data-message="homePreviewVersion">
+        城市开发预览 0.160.0
+      </p>
+    </section>
+
+    <main class="city-screen" data-app-screen="city" hidden>
+      <header class="city-topbar">
+        <div class="city-identity">
+          <span data-message="cityEyebrow">河谷建设局</span
+          ><strong data-city-name>界芽河谷</strong>
+        </div>
+        <dl
+          class="city-hud"
+          aria-label="城市总览"
+          data-message-aria-label="cityOverviewLabel"
+        >
+          <div class="city-hud-funds">
+            <dt data-message="cityFunds">资金</dt>
+            <dd data-city-funds>—</dd>
           </div>
-          <button
-            class="home-panel-close"
-            type="button"
-            data-home-panel-close
-            aria-label="关闭设置"
-            data-message-aria-label="homeSettingsClose"
-          >
-            <i class="ph ph-x" aria-hidden="true"></i>
-          </button>
-        </header>
-        <div class="home-settings-grid">
-          <label>
-            <span data-message="homeMasterVolume">主音量</span>
-            <span class="home-setting-inline">
-              <input
-                type="range"
+          <div class="city-hud-income">
+            <dt data-message="cityNetIncome">净收入</dt>
+            <dd data-city-net-income>—</dd>
+          </div>
+          <div class="city-hud-population">
+            <dt data-message="cityPopulation">人口</dt>
+            <dd data-city-population>—</dd>
+          </div>
+          <div class="city-hud-employment">
+            <dt data-message="cityJobs">就业</dt>
+            <dd data-city-employment>—</dd>
+          </div>
+          <div class="city-hud-vacancies">
+            <dt data-message="cityVacantJobs">空缺</dt>
+            <dd data-city-vacancies>—</dd>
+          </div>
+          <div class="city-hud-demands">
+            <dt data-message="cityZoningDemand">分区需求</dt>
+            <dd>
+              <meter
                 min="0"
                 max="100"
-                step="1"
-                value="70"
-                data-home-player-volume
-              />
-              <output data-home-player-volume-output>70%</output>
-            </span>
-          </label>
-          <label class="home-setting-check">
-            <input type="checkbox" data-home-player-muted />
-            <span data-message="homeMuted">静音</span>
-          </label>
-          <label>
-            <span data-message="homeMotion">动态效果</span>
-            <select data-home-player-motion>
-              <option value="system" data-message="homeMotionSystem">
-                跟随系统
-              </option>
-              <option value="full" data-message="homeMotionFull">
-                完整动态
-              </option>
-              <option value="reduced" data-message="homeMotionReduced">
-                减少动态
-              </option>
-            </select>
-          </label>
-          <label>
-            <span data-message="homeTextScale">文字大小</span>
-            <select data-home-player-text-scale>
-              <option value="100">100%</option>
-              <option value="112">112%</option>
-              <option value="125">125%</option>
-            </select>
-          </label>
-          <label>
-            <span data-message="homeColorVision">配色辨识</span>
-            <select data-home-player-color-vision>
-              <option value="standard" data-message="homeColorStandard">
-                标准
-              </option>
-              <option value="red-green" data-message="homeColorRedGreen">
-                红绿色弱辅助
-              </option>
-              <option value="blue-yellow" data-message="homeColorBlueYellow">
-                蓝黄色弱辅助
-              </option>
-              <option
-                value="high-contrast"
-                data-message="homeColorHighContrast"
-              >
-                高对比
-              </option>
-            </select>
-          </label>
-          <label>
-            <span data-message="homePerformance">显示性能</span>
-            <select data-home-player-performance>
-              <option value="standard" data-message="homePerformanceStandard">
-                标准
-              </option>
-              <option value="reduced" data-message="homePerformanceReduced">
-                低性能
-              </option>
-            </select>
-          </label>
-          <label>
-            <span data-message="graphicsQualityLabel">3D 画质</span>
-            <select data-home-player-graphics-quality>
-              <option value="auto" data-message="graphicsQualityAuto">
-                自动
-              </option>
-              <option value="low" data-message="graphicsQualityLow">低</option>
-              <option value="medium" data-message="graphicsQualityMedium">
-                中
-              </option>
-              <option value="high" data-message="graphicsQualityHigh">
-                高
-              </option>
-            </select>
-          </label>
-        </div>
-        <p class="home-panel-note" data-message="homePreferencesNote">
-          偏好只保存在当前设备，不进入世界存档或 .jieya。
-        </p>
-      </section>
-
-      <section
-        class="home-panel home-language-panel"
-        id="home-language-panel"
-        data-home-panel="language"
-        aria-labelledby="home-language-title"
-        hidden
-      >
-        <header class="home-panel-header">
-          <div>
-            <p data-message="homeLanguageEyebrow">界面语言</p>
-            <h2 id="home-language-title" data-message="homeLanguageTitle">
-              语言
-            </h2>
+                value="0"
+                data-city-demand-residential
+                aria-label="住宅需求"
+                data-message-aria-label="cityResidentialDemand"
+              ></meter>
+              <meter
+                min="0"
+                max="100"
+                value="0"
+                data-city-demand-commercial
+                aria-label="商业需求"
+                data-message-aria-label="cityCommercialDemand"
+              ></meter>
+              <meter
+                min="0"
+                max="100"
+                value="0"
+                data-city-demand-industry
+                aria-label="工业需求"
+                data-message-aria-label="cityIndustryDemand"
+              ></meter>
+            </dd>
           </div>
-          <button
-            class="home-panel-close"
-            type="button"
-            data-home-panel-close
-            aria-label="关闭语言选择"
-            data-message-aria-label="homeLanguageClose"
-          >
-            <i class="ph ph-x" aria-hidden="true"></i>
-          </button>
-        </header>
-        <button
-          class="home-language-option"
-          type="button"
-          data-home-locale="zh-CN"
-          aria-pressed="true"
-        >
-          <span data-message="homeLanguageSimplifiedChinese">简体中文</span>
-          <small data-home-language-selected data-message="homeLanguageSelected"
-            >当前语言</small
-          >
-        </button>
-        <button
-          class="home-language-option"
-          type="button"
-          data-home-locale="en-US"
-          aria-pressed="false"
-        >
-          <span data-message="homeLanguageEnglish">English</span>
-          <small data-home-language-selected hidden></small>
-        </button>
-        <p class="home-panel-note" data-message="homeLanguageChoose">
-          选择后主页与游戏会立即同步。
-        </p>
-        <output
-          class="home-panel-note"
-          data-home-language-status
-          data-message="homeLanguageSaved"
-          aria-live="polite"
-          >语言偏好已保存到当前设备。</output
-        >
-      </section>
-
-      <section
-        class="home-panel home-catalog-panel"
-        id="home-catalog-panel"
-        data-home-panel="catalog"
-        aria-labelledby="home-catalog-title"
-        hidden
-      >
-        <header class="home-panel-header">
-          <div>
-            <p data-message="homeCatalogEyebrow">本地世界目录</p>
-            <h2 id="home-catalog-title" data-message="homeCatalogTitle">
-              查看全部世界
-            </h2>
+          <div class="city-hud-tax">
+            <dt data-message="cityTax">税收</dt>
+            <dd data-city-tax>—</dd>
           </div>
-          <button
-            class="home-panel-close"
-            type="button"
-            data-home-panel-close
-            aria-label="关闭世界目录"
-            data-message-aria-label="homeCatalogClose"
-          >
-            <i class="ph ph-x" aria-hidden="true"></i>
-          </button>
-        </header>
-        <div class="home-catalog-scroll">
-          <section aria-labelledby="home-featured-worlds-title">
-            <h3
-              id="home-featured-worlds-title"
-              data-message="homeCatalogPlayable"
-            >
-              可玩世界
-            </h3>
-            <div class="home-catalog-grid" data-home-catalog-featured></div>
-          </section>
-          <section aria-labelledby="home-classic-worlds-title">
-            <h3
-              id="home-classic-worlds-title"
-              data-message="homeCatalogClassic"
-            >
-              经典世界
-            </h3>
-            <div class="home-catalog-grid" data-home-catalog-legacy></div>
-          </section>
-          <section
-            class="home-manual-world"
-            aria-labelledby="home-manual-seed-title"
-          >
-            <h3
-              id="home-manual-seed-title"
-              data-message="homeCatalogManualSeed"
-            >
-              手动种子
-            </h3>
-            <label>
-              <span data-message="homeCatalogPublishedSeed"
-                >已发布世界种子</span
-              >
-              <input
-                type="text"
-                autocomplete="off"
-                spellcheck="false"
-                data-home-seed-input
-              />
-            </label>
-            <button
-              type="button"
-              data-home-seed-start
-              data-message="homeCatalogOpenWorld"
-            >
-              打开这个世界
-            </button>
-          </section>
-          <section
-            class="home-import-world"
-            aria-labelledby="home-import-title"
-          >
-            <h3 id="home-import-title" data-message="homeCatalogImportTitle">
-              导入本地世界
-            </h3>
-            <p data-message="homeCatalogImportNote">
-              只在本机读取 `.jieya`；解析失败不会覆盖当前世界。
-            </p>
-            <div class="home-import-actions">
-              <button type="button" data-home-world-file-choose>
-                <i class="ph ph-upload-simple" aria-hidden="true"></i>
-                <span data-message="homeCatalogChooseFile">选择 .jieya</span>
-              </button>
-              <button type="button" data-home-world-file-confirm hidden>
-                <span data-message="homeCatalogConfirmImport"
-                  >确认导入并替换</span
-                >
-              </button>
-            </div>
-            <output
-              data-home-world-file-status
-              data-message="homeCatalogFileReady"
-              data-state="ready"
-              aria-live="polite"
-              >世界文件：当前可用</output
-            >
-          </section>
-        </div>
-      </section>
-
-      <dialog
-        class="home-replacement-confirm"
-        data-home-replacement-confirm
-        aria-labelledby="home-replacement-title"
-        aria-describedby="home-replacement-message"
-      >
-        <i class="ph ph-map-trifold" aria-hidden="true"></i>
-        <div>
-          <h2 id="home-replacement-title" data-message="homeReplacementTitle">
-            替换当前本地世界？
-          </h2>
-          <p id="home-replacement-message" data-home-replacement-message>
-            <span data-message="homeReplacementDefault"
-              >新世界只会在你确认后准备。</span
-            >
-          </p>
-        </div>
-        <button
-          type="button"
-          data-home-replacement-cancel
-          data-message="homeCancel"
-        >
-          取消
-        </button>
-        <button
-          type="button"
-          data-home-replacement-accept
-          data-message="homeConfirmReplacement"
-        >
-          确认替换
-        </button>
-      </dialog>
-    </section>
-
-    <section class="unsupported-screen" data-app-screen="unsupported-3d" hidden>
-      <i class="ph ph-mountains" aria-hidden="true"></i>
-      <div
-        class="unsupported-title"
-        role="heading"
-        aria-level="1"
-        data-message="homeUnsupportedTitle"
-      >
-        当前设备暂不支持 3D 地貌
-      </div>
-      <p data-message="homeUnsupportedWorldSafe">
-        你的本地世界仍安全保存在浏览器中。
-      </p>
-      <button
-        type="button"
-        data-unsupported-return-home
-        data-message="homeReturn"
-      >
-        返回主页
-      </button>
-    </section>
-
-    <main class="app-shell" data-app-screen="game">
-      <header class="intro game-topbar">
-        <div class="game-brand">
-          <p class="eyebrow" data-message="eyebrow">塑界师 · 本地星球</p>
-          <h1 class="visually-hidden" data-message="title">界芽：星球观测局</h1>
-          <div class="game-world-identity" aria-hidden="true">
-            <i class="ph ph-plant" aria-hidden="true"></i>
-            <span data-message="homeBrandName">界芽</span>
-            <output data-hud-world-name data-message="worldNotStarted"
-              >世界未启动</output
-            >
+          <div class="city-hud-maintenance">
+            <dt data-message="cityMaintenance">维护</dt>
+            <dd data-city-maintenance>—</dd>
           </div>
-          <p class="description" data-message="description">
-            选择工具，直接创造和改造世界。
-          </p>
-        </div>
-        <button
-          class="game-return-home"
-          type="button"
-          data-game-return-home
-          hidden
-        >
-          <i class="ph ph-arrow-left" aria-hidden="true"></i>
-          <span data-message="homeReturn">返回主页</span>
-        </button>
+          <div class="city-hud-water">
+            <dt data-message="cityWater">水</dt>
+            <dd data-city-water>—</dd>
+          </div>
+          <div class="city-hud-power">
+            <dt data-message="cityPower">电</dt>
+            <dd data-city-power>—</dd>
+          </div>
+          <div class="city-hud-services">
+            <dt data-message="cityServices">服务</dt>
+            <dd>
+              <span data-city-services>—</span>
+              <span class="city-hud-warning" data-city-warning hidden>—</span>
+            </dd>
+          </div>
+          <div class="city-hud-transit">
+            <dt data-message="cityTransit">公交 / 路压</dt>
+            <dd>
+              <span data-city-bus-coverage>—</span> ·
+              <span data-city-bus-passengers>—</span> ·
+              <span data-city-road-pressure>—</span>
+            </dd>
+          </div>
+          <div class="city-hud-watershed">
+            <dt data-message="cityWatershed">流域</dt>
+            <dd data-city-watershed>—</dd>
+          </div>
+          <div class="city-hud-stormwater">
+            <dt data-message="cityStormwater">雨洪</dt>
+            <dd data-city-stormwater>—</dd>
+          </div>
+          <div class="city-hud-logistics">
+            <dt data-message="cityLogistics">物流</dt>
+            <dd data-city-logistics>—</dd>
+          </div>
+          <div class="city-hud-archive">
+            <dt data-message="cityArchive">档案</dt>
+            <dd data-city-archive>—</dd>
+          </div>
+          <div class="city-hud-time">
+            <dt data-message="cityTick">时间</dt>
+            <dd data-city-tick>—</dd>
+          </div>
+        </dl>
         <div
-          class="game-hud-stats"
-          aria-label="世界总览"
-          data-message-aria-label="worldOverviewLabel"
+          class="city-time-controls"
+          aria-label="时间控制"
+          data-message-aria-label="cityTimeControlsLabel"
         >
-          <span
-            class="game-hud-stat game-hud-time"
-            aria-label="世界时间"
-            data-message-aria-label="hudStatusLabel"
-          >
-            <i class="ph ph-clock" aria-hidden="true"></i>
-            <span data-message="worldTime">世界时间</span>
-            <b data-hud-tick>—</b>
-          </span>
-          <button
-            class="game-hud-stat ecology-hud-stat"
-            type="button"
-            data-hud-ecology-focus="plant"
-            data-state="unavailable"
-            aria-label="草本活跃格：世界未启动"
-            data-message-aria-label="worldOverviewPlantUnavailable"
-            disabled
-          >
-            <i class="ph ph-plant" aria-hidden="true"></i>
-            <span class="ecology-hud-label" data-message="worldOverviewPlant"
-              >草本</span
-            >
-            <b data-hud-ecology-plant>—</b>
+          <button type="button" data-city-run-toggle aria-pressed="false">
+            <i class="ph ph-play-pause" aria-hidden="true"></i>
+            <span data-city-run-label data-message="cityRun">运行</span>
           </button>
-          <button
-            class="game-hud-stat ecology-hud-stat"
-            type="button"
-            data-hud-ecology-focus="grazer"
-            data-state="unavailable"
-            aria-label="绒芽兽活跃格：世界未启动"
-            data-message-aria-label="worldOverviewGrazerUnavailable"
-            disabled
-          >
-            <i class="ph ph-rabbit" aria-hidden="true"></i>
-            <span class="ecology-hud-label" data-message="worldOverviewGrazer"
-              >绒芽兽</span
-            >
-            <b data-hud-ecology-grazer>—</b>
+          <button type="button" data-city-speed="1" aria-pressed="true">
+            1×
           </button>
-          <button
-            class="game-hud-stat ecology-hud-stat"
-            type="button"
-            data-hud-ecology-focus="fox"
-            data-state="unavailable"
-            aria-label="影尾狐活跃格：世界未启动"
-            data-message-aria-label="worldOverviewFoxUnavailable"
-            disabled
-          >
-            <i class="ph ph-paw-print" aria-hidden="true"></i>
-            <span class="ecology-hud-label" data-message="worldOverviewFox"
-              >影尾狐</span
-            >
-            <b data-hud-ecology-fox>—</b>
+          <button type="button" data-city-speed="2" aria-pressed="false">
+            2×
           </button>
-        </div>
-        <div
-          class="install-offer"
-          aria-label="安装界芽应用"
-          data-message-aria-label="installControlsLabel"
-          data-install-offer
-          hidden
-        >
-          <p
-            class="install-status"
-            role="status"
-            aria-live="polite"
-            aria-busy="false"
-            data-install-status
-            data-state="unavailable"
-            data-message="installUnavailable"
-          >
-            安装应用：当前不可用
-          </p>
-          <button
-            class="install-action"
-            type="button"
-            data-install-action
-            data-message="installAction"
-            hidden
-            disabled
-          >
-            安装到设备
+          <button type="button" data-city-speed="4" aria-pressed="false">
+            4×
           </button>
         </div>
       </header>
 
-      <details
-        class="dry-valley-guide"
-        aria-label="让干谷重新流动并长出新芽引导任务"
-        data-message-aria-label="dryValleyCardLabel"
-        data-dry-valley-guide
-        data-state="unavailable"
+      <section class="city-workspace">
+        <div data-city-background-diagnostics hidden>
+          <div
+            class="city-world-feedback"
+            data-city-world-feedback
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+            hidden
+          >
+            <span data-city-world-feedback-title>城市告警</span>
+            <strong data-city-world-feedback-summary
+              >当前没有需要处理的问题</strong
+            >
+            <button type="button" data-city-world-feedback-locate>
+              立即处理
+            </button>
+          </div>
+          <ul class="city-priority-list" data-city-priority-list hidden></ul>
+        </div>
+        <div class="city-viewport" data-city-viewport>
+          <canvas
+            data-city-canvas
+            tabindex="0"
+            aria-label="3D 城市建设地图"
+            data-message-aria-label="cityCanvasLabel"
+          ></canvas>
+          <div class="city-camera-help" data-message="cityCameraHelp">
+            WASD 移动 · Q/E 旋转 · 滚轮缩放
+          </div>
+          <output
+            class="city-status"
+            data-city-status
+            data-message="cityIdleStatus"
+            aria-live="polite"
+            >选择工具或检查城市。</output
+          >
+        </div>
+        <aside class="city-inspector" data-city-inspector hidden>
+          <button
+            type="button"
+            class="city-inspector-close"
+            data-city-inspector-close
+            aria-label="关闭检查器"
+            data-message-aria-label="cityInspectorClose"
+          >
+            ×
+          </button>
+          <span class="city-panel-eyebrow" data-message="cityInspector"
+            >检查器</span
+          >
+          <h2 data-city-inspector-title>地块</h2>
+          <dl data-city-inspector-details></dl>
+          <button
+            type="button"
+            data-city-demolish-building
+            data-message="cityDemolishAbandoned"
+            aria-describedby="city-inspector-action-status"
+            hidden
+          >
+            拆除废弃建筑
+          </button>
+          <button
+            type="button"
+            data-city-repair-building
+            aria-describedby="city-inspector-action-status"
+            hidden
+          >
+            修复火灾损坏
+          </button>
+          <output
+            id="city-inspector-action-status"
+            class="city-inspector-action-status"
+            data-city-inspector-action-status
+            role="status"
+            aria-live="polite"
+            hidden
+          ></output>
+          <button type="button" data-city-demolish-center hidden>
+            移除邻里中心
+          </button>
+          <div class="city-service-budget" data-city-service-budget hidden>
+            <span>设施预算</span>
+            <button type="button" data-city-budget-tier="economy">节约</button>
+            <button type="button" data-city-budget-tier="standard">标准</button>
+            <button type="button" data-city-budget-tier="reinforced">
+              强化
+            </button>
+          </div>
+          <button type="button" data-city-demolish-service hidden>
+            拆除公共设施
+          </button>
+          <output
+            data-city-service-upgrade-status
+            role="status"
+            aria-live="polite"
+            hidden
+          ></output>
+          <button type="button" data-city-upgrade-school hidden>
+            扩建小学
+          </button>
+          <button type="button" data-city-upgrade-recycling hidden>
+            改造为回收中心
+          </button>
+          <button type="button" data-city-upgrade-treatment hidden>
+            升级深度处理
+          </button>
+          <button type="button" data-city-demolish-watershed hidden>
+            拆除流域设施
+          </button>
+          <button type="button" data-city-repair-flood hidden>
+            修复雨洪损坏
+          </button>
+          <button type="button" data-city-demolish-stormwater hidden>
+            拆除雨洪设施
+          </button>
+        </aside>
+        <details class="city-information-drawer">
+          <summary>
+            <i class="ph ph-info" aria-hidden="true"></i>
+            <span data-message="cityInformationViews">信息视图</span>
+          </summary>
+          <nav
+            class="city-information-views"
+            aria-label="信息视图"
+            data-message-aria-label="cityInformationViews"
+          >
+            <button
+              type="button"
+              data-city-information-view="natural"
+              aria-pressed="true"
+            >
+              <span data-message="cityViewUtilities">水电</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="employment"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewDevelopment">发展条件</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="commute"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewCommute">通勤</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="finance"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewFinance">财政</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="problems"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewProblems">问题</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="education"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewEducation">教育</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="healthcare"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewHealthcare">医疗</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="fire"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewFire">消防</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="waste"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewWaste">垃圾</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="land-value"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewLandValue">地价</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="road-pressure"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewRoads">道路</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="bus-coverage"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewBusCoverage">公交覆盖</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="bus-ridership"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewBusRidership">客流</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="city-centers"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewCenters">中心</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="water-quality"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewWaterQuality">水质</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="pollution-sources"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewPollution">污染源</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="ecology"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewEcology">生态</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="stormwater"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewStormwater">雨洪</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="supply-chain"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewSupplyChain">供应链</span>
+            </button>
+            <button
+              type="button"
+              data-city-information-view="freight"
+              aria-pressed="false"
+            >
+              <span data-message="cityViewFreight">货运</span>
+            </button>
+          </nav>
+        </details>
+      </section>
+
+      <nav
+        class="city-build-dock"
+        aria-label="建设工具"
+        data-message-aria-label="cityBuildToolsLabel"
       >
-        <summary class="dry-valley-guide-toggle" data-message="dryValleyToggle">
-          生态挑战
-        </summary>
         <div
-          class="ecology-challenge-modes"
-          role="group"
-          aria-label="选择生态挑战"
-          data-message-aria-label="ecologyChallengeModeLabel"
-          data-ecology-challenge-modes
+          class="city-category-tabs city-tool-category"
+          role="tablist"
+          aria-label="建设类别"
+          data-message-aria-label="cityToolCategory"
+          data-city-tool-category-tabs
         >
           <button
-            class="ecology-challenge-mode-card"
             type="button"
-            data-ecology-challenge-mode="dry-valley"
+            role="tab"
+            data-city-tool-category="roads"
             aria-pressed="true"
-            disabled
           >
-            <span
-              class="ecology-challenge-mode-name"
-              data-message="ecologyChallengeDryValley"
-            >
-              干谷
-            </span>
-            <span
-              class="ecology-challenge-mode-status"
-              data-ecology-challenge-mode-status="dry-valley"
-              data-message="challengeDryValleyOptional"
-            >
-              可选 · 复苏干谷
-            </span>
+            <i class="ph ph-road-horizon" aria-hidden="true"></i>
+            <span data-message="cityToolCategoryRoads">道路</span>
           </button>
           <button
-            class="ecology-challenge-mode-card"
             type="button"
-            data-ecology-challenge-mode="food-chain"
+            role="tab"
+            data-city-tool-category="zoning"
             aria-pressed="false"
-            disabled
           >
-            <span
-              class="ecology-challenge-mode-name"
-              data-message="ecologyChallengeFoodChain"
-            >
-              食物链
-            </span>
-            <span
-              class="ecology-challenge-mode-status"
-              data-ecology-challenge-mode-status="food-chain"
-              data-message="challengeFoodChainOptional"
-            >
-              可选 · 建立生态
-            </span>
+            <i class="ph ph-map-trifold" aria-hidden="true"></i>
+            <span data-message="cityToolCategoryZoning">分区</span>
           </button>
           <button
-            class="ecology-challenge-mode-card"
             type="button"
-            data-ecology-challenge-mode="pond"
+            role="tab"
+            data-city-tool-category="utilities"
             aria-pressed="false"
-            disabled
           >
-            <span
-              class="ecology-challenge-mode-name"
-              data-message="ecologyChallengePond"
-            >
-              造湖
-            </span>
-            <span
-              class="ecology-challenge-mode-status"
-              data-ecology-challenge-mode-status="pond"
-              data-message="challengePondOptional"
-            >
-              可选 · 亲手造湖
-            </span>
+            <i class="ph ph-lightning" aria-hidden="true"></i>
+            <span data-message="cityToolCategoryUtilities">水电</span>
           </button>
           <button
-            class="ecology-challenge-mode-card"
             type="button"
-            data-ecology-challenge-mode="oasis"
+            role="tab"
+            data-city-tool-category="services"
             aria-pressed="false"
-            disabled
           >
-            <span
-              class="ecology-challenge-mode-name"
-              data-message="ecologyChallengeOasis"
-              >绿洲</span
-            >
-            <span
-              class="ecology-challenge-mode-status"
-              data-ecology-challenge-mode-status="oasis"
-              data-message="challengeOasisOptional"
-              >可选 · 亲手造绿洲</span
-            >
+            <i class="ph ph-buildings" aria-hidden="true"></i>
+            <span data-message="cityToolCategoryServices">服务</span>
           </button>
         </div>
-        <section class="ecology-challenge-panel" data-dry-valley-panel>
-          <div class="dry-valley-guide-copy">
-            <p class="dry-valley-guide-eyebrow" data-message="dryValleyEyebrow">
-              下一项 · 可选挑战
-            </p>
-            <h2 class="dry-valley-guide-title" data-message="dryValleyTitle">
-              让干谷重新流动并长出新芽
-            </h2>
-            <p
-              class="dry-valley-guide-summary"
-              data-dry-valley-summary
-              data-message="dryValleySandboxSummary"
-            >
-              进入固定干谷，用降雨和时间把水送到谷底，再把第一株先锋草本照料成草地。开始前会再次确认替换当前本地世界。
-            </p>
-          </div>
-          <div class="dry-valley-guide-actions">
-            <button
-              class="dry-valley-guide-action"
-              type="button"
-              data-dry-valley-start
-              data-message="dryValleyStart"
-              aria-describedby="dry-valley-status"
-              disabled
-            >
-              开始干谷挑战
-            </button>
-            <button
-              class="dry-valley-guide-action"
-              type="button"
-              data-dry-valley-locate
-              data-message="dryValleyLocateSource"
-              aria-describedby="dry-valley-status"
-              hidden
-              disabled
-            >
-              定位源头
-            </button>
-            <button
-              class="dry-valley-guide-action"
-              type="button"
-              data-dry-valley-retreat
-              data-message="dryValleyRetreatStart"
-              aria-describedby="dry-valley-status"
-              hidden
-              disabled
-            >
-              前往源头并停雨
-            </button>
-            <button
-              class="dry-valley-guide-dismiss"
-              type="button"
-              data-dry-valley-dismiss
-              data-message="dryValleyDismiss"
-              aria-describedby="dry-valley-status"
-              hidden
-              disabled
-            >
-              隐藏本次引导
-            </button>
-          </div>
-          <output
-            class="dry-valley-guide-status"
-            id="dry-valley-status"
-            data-dry-valley-status
-            data-state="unavailable"
-            data-message="dryValleyUnavailable"
-            aria-live="polite"
+        <div class="city-subtool-tray">
+          <button type="button" data-city-tool="select" aria-pressed="true">
+            <i class="ph ph-cursor" aria-hidden="true"></i
+            ><span data-message="cityToolSelect">查看</span>
+          </button>
+          <button type="button" data-city-tool="road" aria-pressed="false">
+            <i class="ph ph-path" aria-hidden="true"></i
+            ><span data-message="cityToolRoad">道路</span
+            ><small data-message="cityPriceRoad">¥50 / 单位 · R</small>
+          </button>
+          <button
+            type="button"
+            data-city-road-mode="straight"
+            aria-pressed="true"
           >
-            干谷任务：世界尚未启动
-          </output>
-          <section
-            class="dry-valley-adventure-crisis"
-            data-dry-valley-adventure-crisis
-            aria-live="assertive"
-            hidden
+            <i class="ph ph-line-segment" aria-hidden="true"></i
+            ><span data-message="cityRoadModeStraight">直线</span>
+          </button>
+          <button
+            type="button"
+            data-city-road-mode="angled"
+            aria-pressed="false"
           >
-            <h3 data-dry-valley-adventure-crisis-title></h3>
-            <p data-dry-valley-adventure-crisis-delta></p>
-            <p data-dry-valley-adventure-crisis-cause></p>
-            <button
-              type="button"
-              data-dry-valley-adventure-crisis-acknowledge
-              data-message="adventureCrisisRepair"
-            >
-              我来修复
-            </button>
-          </section>
-          <section
-            class="dry-valley-adventure-result"
-            data-dry-valley-adventure-result
-            aria-live="polite"
-            hidden
+            <i class="ph ph-path" aria-hidden="true"></i
+            ><span data-message="cityRoadModeAngled">折线</span>
+          </button>
+          <button type="button" data-city-road-confirm hidden>
+            <i class="ph ph-check" aria-hidden="true"></i
+            ><span data-message="cityRoadConfirm">建造道路</span>
+          </button>
+          <button type="button" data-city-road-cancel hidden>
+            <i class="ph ph-x" aria-hidden="true"></i
+            ><span data-message="cityRoadCancel">取消路线</span>
+          </button>
+          <button type="button" data-city-tool="demolish" aria-pressed="false">
+            <i class="ph ph-hammer" aria-hidden="true"></i
+            ><span data-message="cityToolDemolish">拆除道路</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="residential"
+            aria-pressed="false"
           >
-            <h3 data-dry-valley-adventure-result-title></h3>
-            <p data-dry-valley-adventure-result-delta></p>
-            <p data-dry-valley-adventure-result-cause></p>
-            <div data-dry-valley-adventure-final hidden>
-              <div
-                class="dry-valley-adventure-comparison"
-                aria-label="干谷复苏前后鹰眼对比"
-                data-message-aria-label="dryValleyComparisonLabel"
-              >
-                <figure>
-                  <figcaption data-message="dryValleyComparisonInitial">
-                    初始干谷
-                  </figcaption>
-                  <canvas
-                    width="256"
-                    height="256"
-                    data-dry-valley-adventure-initial-canvas
-                    aria-label="初始干谷鹰眼图"
-                    data-message-aria-label="dryValleyComparisonInitialMap"
-                  ></canvas>
-                </figure>
-                <figure>
-                  <figcaption data-message="dryValleyComparisonCurrent">
-                    当前世界
-                  </figcaption>
-                  <canvas
-                    width="256"
-                    height="256"
-                    data-dry-valley-adventure-current-canvas
-                    aria-label="当前复苏世界鹰眼图"
-                    data-message-aria-label="dryValleyComparisonCurrentMap"
-                  ></canvas>
-                </figure>
-              </div>
-              <dl class="dry-valley-adventure-stats">
-                <div>
-                  <dt data-message="dryValleyResultTicks">用时</dt>
-                  <dd data-dry-valley-adventure-stat-ticks>—</dd>
-                </div>
-                <div>
-                  <dt data-message="dryValleyResultWetChannel">湿润水道</dt>
-                  <dd data-dry-valley-adventure-stat-water>—</dd>
-                </div>
-                <div>
-                  <dt data-message="dryValleyResultMeadow">达标草甸</dt>
-                  <dd data-dry-valley-adventure-stat-meadow>—</dd>
-                </div>
-                <div>
-                  <dt data-message="dryValleyResultFeeding">真实取食</dt>
-                  <dd data-dry-valley-adventure-stat-feeding>—</dd>
-                </div>
-                <div>
-                  <dt data-message="dryValleyResultHunting">真实捕猎</dt>
-                  <dd data-dry-valley-adventure-stat-hunting>—</dd>
-                </div>
-              </dl>
-              <p
-                class="dry-valley-adventure-emblem"
-                data-dry-valley-adventure-emblem
-                data-message="dryValleyEmblem"
-              >
-                界芽印记 · 干谷复苏
-              </p>
-            </div>
-            <div class="dry-valley-adventure-actions">
-              <button
-                type="button"
-                data-dry-valley-adventure-continue
-                data-message="adventureContinue"
-              >
-                继续
-              </button>
-              <button
-                type="button"
-                data-dry-valley-adventure-forest
-                data-message="dryValleyGoToForestRecovery"
-                hidden
-              >
-                前往林地复苏
-              </button>
-              <button
-                type="button"
-                data-dry-valley-adventure-replay
-                data-message="adventureReplay"
-                hidden
-              >
-                重新挑战
-              </button>
-            </div>
-          </section>
-          <output
-            class="dry-valley-adventure-storage-warning"
-            data-dry-valley-adventure-storage-warning
-            aria-live="polite"
-            hidden
-          ></output>
-          <output
-            class="dry-valley-adventure-feedback"
-            data-dry-valley-adventure-feedback
-            aria-live="polite"
-            hidden
-          ></output>
-          <details
-            class="dry-valley-balance-comparison"
-            data-dry-valley-balance-comparison
-            hidden
+            <i class="ph ph-house" aria-hidden="true"></i
+            ><span data-message="cityToolResidential">住宅</span
+            ><small data-message="cityPriceResidential">¥500 · H</small>
+          </button>
+          <button
+            type="button"
+            data-city-tool="starter-workplace"
+            aria-pressed="false"
           >
-            <summary
-              class="dry-valley-balance-comparison-toggle"
-              data-dry-valley-balance-comparison-toggle
-              data-message="dryValleyBalanceComparisonToggle"
-            >
-              展开地形实验 A/B 对照
-            </summary>
-            <div class="dry-valley-balance-comparison-body">
-              <h3
-                class="dry-valley-balance-comparison-title"
-                data-dry-valley-balance-comparison-title
-                data-message="dryValleyBalanceComparisonTitle"
-              >
-                地形实验 A/B 对照
-              </h3>
-              <p
-                class="dry-valley-balance-comparison-intro"
-                data-dry-valley-balance-comparison-intro
-              ></p>
-              <div class="dry-valley-balance-comparison-rows" role="list">
-                <article
-                  class="dry-valley-balance-comparison-row"
-                  data-dry-valley-balance-comparison-raised
-                  role="listitem"
-                >
-                  <h4 data-dry-valley-balance-comparison-raised-condition></h4>
-                  <p data-dry-valley-balance-comparison-raised-process></p>
-                  <p data-dry-valley-balance-comparison-raised-endpoints></p>
-                </article>
-                <article
-                  class="dry-valley-balance-comparison-row"
-                  data-dry-valley-balance-comparison-restored
-                  role="listitem"
-                >
-                  <h4
-                    data-dry-valley-balance-comparison-restored-condition
-                  ></h4>
-                  <p data-dry-valley-balance-comparison-restored-process></p>
-                  <p data-dry-valley-balance-comparison-restored-endpoints></p>
-                </article>
-              </div>
-              <p
-                class="dry-valley-balance-comparison-conclusion"
-                data-dry-valley-balance-comparison-conclusion
-              ></p>
-            </div>
-          </details>
-        </section>
-        <section
-          class="ecology-challenge-panel"
-          aria-label="建立并见证三层食物链挑战"
-          data-message-aria-label="foodChainCardLabel"
-          data-food-chain-challenge
-          data-state="inactive"
-          hidden
-        >
-          <div class="dry-valley-guide-copy">
-            <p class="dry-valley-guide-eyebrow" data-message="foodChainEyebrow">
-              新任务 · 亲手建立生态
-            </p>
-            <h2 class="dry-valley-guide-title" data-message="foodChainTitle">
-              建立并见证三层食物链
-            </h2>
-            <p class="dry-valley-guide-summary" data-message="foodChainSummary">
-              从草本开始养成绒芽兽，再引入影尾狐；只有你推进出的真实捕食 Tick
-              才算完成。
-            </p>
-          </div>
-          <div class="dry-valley-guide-actions">
-            <button
-              class="dry-valley-guide-action"
-              type="button"
-              data-food-chain-start
-              data-message="foodChainStart"
-              aria-describedby="food-chain-status"
-              disabled
-            >
-              开始食物链挑战
-            </button>
-            <button
-              class="dry-valley-guide-action"
-              type="button"
-              data-food-chain-action
-              data-message="foodChainActionSow"
-              aria-describedby="food-chain-status"
-              hidden
-              disabled
-            >
-              装备播种工具
-            </button>
-            <button
-              class="dry-valley-guide-dismiss"
-              type="button"
-              data-food-chain-cancel
-              data-message="foodChainCancel"
-              aria-describedby="food-chain-status"
-              hidden
-              disabled
-            >
-              结束本次挑战
-            </button>
-          </div>
-          <output
-            class="dry-valley-guide-status"
-            id="food-chain-status"
-            data-food-chain-status
-            data-state="unavailable"
-            data-message="foodChainUnavailable"
-            aria-live="polite"
+            <i class="ph ph-storefront" aria-hidden="true"></i
+            ><span data-message="cityToolWorkplace">初始岗位</span
+            ><small data-message="cityPriceWorkplace">¥700 · J</small>
+          </button>
+          <button
+            type="button"
+            data-city-tool="commercial"
+            aria-pressed="false"
           >
-            食物链任务：世界尚未启动
-          </output>
-        </section>
-        <section
-          class="ecology-challenge-panel"
-          aria-label="从选中格亲手挖出并注水一片湖的挑战"
-          data-message-aria-label="pondCardLabel"
-          data-pond-challenge
-          data-state="inactive"
-          hidden
-        >
-          <div class="dry-valley-guide-copy">
-            <p class="dry-valley-guide-eyebrow" data-message="pondEyebrow">
-              新任务 · 改造一处地貌
-            </p>
-            <h2 class="dry-valley-guide-title" data-message="pondTitle">
-              从一格地面造出湖泊
-            </h2>
-            <p class="dry-valley-guide-summary" data-message="pondSummary">
-              从当前选中的格子开始：亲手挖低至少 100 米、注入至少 64
-              毫米水，再推进一个 Tick。不会替换或自动修改世界。
-            </p>
-          </div>
-          <div class="dry-valley-guide-actions">
-            <button
-              class="dry-valley-guide-action"
-              type="button"
-              data-pond-start
-              data-message="pondStart"
-              aria-describedby="pond-status"
-              disabled
-            >
-              以当前格开始造湖
-            </button>
-            <button
-              class="dry-valley-guide-action"
-              type="button"
-              data-pond-action
-              data-message="pondActionBasin"
-              aria-describedby="pond-status"
-              hidden
-              disabled
-            >
-              定位并装备挖低
-            </button>
-            <button
-              class="dry-valley-guide-dismiss"
-              type="button"
-              data-pond-cancel
-              data-message="pondCancel"
-              aria-describedby="pond-status"
-              hidden
-              disabled
-            >
-              结束本次挑战
-            </button>
-          </div>
-          <output
-            class="dry-valley-guide-status"
-            id="pond-status"
-            data-pond-status
-            data-state="unavailable"
-            data-message="pondUnavailable"
-            aria-live="polite"
+            <i class="ph ph-storefront" aria-hidden="true"></i
+            ><span data-message="cityToolCommercial">商业</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="light-industry"
+            aria-pressed="false"
           >
-            造湖任务：世界或当前格不可用
-          </output>
-        </section>
-        <section
-          class="ecology-challenge-panel"
-          aria-label="从选中格亲手造出绿洲的挑战"
-          data-message-aria-label="oasisCardLabel"
-          data-oasis-challenge
-          data-state="inactive"
-          hidden
-        >
-          <div class="dry-valley-guide-copy">
-            <p class="dry-valley-guide-eyebrow" data-message="oasisEyebrow">
-              新任务 · 让一格土地复苏
-            </p>
-            <h2 class="dry-valley-guide-title" data-message="oasisTitle">
-              从一格土地造出绿洲
-            </h2>
-            <p class="dry-valley-guide-summary" data-message="oasisSummary">
-              从当前仍可播种的土地开始：亲手加水、播种，再推进一个
-              Tick。不会替换或自动修改世界。
-            </p>
-          </div>
-          <div class="dry-valley-guide-actions">
-            <button
-              class="dry-valley-guide-action"
-              type="button"
-              data-oasis-start
-              data-message="oasisStart"
-              aria-describedby="oasis-status"
-              disabled
-            >
-              以当前格开始造绿洲
-            </button>
-            <button
-              class="dry-valley-guide-action"
-              type="button"
-              data-oasis-action
-              data-message="oasisActionWater"
-              aria-describedby="oasis-status"
-              hidden
-              disabled
-            >
-              定位并装备加水
-            </button>
-            <button
-              class="dry-valley-guide-dismiss"
-              type="button"
-              data-oasis-cancel
-              data-message="oasisCancel"
-              aria-describedby="oasis-status"
-              hidden
-              disabled
-            >
-              结束本次挑战
-            </button>
-          </div>
-          <output
-            class="dry-valley-guide-status"
-            id="oasis-status"
-            data-oasis-status
-            data-state="unavailable"
-            data-message="oasisUnavailable"
-            aria-live="polite"
-            >绿洲任务：请选择一格仍可播种的土地</output
+            <i class="ph ph-buildings" aria-hidden="true"></i
+            ><span data-message="cityToolLightIndustry">轻工业</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="water-pump"
+            aria-pressed="false"
           >
-        </section>
-      </details>
-
-      <details class="operation-guide" data-operation-guide>
-        <summary
-          class="operation-guide-toggle"
-          data-guide-toggle
-          data-message="guideTitle"
-        >
-          操作指南
-        </summary>
-        <ol class="operation-guide-list">
-          <li data-message="guideSelect">
-            先在底部选择观测、地形、水体、气候或生灵；创造类别会在上方展开当前工具，再点击或触摸世界。
-          </li>
-          <li data-message="guideBrush">
-            选择 1×1、3×3 或 5×5
-            画笔，再直接点击或拖过世界完成一次改造；画布聚焦后可按 1、3、5
-            快速切换。
-          </li>
-          <li data-message="guideSimulation">
-            亲手加水、排水、播下先锋草本或改变降雨，再推进 1
-            Tick，观察水流、土壤水和新芽如何回应；暂停后可撤销或重做改造，切到其他应用时会自动暂停。
-          </li>
-          <li data-message="guideNavigate">
-            放大后可拖动画布；聚焦世界视窗后可用方向键或翻页键滚动。
-          </li>
-          <li data-message="guideZoom">
-            在世界上滚轮缩放；按住空格加左键或使用鼠标中键拖动地图，不会切走当前工具。左侧按钮和世界视窗键盘操作继续可用。
-          </li>
-          <li data-message="guideJump">
-            输入第 1～64 行和第 1～64 列，可直接跳转到指定格子。
-          </li>
-          <li data-message="guideObserve">
-            在萌芽视图阅读摘要，切换调律视图查看当前格的详细坐标。
-          </li>
-          <li data-message="guideWorldFile">
-            可将完整世界导出为
-            .jieya；导入会先验证文件，并要求再次确认后才替换本地世界。
-          </li>
-        </ol>
-      </details>
+            <i class="ph ph-drop" aria-hidden="true"></i
+            ><span data-message="cityToolWaterPump">取水泵</span
+            ><small data-message="cityPriceWaterPump">¥2,000 · W</small>
+          </button>
+          <button
+            type="button"
+            data-city-tool="wind-turbine"
+            aria-pressed="false"
+          >
+            <i class="ph ph-wind" aria-hidden="true"></i
+            ><span data-message="cityToolWindTurbine">风力机</span
+            ><small data-message="cityPriceWindTurbine">¥2,500 · E</small>
+          </button>
+          <button
+            type="button"
+            data-city-tool="waste-depot"
+            aria-pressed="false"
+          >
+            <i class="ph ph-recycle" aria-hidden="true"></i
+            ><span data-message="cityToolWasteDepot">垃圾站</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="elementary-school"
+            aria-pressed="false"
+          >
+            <i class="ph ph-student" aria-hidden="true"></i
+            ><span data-message="cityToolElementarySchool">小学</span
+            ><small data-message="cityPriceSchool">¥7,000 · 50 人开放</small>
+          </button>
+          <button type="button" data-city-tool="clinic" aria-pressed="false">
+            <i class="ph ph-first-aid" aria-hidden="true"></i
+            ><span data-message="cityToolClinic">诊所</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="fire-station"
+            aria-pressed="false"
+          >
+            <i class="ph ph-fire-truck" aria-hidden="true"></i
+            ><span data-message="cityToolFireStation">消防站</span>
+          </button>
+          <button type="button" data-city-tool="bus-depot" aria-pressed="false">
+            <i class="ph ph-bus" aria-hidden="true"></i
+            ><span data-message="cityToolBusDepot">公交车场</span>
+          </button>
+          <button type="button" data-city-tool="bus-stop" aria-pressed="false">
+            <i class="ph ph-map-pin" aria-hidden="true"></i
+            ><span data-message="cityToolBusStop">公交站</span>
+          </button>
+          <button type="button" data-city-tool="bus-route" aria-pressed="false">
+            <i class="ph ph-git-branch" aria-hidden="true"></i
+            ><span data-message="cityToolBusRoute">创建线路</span>
+          </button>
+          <output data-city-bus-route-status hidden>尚未选择站点</output>
+          <button type="button" data-city-bus-route-confirm hidden disabled>
+            <i class="ph ph-check" aria-hidden="true"></i><span>确认线路</span>
+          </button>
+          <button type="button" data-city-bus-route-cancel hidden>
+            <i class="ph ph-x" aria-hidden="true"></i><span>取消线路</span>
+          </button>
+          <div class="city-route-list" data-city-route-list hidden></div>
+          <button
+            type="button"
+            data-city-tool="collector-road"
+            aria-pressed="false"
+          >
+            <i class="ph ph-road-horizon" aria-hidden="true"></i
+            ><span data-message="cityToolCollector">集散道路</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="neighborhood-center"
+            aria-pressed="false"
+          >
+            <i class="ph ph-buildings" aria-hidden="true"></i
+            ><span data-message="cityToolCenter">邻里中心</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="water-quality-monitor"
+            aria-pressed="false"
+          >
+            <i class="ph ph-gauge" aria-hidden="true"></i
+            ><span data-message="cityToolWaterQualityMonitor">水质监测</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="sewage-outfall"
+            aria-pressed="false"
+          >
+            <i class="ph ph-pipe" aria-hidden="true"></i
+            ><span data-message="cityToolSewageOutfall">污水排口</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="wastewater-treatment-plant"
+            aria-pressed="false"
+          >
+            <i class="ph ph-factory" aria-hidden="true"></i
+            ><span data-message="cityToolWastewaterTreatment">处理厂</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="constructed-wetland"
+            aria-pressed="false"
+          >
+            <i class="ph ph-plant" aria-hidden="true"></i
+            ><span data-message="cityToolConstructedWetland">人工湿地</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="riparian-buffer"
+            aria-pressed="false"
+          >
+            <i class="ph ph-leaf" aria-hidden="true"></i
+            ><span data-message="cityToolRiparianBuffer">河岸缓冲</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="ecological-corridor"
+            aria-pressed="false"
+          >
+            <i class="ph ph-tree" aria-hidden="true"></i
+            ><span data-message="cityToolEcologicalCorridor">生态廊道</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="rain-garden"
+            aria-pressed="false"
+          >
+            <i class="ph ph-flower-lotus" aria-hidden="true"></i
+            ><span data-message="cityToolRainGarden">雨水花园</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="detention-basin"
+            aria-pressed="false"
+          >
+            <i class="ph ph-drop-half-bottom" aria-hidden="true"></i
+            ><span data-message="cityToolDetentionBasin">调蓄池</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="drainage-pump"
+            aria-pressed="false"
+          >
+            <i class="ph ph-engine" aria-hidden="true"></i
+            ><span data-message="cityToolDrainagePump">排涝泵站</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="industry-circular"
+            aria-pressed="false"
+          >
+            <i class="ph ph-recycle" aria-hidden="true"></i
+            ><span data-message="cityIndustryCircular">循环建材</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="industry-food"
+            aria-pressed="false"
+          >
+            <i class="ph ph-bowl-food" aria-hidden="true"></i
+            ><span data-message="cityIndustryFood">食品加工</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="industry-wood"
+            aria-pressed="false"
+          >
+            <i class="ph ph-tree" aria-hidden="true"></i
+            ><span data-message="cityIndustryWood">木制品</span>
+          </button>
+          <button type="button" data-city-tool="warehouse" aria-pressed="false">
+            <i class="ph ph-warehouse" aria-hidden="true"></i
+            ><span data-message="cityToolWarehouse">仓库</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="cargo-terminal"
+            aria-pressed="false"
+          >
+            <i class="ph ph-crane" aria-hidden="true"></i
+            ><span data-message="cityToolCargoTerminal">货运站</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="distribution-hub"
+            aria-pressed="false"
+          >
+            <i class="ph ph-package" aria-hidden="true"></i
+            ><span data-message="cityToolDistributionHub">配送中心</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="policy-fiscal"
+            aria-pressed="false"
+          >
+            <i class="ph ph-scales" aria-hidden="true"></i
+            ><span data-message="cityPolicyFiscal">财政纪律</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="policy-green"
+            aria-pressed="false"
+          >
+            <i class="ph ph-leaf" aria-hidden="true"></i
+            ><span data-message="cityPolicyGreen">绿色韧性</span>
+          </button>
+          <button
+            type="button"
+            data-city-tool="policy-circular"
+            aria-pressed="false"
+          >
+            <i class="ph ph-arrows-clockwise" aria-hidden="true"></i
+            ><span data-message="cityPolicyCircular">循环繁荣</span>
+          </button>
+        </div>
+      </nav>
 
       <section
-        class="world-panel"
-        aria-label="世界画布"
-        data-message-aria-label="panelLabel"
+        class="city-game-menu"
+        data-city-game-menu
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="city-game-menu-title"
+        hidden
       >
-        <noscript>
-          <p
-            class="status"
-            data-noscript
-            data-state="error"
-            data-message="javascriptRequired"
+        <div class="city-game-menu-panel">
+          <span class="city-game-menu-eyebrow" data-message="cityGameMenuPaused"
+            >游戏已暂停</span
           >
-            需要启用 JavaScript 才能创建和改造世界。启用后请刷新此页。
-          </p>
-        </noscript>
-        <aside
-          class="first-creation-guide"
-          aria-label="第一次塑界游戏内引导"
-          aria-labelledby="first-creation-guide-title"
-          data-message-aria-label="firstCreationGuideLabel"
-          data-first-creation-guide
-          data-state="needs-lowland"
-          hidden
-        >
-          <div class="first-creation-guide-heading">
-            <p
-              class="first-creation-guide-eyebrow"
-              data-message="firstCreationGuideEyebrow"
-            >
-              第一次塑界
-            </p>
-            <strong data-first-creation-progress>1 / 3</strong>
-          </div>
-          <h2
-            class="first-creation-guide-title"
-            id="first-creation-guide-title"
-            data-message="firstCreationGuideTitle"
-          >
-            亲手让世界回应
-          </h2>
-          <p
-            class="first-creation-guide-instruction"
-            data-first-creation-instruction
-            data-message="firstCreationGuideChooseTerrain"
-            aria-live="polite"
-          >
-            先从底部工具坞选择“地形”。
-          </p>
-          <ol
-            class="first-creation-steps"
-            aria-label="首次塑界三步"
-            data-message-aria-label="firstCreationGuideStepsLabel"
-          >
-            <li data-first-creation-step="lowland">
-              <i class="ph ph-mountains" aria-hidden="true"></i>
-              <span data-message="firstCreationGuideStepDig">挖出低地</span>
-            </li>
-            <li data-first-creation-step="time">
-              <i class="ph ph-clock" aria-hidden="true"></i>
-              <span data-message="firstCreationGuideStepAdvance">推动 +1</span>
-            </li>
-            <li data-first-creation-step="water">
-              <i class="ph ph-drop" aria-hidden="true"></i>
-              <span data-message="firstCreationGuideStepObserve">打开水文</span>
-            </li>
-          </ol>
-          <button
-            class="first-creation-guide-action"
-            type="button"
-            data-first-creation-action
-            data-message="firstCreationGuideSkip"
-          >
-            跳过引导
-          </button>
-        </aside>
-        <aside
-          class="world-wish-strip"
-          aria-label="世界愿望条"
-          data-message-aria-label="worldWishStripLabel"
-          data-world-wish-strip
-          data-state="idle"
-          hidden
-        >
-          <button type="button" data-world-wish-strip-action>
-            <span aria-hidden="true">✦</span>
-            <strong
-              data-world-wish-strip-label
-              data-message="adventureChooseWish"
-              >选择下一愿望</strong
-            >
-          </button>
-        </aside>
-        <aside
-          class="first-session-experiment"
-          aria-label="第一次塑界渐进实验"
-          aria-labelledby="first-session-experiment-title"
-          data-message-aria-label="firstSessionExperimentLabel"
-          data-first-session-experiment
-          data-state="needs-action"
-          hidden
-        >
-          <div class="first-session-experiment-heading">
-            <p data-message="firstSessionExperimentEyebrow">
-              下一实验 · 可忽略
-            </p>
-            <strong data-first-session-experiment-progress>1 / 3</strong>
-          </div>
-          <h2
-            id="first-session-experiment-title"
-            data-first-session-experiment-title
-          ></h2>
-          <p
-            class="first-session-experiment-instruction"
-            data-first-session-experiment-instruction
-            aria-live="polite"
-          ></p>
-          <div class="first-session-experiment-evidence">
-            <i class="ph ph-map-pin" aria-hidden="true"></i>
-            <output data-first-session-experiment-delta></output>
-          </div>
-          <output
-            class="first-session-experiment-cause"
-            data-first-session-experiment-cause
-            aria-live="polite"
-            hidden
-          ></output>
-          <div class="first-session-experiment-actions">
+          <h1 id="city-game-menu-title" data-message="cityGameMenuTitle">
+            游戏菜单
+          </h1>
+          <p data-message="cityGameMenuHint">按 Esc 或选择继续返回城市</p>
+          <div class="city-game-menu-actions">
             <button
-              class="first-session-experiment-primary"
               type="button"
-              data-first-session-experiment-action
-              data-message="firstSessionExperimentNext"
-              disabled
+              class="city-game-menu-action city-game-menu-continue"
+              data-city-game-menu-continue
+              data-message="cityGameMenuContinue"
             >
-              下一实验
+              继续游戏
             </button>
             <button
-              class="first-session-experiment-dismiss"
               type="button"
-              data-first-session-experiment-dismiss
-              data-message="firstSessionExperimentDismiss"
-              disabled
+              class="city-game-menu-action city-game-menu-exit"
+              data-city-game-menu-exit
+              data-message="cityGameMenuExit"
             >
-              先自由探索
-            </button>
-          </div>
-        </aside>
-        <div
-          class="active-tool-chip"
-          role="status"
-          aria-live="polite"
-          data-active-tool-status
-          data-active-tool-shortcut="I"
-          data-observation-lens-legend
-          data-active-observation-lens="world"
-          data-message="activeToolInspect"
-        >
-          当前工具：观测 · 拖动地图，点击查看
-        </div>
-        <section
-          class="world-action-ribbon"
-          data-world-action-ribbon
-          data-state="unavailable"
-          aria-label="世界回应"
-          data-message-aria-label="worldActionRibbonLabel"
-          hidden
-        >
-          <output
-            class="world-action-ribbon-message"
-            data-world-action-ribbon-message
-            data-message="worldActionRibbonUnavailable"
-            aria-live="off"
-            >世界回应：等待创造</output
-          >
-          <button
-            class="world-action-ribbon-step"
-            type="button"
-            data-world-action-ribbon-step
-            aria-label="推进 1 Tick，观察世界变化"
-            data-message-aria-label="worldActionRibbonStepLabel"
-            disabled
-          >
-            <span data-message="worldActionRibbonStep">推进 1 Tick</span>
-            <kbd aria-hidden="true">.</kbd>
-          </button>
-        </section>
-        <div
-          class="zoom-toolbar"
-          role="group"
-          aria-label="世界视图缩放"
-          data-message-aria-label="zoomControlsLabel"
-        >
-          <button
-            class="zoom-button"
-            type="button"
-            data-zoom-out
-            aria-label="缩小"
-            data-message-aria-label="zoomOut"
-            disabled
-          >
-            <i class="ph ph-minus" aria-hidden="true"></i>
-          </button>
-          <output
-            class="zoom-status"
-            id="zoom-status"
-            data-zoom-status
-            data-message="zoomUnavailable"
-            aria-live="polite"
-          >
-            当前缩放：世界未启动
-          </output>
-          <button
-            class="zoom-button"
-            type="button"
-            data-zoom-in
-            aria-label="放大"
-            data-message-aria-label="zoomIn"
-            disabled
-          >
-            <i class="ph ph-plus" aria-hidden="true"></i>
-          </button>
-          <button
-            class="zoom-button zoom-reset"
-            type="button"
-            data-zoom-reset
-            aria-label="恢复 100%"
-            data-message-aria-label="zoomReset"
-            disabled
-          >
-            <span aria-hidden="true">1:1</span>
-          </button>
-          <button
-            class="zoom-button"
-            type="button"
-            data-center-selection
-            aria-label="定位当前格"
-            data-message-aria-label="centerSelection"
-            disabled
-          >
-            <i class="ph ph-crosshair" aria-hidden="true"></i>
-          </button>
-          <div class="world-3d-camera-controls" data-world-3d-camera-controls>
-            <button
-              class="zoom-button"
-              type="button"
-              data-world-3d-rotate="counter-clockwise"
-              aria-label="向左旋转 90°"
-              aria-keyshortcuts="Q"
-              data-message-aria-label="world3dRotateCounterClockwise"
-              disabled
-            >
-              <i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i>
-            </button>
-            <output
-              class="world-3d-mode-status"
-              data-world-3d-mode-status
-              data-message="world3dModeStatus"
-              >3D 开发预览</output
-            >
-            <button
-              class="zoom-button"
-              type="button"
-              data-world-3d-rotate="clockwise"
-              aria-label="向右旋转 90°"
-              aria-keyshortcuts="E"
-              data-message-aria-label="world3dRotateClockwise"
-              disabled
-            >
-              <i class="ph ph-arrow-clockwise" aria-hidden="true"></i>
-            </button>
-          </div>
-          <p class="camera-hint" data-message="cameraHint">
-            滚轮缩放 · 空格/中键拖动
-          </p>
-        </div>
-        <div
-          class="game-tool-dock"
-          aria-label="创造工具坞"
-          data-message-aria-label="gameToolDockLabel"
-        >
-          <div
-            class="tool-category-toolbar"
-            role="group"
-            aria-label="创造类别"
-            data-message-aria-label="toolCategoriesLabel"
-          >
-            <button
-              class="zoom-button tool-button tool-category-button tool-button-inspect"
-              type="button"
-              data-tool-action="Inspect"
-              data-tool-category="inspect"
-              aria-label="观测"
-              data-message-aria-label="inspectTool"
-              aria-pressed="true"
-              aria-keyshortcuts="I"
-              disabled
-            >
-              <i
-                class="ph ph-binoculars tool-button-icon"
-                aria-hidden="true"
-              ></i>
-              <span data-message="inspectTool">观测</span>
-              <kbd class="tool-shortcut-hint" aria-hidden="true">I</kbd>
-            </button>
-            <button
-              class="zoom-button tool-button tool-category-button"
-              type="button"
-              data-tool-category="terrain"
-              aria-label="地形"
-              data-message-aria-label="toolCategoryTerrain"
-              aria-controls="contextual-tool-tray"
-              aria-pressed="false"
-              aria-keyshortcuts="T"
-              disabled
-            >
-              <i
-                class="ph ph-mountains tool-button-icon"
-                aria-hidden="true"
-              ></i>
-              <span data-message="toolCategoryTerrain">地形</span>
-              <kbd class="tool-shortcut-hint" aria-hidden="true">T</kbd>
-            </button>
-            <button
-              class="zoom-button tool-button tool-category-button"
-              type="button"
-              data-tool-category="water"
-              aria-label="水体"
-              data-message-aria-label="toolCategoryWater"
-              aria-controls="contextual-tool-tray"
-              aria-pressed="false"
-              aria-keyshortcuts="W"
-              disabled
-            >
-              <i class="ph ph-drop tool-button-icon" aria-hidden="true"></i>
-              <span data-message="toolCategoryWater">水体</span>
-              <kbd class="tool-shortcut-hint" aria-hidden="true">W</kbd>
-            </button>
-            <button
-              class="zoom-button tool-button tool-category-button"
-              type="button"
-              data-tool-category="climate"
-              aria-label="气候"
-              data-message-aria-label="toolCategoryClimate"
-              aria-controls="contextual-tool-tray"
-              aria-pressed="false"
-              aria-keyshortcuts="C"
-              disabled
-            >
-              <i class="ph ph-cloud tool-button-icon" aria-hidden="true"></i>
-              <span data-message="toolCategoryClimate">气候</span>
-              <kbd class="tool-shortcut-hint" aria-hidden="true">C</kbd>
-            </button>
-            <button
-              class="zoom-button tool-button tool-category-button"
-              type="button"
-              data-tool-category="life"
-              aria-label="生灵"
-              data-message-aria-label="toolCategoryLife"
-              aria-controls="contextual-tool-tray"
-              aria-pressed="false"
-              aria-keyshortcuts="L"
-              disabled
-            >
-              <i class="ph ph-plant tool-button-icon" aria-hidden="true"></i>
-              <span data-message="toolCategoryLife">生灵</span>
-              <kbd class="tool-shortcut-hint" aria-hidden="true">L</kbd>
+              退出到主页
             </button>
           </div>
           <div
-            class="contextual-tool-tray"
-            id="contextual-tool-tray"
-            aria-label="当前游戏工具"
-            data-message-aria-label="contextualToolTrayLabel"
-            data-contextual-tool-tray
-            hidden
+            class="city-game-menu-future"
+            aria-label="未来功能"
+            data-message-aria-label="cityGameMenuFuture"
           >
-            <div
-              class="observation-lens-toolbar"
-              role="group"
-              aria-label="观测镜片"
-              data-message-aria-label="observationLensControlsLabel"
-              data-tool-panel="inspect"
-              hidden
-            >
-              <b class="brush-label" data-message="observationLensLabel"
-                >观测镜片</b
-              >
-              <button
-                class="zoom-button observation-lens-button"
-                type="button"
-                data-observation-lens-action="world"
-                aria-pressed="true"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">◎</span>
-                <span data-message="observationLensWorld">世界</span>
-              </button>
-              <button
-                class="zoom-button observation-lens-button"
-                type="button"
-                data-observation-lens-action="water"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">≋</span>
-                <span data-message="observationLensWater">水文</span>
-              </button>
-              <button
-                class="zoom-button observation-lens-button"
-                type="button"
-                data-observation-lens-action="climate"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">▲≈</span>
-                <span data-message="observationLensClimate">气候</span>
-              </button>
-              <button
-                class="zoom-button observation-lens-button"
-                type="button"
-                data-observation-lens-action="life"
-                aria-pressed="false"
-                disabled
-              >
-                <i class="ph ph-plant tool-button-icon" aria-hidden="true"></i>
-                <span data-message="observationLensLife">生灵</span>
-              </button>
-            </div>
-            <div
-              class="brush-toolbar"
-              role="group"
-              aria-label="画笔范围预览"
-              data-message-aria-label="brushControlsLabel"
-              data-brush-toolbar
-            >
-              <span class="brush-label" data-message="brushLabel"
-                >画笔范围</span
-              >
-              <span
-                class="brush-cycle-hint"
-                data-brush-cycle-hint
-                data-message="brushCycleHint"
-                aria-hidden="true"
-                >[ ] 调范围</span
-              >
-              <button
-                class="zoom-button brush-button"
-                type="button"
-                data-brush-size="1"
-                data-message="brushSize1"
-                aria-keyshortcuts="1"
-                aria-pressed="true"
-                disabled
-              >
-                1×1
-              </button>
-              <button
-                class="zoom-button brush-button"
-                type="button"
-                data-brush-size="3"
-                data-message="brushSize3"
-                aria-keyshortcuts="3"
-                aria-pressed="false"
-                disabled
-              >
-                3×3
-              </button>
-              <button
-                class="zoom-button brush-button"
-                type="button"
-                data-brush-size="5"
-                data-message="brushSize5"
-                aria-keyshortcuts="5"
-                aria-pressed="false"
-                disabled
-              >
-                5×5
-              </button>
-              <output
-                class="brush-status"
-                id="brush-status"
-                data-brush-status
-                data-message="brushUnavailable"
-                aria-live="polite"
-              >
-                画笔预览：世界未启动
-              </output>
-              <output
-                class="pointer-status"
-                data-pointer-status
-                data-state="unavailable"
-                data-message="pointerUnavailable"
-                aria-live="off"
-              >
-                指针位置：世界未启动
-              </output>
-            </div>
-            <div
-              class="terrain-toolbar"
-              role="group"
-              aria-label="地形改造"
-              data-message-aria-label="terrainControlsLabel"
-              data-tool-panel="terrain"
-              hidden
-            >
-              <b class="brush-label" data-message="terrainLabel">地形改造</b>
-              <button
-                class="zoom-button terrain-button terrain-button-raise"
-                type="button"
-                data-terrain-action="RaiseTerrain"
-                aria-label="抬高 +100 米"
-                data-message-aria-label="terrainRaise"
-                aria-describedby="terrain-status"
-                aria-keyshortcuts="R"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">▲</span>
-                <span data-message="terrainRaiseShort">抬高</span>
-                <kbd class="tool-shortcut-hint" aria-hidden="true">R</kbd>
-              </button>
-              <button
-                class="zoom-button terrain-button terrain-button-lower"
-                type="button"
-                data-terrain-action="LowerTerrain"
-                aria-label="降低 −100 米"
-                data-message-aria-label="terrainLower"
-                aria-describedby="terrain-status"
-                aria-keyshortcuts="D"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">▼</span>
-                <span data-message="terrainLowerShort">挖低</span>
-                <kbd class="tool-shortcut-hint" aria-hidden="true">D</kbd>
-              </button>
-              <output
-                class="terrain-status"
-                id="terrain-status"
-                data-terrain-status
-                data-state="unavailable"
-                data-message="terrainUnavailable"
-                aria-live="polite"
-              >
-                地形工具：世界未启动
-              </output>
-            </div>
-            <div
-              class="surface-water-toolbar"
-              role="group"
-              aria-label="地表水改造"
-              data-message-aria-label="surfaceWaterControlsLabel"
-              data-tool-panel="water"
-              hidden
-            >
-              <b class="brush-label" data-message="surfaceWaterLabel">地表水</b>
-              <button
-                class="zoom-button surface-water-button surface-water-button-add"
-                type="button"
-                data-surface-water-action="AddSurfaceWater"
-                aria-label="加水 +64 毫米"
-                data-message-aria-label="surfaceWaterAdd"
-                aria-describedby="surface-water-status"
-                aria-keyshortcuts="A"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">≋</span>
-                <span data-message="surfaceWaterAddShort">加水</span>
-                <kbd class="tool-shortcut-hint" aria-hidden="true">A</kbd>
-              </button>
-              <button
-                class="zoom-button surface-water-button surface-water-button-remove"
-                type="button"
-                data-surface-water-action="RemoveSurfaceWater"
-                aria-label="排水 −64 毫米"
-                data-message-aria-label="surfaceWaterRemove"
-                aria-describedby="surface-water-status"
-                aria-keyshortcuts="S"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">⌁</span>
-                <span data-message="surfaceWaterRemoveShort">排水</span>
-                <kbd class="tool-shortcut-hint" aria-hidden="true">S</kbd>
-              </button>
-              <output
-                class="surface-water-status"
-                id="surface-water-status"
-                data-surface-water-status
-                data-state="unavailable"
-                data-message="surfaceWaterUnavailable"
-                aria-live="polite"
-              >
-                地表水工具：世界未启动
-              </output>
-            </div>
-            <div
-              class="rainfall-toolbar"
-              role="group"
-              aria-label="降雨改造"
-              data-message-aria-label="rainfallControlsLabel"
-              data-tool-panel="climate"
-              hidden
-            >
-              <b class="brush-label" data-message="rainfallLabel">降雨改造</b>
-              <button
-                class="zoom-button rainfall-button rainfall-button-increase"
-                type="button"
-                data-rainfall-action="IncreaseRainfall"
-                aria-label="增加降雨 +8 毫米/格/Tick"
-                data-message-aria-label="rainfallIncrease"
-                aria-describedby="rainfall-status"
-                aria-keyshortcuts="G"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">☂</span>
-                <span data-message="rainfallIncreaseShort">增雨</span>
-                <kbd class="tool-shortcut-hint" aria-hidden="true">G</kbd>
-              </button>
-              <button
-                class="zoom-button rainfall-button rainfall-button-decrease"
-                type="button"
-                data-rainfall-action="DecreaseRainfall"
-                aria-label="减少降雨 −8 毫米/格/Tick"
-                data-message-aria-label="rainfallDecrease"
-                aria-describedby="rainfall-status"
-                aria-keyshortcuts="H"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">☀</span>
-                <span data-message="rainfallDecreaseShort">减雨</span>
-                <kbd class="tool-shortcut-hint" aria-hidden="true">H</kbd>
-              </button>
-              <button
-                class="zoom-button rainfall-button"
-                type="button"
-                data-climate-action="IncreaseTemperature"
-                aria-label="升温 +1.0 摄氏度"
-                data-message-aria-label="temperatureIncrease"
-                aria-describedby="rainfall-status"
-                aria-keyshortcuts="U"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">▲</span
-                ><span data-message="temperatureIncreaseShort">升温</span
-                ><kbd class="tool-shortcut-hint" aria-hidden="true">U</kbd>
-              </button>
-              <button
-                class="zoom-button rainfall-button"
-                type="button"
-                data-climate-action="DecreaseTemperature"
-                aria-label="降温 −1.0 摄氏度"
-                data-message-aria-label="temperatureDecrease"
-                aria-describedby="rainfall-status"
-                aria-keyshortcuts="J"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">▼</span
-                ><span data-message="temperatureDecreaseShort">降温</span
-                ><kbd class="tool-shortcut-hint" aria-hidden="true">J</kbd>
-              </button>
-              <button
-                class="zoom-button rainfall-button"
-                type="button"
-                data-climate-action="IncreaseHumidity"
-                aria-label="增湿 +10 百分点"
-                data-message-aria-label="humidityIncrease"
-                aria-describedby="rainfall-status"
-                aria-keyshortcuts="Y"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">≈</span
-                ><span data-message="humidityIncreaseShort">增湿</span
-                ><kbd class="tool-shortcut-hint" aria-hidden="true">Y</kbd>
-              </button>
-              <button
-                class="zoom-button rainfall-button"
-                type="button"
-                data-climate-action="DecreaseHumidity"
-                aria-label="除湿 −10 百分点"
-                data-message-aria-label="humidityDecrease"
-                aria-describedby="rainfall-status"
-                aria-keyshortcuts="K"
-                aria-pressed="false"
-                disabled
-              >
-                <span class="tool-button-icon" aria-hidden="true">≋</span
-                ><span data-message="humidityDecreaseShort">除湿</span
-                ><kbd class="tool-shortcut-hint" aria-hidden="true">K</kbd>
-              </button>
-              <output
-                class="rainfall-status"
-                id="rainfall-status"
-                data-rainfall-status
-                data-state="unavailable"
-                data-message="rainfallUnavailable"
-                aria-live="polite"
-              >
-                降雨工具：世界未启动
-              </output>
-            </div>
-            <div
-              class="pioneer-plant-sowing-toolbar"
-              role="group"
-              aria-label="生灵匣播种"
-              data-message-aria-label="pioneerPlantSowingControlsLabel"
-              data-tool-panel="life"
-              hidden
-            >
-              <b data-message="pioneerPlantSowingLabel">生灵匣</b>
-              <button
-                class="zoom-button pioneer-plant-sowing-button"
-                type="button"
-                data-pioneer-plant-sowing-action
-                aria-label="播种先锋草本"
-                data-message-aria-label="pioneerPlantSow"
-                aria-describedby="pioneer-plant-sowing-status"
-                aria-keyshortcuts="B"
-                aria-pressed="false"
-                disabled
-              >
-                <i class="ph ph-plant tool-button-icon" aria-hidden="true"></i>
-                <span
-                  data-life-tool-name
-                  data-message="lifeToolPioneerPlantName"
-                  >先锋草本</span
-                >
-                <kbd class="tool-shortcut-hint" aria-hidden="true">B</kbd>
-              </button>
-              <button
-                class="zoom-button flowering-sprout-planting-button"
-                type="button"
-                data-flowering-sprout-planting-action
-                aria-label="种下花株"
-                data-message-aria-label="floweringSproutPlant"
-                aria-describedby="pioneer-plant-sowing-status"
-                aria-keyshortcuts="F"
-                aria-pressed="false"
-                disabled
-              >
-                <i class="ph ph-flower tool-button-icon" aria-hidden="true"></i>
-                <span data-life-tool-name data-message="lifeToolFlowerName"
-                  >花株</span
-                >
-                <kbd class="tool-shortcut-hint" aria-hidden="true">F</kbd>
-              </button>
-              <button
-                class="zoom-button pollinator-release-button"
-                type="button"
-                data-pollinator-release-action
-                aria-label="投放花粉蜂"
-                data-message-aria-label="lifeToolPollinatorRelease"
-                aria-describedby="pioneer-plant-sowing-status"
-                aria-keyshortcuts="P"
-                aria-pressed="false"
-                disabled
-                title="投放花粉蜂（P）"
-                data-message-title="lifeToolPollinatorTitle"
-              >
-                <i
-                  class="ph ph-butterfly tool-button-icon"
-                  aria-hidden="true"
-                ></i>
-                <span data-life-tool-name data-message="lifeToolPollinatorName"
-                  >花粉蜂</span
-                >
-                <kbd class="tool-shortcut-hint" aria-hidden="true">P</kbd>
-              </button>
-              <button
-                class="zoom-button decomposer-release-button"
-                type="button"
-                data-decomposer-release-action
-                aria-label="投放腐光菌"
-                data-message-aria-label="lifeToolDecomposerRelease"
-                aria-describedby="pioneer-plant-sowing-status"
-                aria-keyshortcuts="M"
-                aria-pressed="false"
-                disabled
-                title="投放腐光菌（M）"
-                data-message-title="lifeToolDecomposerTitle"
-              >
-                <i class="ph ph-leaf tool-button-icon" aria-hidden="true"></i>
-                <span data-life-tool-name data-message="lifeToolDecomposerName"
-                  >腐光菌</span
-                >
-                <kbd class="tool-shortcut-hint" aria-hidden="true">M</kbd>
-              </button>
-              <button
-                class="zoom-button woody-sapling-planting-button"
-                type="button"
-                data-woody-sapling-planting-action
-                aria-label="种下芽木"
-                data-message-aria-label="lifeToolWoodyPlant"
-                aria-describedby="pioneer-plant-sowing-status"
-                aria-pressed="false"
-                disabled
-                title="种下芽木；装备后在画布按 Enter 种植"
-                data-message-title="lifeToolWoodyTitle"
-              >
-                <i class="ph ph-tree tool-button-icon" aria-hidden="true"></i>
-                <span data-life-tool-name data-message="lifeToolWoodyName"
-                  >芽木</span
-                >
-              </button>
-              <button
-                class="zoom-button shrub-release-button"
-                type="button"
-                data-shrub-release-action
-                aria-label="投放灌木"
-                data-message-aria-label="lifeToolShrubRelease"
-                aria-describedby="pioneer-plant-sowing-status"
-                aria-keyshortcuts="V"
-                aria-pressed="false"
-                disabled
-                title="投放灌木（V）"
-                data-message-title="lifeToolShrubTitle"
-              >
-                <i
-                  class="ph ph-tree-evergreen tool-button-icon"
-                  aria-hidden="true"
-                ></i>
-                <span data-life-tool-name data-message="lifeToolShrubName"
-                  >灌木</span
-                >
-                <kbd class="tool-shortcut-hint" aria-hidden="true">V</kbd>
-              </button>
-              <button
-                class="zoom-button sprout-grazer-release-button"
-                type="button"
-                data-sprout-grazer-release-action
-                aria-label="投放绒芽兽"
-                data-message-aria-label="sproutGrazerRelease"
-                aria-describedby="pioneer-plant-sowing-status"
-                aria-keyshortcuts="N"
-                aria-pressed="false"
-                disabled
-              >
-                <i class="ph ph-rabbit tool-button-icon" aria-hidden="true"></i>
-                <span data-life-tool-name data-message="lifeToolGrazerName"
-                  >绒芽兽</span
-                >
-                <kbd class="tool-shortcut-hint" aria-hidden="true">N</kbd>
-              </button>
-              <button
-                class="zoom-button shadowtail-fox-release-button"
-                type="button"
-                data-shadowtail-fox-release-action
-                aria-label="投放影尾狐"
-                data-message-aria-label="shadowtailFoxRelease"
-                aria-describedby="pioneer-plant-sowing-status"
-                aria-keyshortcuts="X"
-                aria-pressed="false"
-                disabled
-              >
-                <i
-                  class="ph ph-paw-print tool-button-icon"
-                  aria-hidden="true"
-                ></i>
-                <span data-life-tool-name data-message="lifeToolFoxName"
-                  >影尾狐</span
-                >
-                <kbd class="tool-shortcut-hint" aria-hidden="true">X</kbd>
-              </button>
-              <output
-                class="pioneer-plant-sowing-status"
-                id="pioneer-plant-sowing-status"
-                data-pioneer-plant-sowing-status
-                data-state="unavailable"
-                data-message="pioneerPlantSowingUnavailable"
-                aria-live="polite"
-              >
-                播种工具：世界未启动
-              </output>
-            </div>
+            <button data-city-game-menu-placeholder disabled>
+              <span data-message="cityGameMenuSave">保存游戏</span>
+              <small data-message="cityGameMenuComingSoon">即将开放</small>
+            </button>
+            <button data-city-game-menu-placeholder disabled>
+              <span data-message="cityGameMenuLoad">读取游戏</span>
+              <small data-message="cityGameMenuComingSoon">即将开放</small>
+            </button>
+            <button data-city-game-menu-placeholder disabled>
+              <span data-message="cityGameMenuSettings">游戏设置</span>
+              <small data-message="cityGameMenuComingSoon">即将开放</small>
+            </button>
           </div>
         </div>
-        <details class="world-menu" data-world-menu>
-          <summary class="world-menu-toggle" data-world-menu-toggle>
-            <i class="ph ph-globe" aria-hidden="true"></i>
-            <span data-message="worldMenu">世界</span>
-          </summary>
-          <div
-            class="persistence-toolbar"
-            role="group"
-            aria-label="本地世界保存"
-            data-message-aria-label="persistenceControlsLabel"
-          >
-            <section class="hud-history-home" data-hud-history-home>
-              <b data-message="historyToolsTitle">历史与工具</b>
-              <section
-                class="forest-floor-challenge"
-                data-forest-floor-challenge
-              >
-                <b data-message="forestChallengeTitle">挑战：林地复苏</b>
-                <p
-                  data-forest-floor-challenge-status
-                  data-message="forestReadyDescription"
-                >
-                  在当前格开始，依次培育芽木、制造枯落、分解回肥并让芽木续长。
-                </p>
-                <button
-                  class="zoom-button"
-                  type="button"
-                  data-forest-floor-challenge-action
-                  data-message="forestReadyAction"
-                  disabled
-                >
-                  从当前格开始
-                </button>
-              </section>
-            </section>
-            <section
-              class="world-status-panel"
-              aria-label="世界与应用状态"
-              data-message-aria-label="worldStatusLabel"
-              data-world-status
-            >
-              <b data-message="worldStatusTitle">世界状态</b>
-              <dl class="world-status-list">
-                <div>
-                  <dt data-message="observationRevisionLabel">世界版本</dt>
-                  <dd data-hud-revision>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationLabel">当前格观测</dt>
-                  <dd
-                    class="game-hud-selection"
-                    data-hud-selection
-                    data-message="hudSelectionUnavailable"
-                  >
-                    —
-                  </dd>
-                </div>
-              </dl>
-              <p
-                class="offline-status"
-                role="status"
-                aria-live="polite"
-                data-offline-status
-                data-state="unavailable"
-                data-message="offlineUnavailable"
-              >
-                离线能力：当前不可用
-              </p>
-              <footer
-                class="preview-footer"
-                aria-label="公开预览说明"
-                data-message-aria-label="previewFooterLabel"
-              >
-                <p>
-                  <strong data-message="previewVersion"
-                    >公开预览 0.159.0 · MVP Candidate</strong
-                  >
-                  <span aria-hidden="true"> · </span>
-                  <span data-message="previewPrivacy">
-                    世界只保存在当前浏览器，不会上传；清除站点数据会删除本地世界。
-                  </span>
-                </p>
-                <p data-message="previewRecovery">
-                  若页面异常，请先刷新；清空本地世界需要二次确认且无法恢复。
-                </p>
-                <a href="./feedback.html" data-message="previewFeedback">
-                  查看版本说明或反馈问题
-                </a>
-              </footer>
-            </section>
-            <details class="player-settings" data-player-settings>
-              <summary
-                data-player-settings-toggle
-                data-message="playerSettingsTitle"
-              >
-                设备设置
-              </summary>
-              <div class="player-settings-grid">
-                <p data-message="playerSettingsDisclosure">
-                  设置和引导状态只保存在当前设备，不进入世界存档或 .jieya 文件。
-                </p>
-                <label>
-                  <span data-message="playerVolumeLabel">主音量</span>
-                  <span class="player-volume-control">
-                    <input
-                      type="range"
-                      min="0"
-                      max="100"
-                      step="1"
-                      value="70"
-                      data-player-volume
-                    />
-                    <output data-player-volume-output>70%</output>
-                  </span>
-                </label>
-                <label class="player-setting-checkbox">
-                  <input type="checkbox" data-player-muted />
-                  <span data-message="playerMutedLabel">静音</span>
-                </label>
-                <label>
-                  <span data-message="playerMotionLabel">动态效果</span>
-                  <select data-player-motion-control>
-                    <option value="system" data-message="playerMotionSystem">
-                      跟随系统
-                    </option>
-                    <option value="full" data-message="playerMotionFull">
-                      完整动态
-                    </option>
-                    <option value="reduced" data-message="playerMotionReduced">
-                      减少动态
-                    </option>
-                  </select>
-                </label>
-                <label>
-                  <span data-message="playerTextScaleLabel">文字大小</span>
-                  <select data-player-text-scale>
-                    <option value="100">100%</option>
-                    <option value="112">112%</option>
-                    <option value="125">125%</option>
-                  </select>
-                </label>
-                <label>
-                  <span data-message="playerColorVisionLabel">配色辨识</span>
-                  <select data-player-color-vision-control>
-                    <option value="standard" data-message="playerColorStandard">
-                      标准
-                    </option>
-                    <option
-                      value="red-green"
-                      data-message="playerColorRedGreen"
-                    >
-                      红绿色弱辅助
-                    </option>
-                    <option
-                      value="blue-yellow"
-                      data-message="playerColorBlueYellow"
-                    >
-                      蓝黄色弱辅助
-                    </option>
-                    <option
-                      value="high-contrast"
-                      data-message="playerColorHighContrast"
-                    >
-                      高对比
-                    </option>
-                  </select>
-                </label>
-                <label>
-                  <span data-message="playerPerformanceLabel">显示性能</span>
-                  <select data-player-performance-control>
-                    <option
-                      value="standard"
-                      data-message="playerPerformanceStandard"
-                    >
-                      标准
-                    </option>
-                    <option
-                      value="reduced"
-                      data-message="playerPerformanceReduced"
-                    >
-                      低性能
-                    </option>
-                  </select>
-                </label>
-                <label>
-                  <span data-message="graphicsQualityLabel">3D 画质</span>
-                  <select data-player-graphics-quality>
-                    <option value="auto" data-message="graphicsQualityAuto">
-                      自动
-                    </option>
-                    <option value="low" data-message="graphicsQualityLow">
-                      低
-                    </option>
-                    <option value="medium" data-message="graphicsQualityMedium">
-                      中
-                    </option>
-                    <option value="high" data-message="graphicsQualityHigh">
-                      高
-                    </option>
-                  </select>
-                </label>
-                <button
-                  class="zoom-button player-profile-reset"
-                  type="button"
-                  data-first-creation-replay
-                  data-message="firstCreationGuideReplay"
-                >
-                  重新查看引导
-                </button>
-                <button
-                  class="zoom-button player-profile-reset"
-                  type="button"
-                  data-player-profile-reset
-                  data-message="playerProfileReset"
-                  aria-describedby="player-profile-status"
-                >
-                  重置本地资料
-                </button>
-                <output
-                  id="player-profile-status"
-                  class="player-profile-status"
-                  data-player-profile-status
-                  data-state="saving"
-                  aria-live="polite"
-                  data-message="playerProfileSaving"
-                >
-                  设备资料：正在保存
-                </output>
-              </div>
-            </details>
-            <details class="local-codex" data-local-codex>
-              <summary data-local-codex-toggle>
-                <span data-message="localCodexTitle">界芽图鉴</span>
-                <span data-local-codex-count>0/24</span>
-              </summary>
-              <p data-message="localCodexDisclosure">
-                本局发现保留详细过程；这里保存当前设备首次解锁的长期证据。
-              </p>
-              <output
-                class="local-codex-status"
-                data-local-codex-status
-                data-message="localCodexEmpty"
-                aria-live="polite"
-              >
-                尚未解锁图鉴
-              </output>
-              <ol class="local-codex-list" data-local-codex-list></ol>
-            </details>
-            <b data-message="persistenceLabel">本地世界</b>
-            <section
-              class="seed-world-picker"
-              aria-labelledby="seed-world-title"
-              data-seed-world-picker
-            >
-              <h3 id="seed-world-title" data-message="seedWorldTitle">
-                播下界芽
-              </h3>
-              <p data-message="seedWorldDisclosure">
-                选择或输入已发布的固定世界种子。创建会替换当前本地世界，未发布种子不会生成世界。
-              </p>
-              <label>
-                <span data-message="seedWorldPresetLabel">世界预设</span>
-                <select data-seed-world-select disabled>
-                  <option value="" data-message="seedWorldManualOption">
-                    手动输入已发布种子
-                  </option>
-                  <option
-                    value="JIEYA-LOCAL-FIRST-1"
-                    data-message="seedWorldInitialName"
-                  >
-                    初始界芽
-                  </option>
-                  <option
-                    value="JIEYA-NEWBORN-CONTINENT-1"
-                    data-message="seedWorldNewbornName"
-                    selected
-                  >
-                    新生大陆
-                  </option>
-                  <option
-                    value="JIEYA-FLOATING-BASIN-1"
-                    data-message="seedWorldFloatingBasinName"
-                  >
-                    浮岛盆地
-                  </option>
-                </select>
-              </label>
-              <label>
-                <span data-message="seedWorldSeedLabel">世界种子</span>
-                <input
-                  type="text"
-                  value="JIEYA-NEWBORN-CONTINENT-1"
-                  autocomplete="off"
-                  spellcheck="false"
-                  data-seed-world-input
-                  disabled
-                />
-              </label>
-              <div class="seed-world-picker-actions">
-                <button
-                  class="zoom-button"
-                  type="button"
-                  data-seed-world-copy
-                  data-message="seedWorldCopy"
-                  disabled
-                >
-                  复制种子
-                </button>
-                <button
-                  class="zoom-button"
-                  type="button"
-                  data-seed-world-create
-                  data-message="seedWorldCreate"
-                  aria-describedby="seed-world-disclosure seed-world-status"
-                  disabled
-                >
-                  创建这个世界
-                </button>
-              </div>
-              <p id="seed-world-disclosure" data-message="seedWorldDisclosure">
-                选择或输入已发布的固定世界种子。创建会替换当前本地世界，未发布种子不会生成世界。
-              </p>
-              <output
-                class="seed-world-status"
-                id="seed-world-status"
-                data-seed-world-status
-                data-state="unavailable"
-                aria-live="polite"
-                data-message="seedWorldUnavailable"
-                >世界种子：等待世界启动</output
-              >
-            </section>
-            <button
-              class="zoom-button persistence-reset-button"
-              type="button"
-              data-persistence-reset
-              data-message="persistenceReset"
-              aria-describedby="persistence-status"
-              disabled
-            >
-              清空本地世界
-            </button>
-            <button
-              class="zoom-button"
-              type="button"
-              data-world-file-export
-              data-message="worldFileExport"
-              aria-describedby="world-file-disclosure world-file-status"
-              disabled
-            >
-              导出 .jieya
-            </button>
-            <button
-              class="zoom-button"
-              type="button"
-              data-world-file-choose
-              data-message="worldFileChoose"
-              aria-describedby="world-file-disclosure world-file-status"
-              disabled
-            >
-              选择 .jieya
-            </button>
-            <input
-              class="visually-hidden"
-              type="file"
-              accept=".jieya,application/json"
-              data-world-file-input
-              aria-label="选择 .jieya 世界文件"
-              data-message-aria-label="worldFileChoose"
-              disabled
-            />
-            <button
-              class="zoom-button world-file-confirm"
-              type="button"
-              data-world-file-confirm
-              data-message="worldFileConfirm"
-              aria-describedby="world-file-disclosure world-file-status"
-              hidden
-              disabled
-            >
-              确认导入并替换
-            </button>
-            <p
-              class="world-file-disclosure"
-              id="world-file-disclosure"
-              data-message="worldFileDisclosure"
-            >
-              完整备份包含世界名称、worldId 和
-              seed，只在本机下载或读取，不会上传。
-            </p>
-            <output
-              class="persistence-status"
-              id="persistence-status"
-              data-persistence-status
-              data-state="unavailable"
-              data-message="persistenceUnavailable"
-              aria-live="polite"
-            >
-              本地世界：世界未启动
-            </output>
-            <output
-              class="world-file-status"
-              id="world-file-status"
-              data-world-file-status
-              data-state="unavailable"
-              data-message="worldFileUnavailable"
-              aria-live="polite"
-            >
-              世界文件：当前不可用
-            </output>
-          </div>
-        </details>
-        <div class="game-time-dock" data-state="unavailable">
-          <div
-            class="history-toolbar"
-            role="group"
-            aria-label="世界改造回溯"
-            data-message-aria-label="historyControlsLabel"
-          >
-            <b data-message="historyLabel">改造回溯</b>
-            <output
-              class="history-state-beacon"
-              data-history-state-beacon
-              data-state="unavailable"
-              data-message="historyBeaconUnavailable"
-              aria-live="off"
-            >
-              回溯不可用
-            </output>
-            <button
-              class="zoom-button history-button"
-              type="button"
-              data-history-action="UndoLatestPlayerOperation"
-              aria-describedby="history-status"
-              aria-keyshortcuts="Control+Z Meta+Z"
-              disabled
-            >
-              <i class="ph ph-arrow-u-up-left" aria-hidden="true"></i>
-              <span data-message="historyUndo">撤销</span>
-              <kbd class="history-shortcut-hint" aria-hidden="true"
-                >Ctrl/⌘ Z</kbd
-              >
-            </button>
-            <button
-              class="zoom-button history-button"
-              type="button"
-              data-history-action="RedoLatestPlayerOperation"
-              aria-describedby="history-status"
-              aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z"
-              disabled
-            >
-              <i class="ph ph-arrow-u-up-right" aria-hidden="true"></i>
-              <span data-message="historyRedo">重做</span>
-              <kbd class="history-shortcut-hint" aria-hidden="true"
-                >Ctrl/⌘ ⇧ Z</kbd
-              >
-            </button>
-            <details
-              class="session-time-anchor-menu"
-              data-session-time-anchor-menu
-            >
-              <summary
-                class="zoom-button session-time-anchor-toggle"
-                data-session-time-anchor-count
-                data-message="sessionTimeAnchorLabel"
-              >
-                时间锚 0/3
-              </summary>
-              <div class="session-time-anchor-popover">
-                <p
-                  class="session-time-anchor-disclosure"
-                  data-message="sessionTimeAnchorDisclosure"
-                >
-                  锚点仅在本次打开期间有效，不会写入存档或导出文件。
-                </p>
-                <button
-                  class="session-time-anchor-capture"
-                  type="button"
-                  data-session-time-anchor-capture
-                  data-message="sessionTimeAnchorCapture"
-                >
-                  建立当前锚点
-                </button>
-                <ol
-                  class="session-time-anchor-list"
-                  data-session-time-anchor-list
-                  aria-label="本次会话的时间锚"
-                  data-message-aria-label="sessionTimeAnchorsListLabel"
-                ></ol>
-                <output
-                  class="session-time-anchor-status"
-                  data-session-time-anchor-status
-                  data-state="ready"
-                  data-message="sessionTimeAnchorSessionOnly"
-                  aria-live="polite"
-                >
-                  锚点仅在本次打开期间有效
-                </output>
-              </div>
-            </details>
-            <output
-              class="history-status"
-              id="history-status"
-              data-history-status
-              data-state="unavailable"
-              data-message="historyUnavailable"
-              aria-live="polite"
-            >
-              回溯：世界未启动
-            </output>
-          </div>
-          <div
-            class="simulation-toolbar"
-            role="group"
-            aria-label="世界时间控制"
-            data-message-aria-label="simulationControlsLabel"
-          >
-            <b data-message="simulationLabel">世界时间</b>
-            <output
-              class="simulation-state-beacon"
-              data-simulation-state-beacon
-              data-state="unavailable"
-              data-message="simulationBeaconUnavailable"
-              aria-live="off"
-            >
-              不可
-            </output>
-            <button
-              class="zoom-button simulation-button simulation-step-button"
-              type="button"
-              data-simulation-action="StepSimulation"
-              aria-label="单步推进"
-              data-message-aria-label="simulationStep"
-              aria-describedby="simulation-status"
-              aria-keyshortcuts="."
-              disabled
-            >
-              <span class="time-control-icon" aria-hidden="true"
-                ><i class="ph ph-plus"></i>1</span
-              >
-              <span class="time-control-label" data-message="simulationStep"
-                >单步推进</span
-              >
-              <kbd aria-hidden="true">.</kbd>
-            </button>
-            <div class="simulation-primary-slot" data-simulation-primary-slot>
-              <button
-                class="zoom-button simulation-button simulation-primary-button"
-                type="button"
-                data-simulation-action="RunSimulation"
-                aria-label="推动时间"
-                data-message-aria-label="simulationRun"
-                aria-describedby="simulation-status"
-                aria-keyshortcuts="Q"
-                disabled
-              >
-                <i class="ph ph-play time-control-icon" aria-hidden="true"></i>
-                <span class="time-control-label" data-message="simulationRun"
-                  >推动时间</span
-                >
-                <kbd aria-hidden="true">Q</kbd>
-              </button>
-              <button
-                class="zoom-button simulation-button simulation-primary-button"
-                type="button"
-                data-simulation-action="PauseSimulation"
-                aria-label="暂停"
-                data-message-aria-label="simulationPause"
-                aria-describedby="simulation-status"
-                aria-keyshortcuts="Q"
-                hidden
-                disabled
-              >
-                <i class="ph ph-pause time-control-icon" aria-hidden="true"></i>
-                <span class="time-control-label" data-message="simulationPause"
-                  >暂停</span
-                >
-                <kbd aria-hidden="true">Q</kbd>
-              </button>
-              <button
-                class="zoom-button simulation-button simulation-primary-button"
-                type="button"
-                data-simulation-action="ResetSimulationRunControl"
-                aria-label="恢复时间控制"
-                data-message-aria-label="simulationReset"
-                aria-describedby="simulation-status"
-                aria-keyshortcuts="Q"
-                hidden
-                disabled
-              >
-                <i
-                  class="ph ph-arrow-clockwise time-control-icon"
-                  aria-hidden="true"
-                ></i>
-                <span class="time-control-label" data-message="simulationReset"
-                  >恢复时间控制</span
-                >
-                <kbd aria-hidden="true">Q</kbd>
-              </button>
-            </div>
-            <details
-              class="simulation-speed-menu"
-              data-simulation-speed-menu
-              data-state="unavailable"
-            >
-              <summary
-                class="zoom-button simulation-speed-toggle"
-                data-simulation-speed-toggle
-                aria-label="当前速度 1×；展开选择速度"
-                data-message-aria-label="simulationSpeedMenuLabel"
-                aria-describedby="simulation-status"
-                aria-disabled="true"
-                tabindex="-1"
-              >
-                <i class="ph ph-gauge time-control-icon" aria-hidden="true"></i>
-                <span
-                  class="time-control-label"
-                  data-message="simulationSpeedLabel"
-                  >速度</span
-                >
-                <strong data-simulation-speed-current>1×</strong>
-              </summary>
-              <div
-                class="simulation-speed-options"
-                role="group"
-                aria-label="选择世界速度"
-                data-message-aria-label="simulationSpeedOptionsLabel"
-              >
-                <button
-                  class="zoom-button simulation-speed-button"
-                  type="button"
-                  data-simulation-speed="1"
-                  data-message="simulationSpeed1"
-                  aria-pressed="true"
-                  aria-describedby="simulation-status"
-                  disabled
-                >
-                  1×
-                </button>
-                <button
-                  class="zoom-button simulation-speed-button"
-                  type="button"
-                  data-simulation-speed="2"
-                  data-message="simulationSpeed2"
-                  aria-pressed="false"
-                  aria-describedby="simulation-status"
-                  disabled
-                >
-                  2×
-                </button>
-                <button
-                  class="zoom-button simulation-speed-button"
-                  type="button"
-                  data-simulation-speed="4"
-                  data-message="simulationSpeed4"
-                  aria-pressed="false"
-                  aria-describedby="simulation-status"
-                  disabled
-                >
-                  4×
-                </button>
-                <button
-                  class="zoom-button simulation-speed-button"
-                  type="button"
-                  data-simulation-speed="8"
-                  data-message="simulationSpeed8"
-                  aria-pressed="false"
-                  aria-describedby="simulation-status"
-                  disabled
-                >
-                  8×
-                </button>
-              </div>
-            </details>
-            <output
-              class="simulation-status"
-              id="simulation-status"
-              data-simulation-status
-              data-state="unavailable"
-              data-message="simulationUnavailable"
-              aria-live="polite"
-            >
-              时间：世界未启动
-            </output>
-          </div>
-        </div>
-        <details class="coordinate-menu" data-coordinate-menu>
-          <summary class="coordinate-menu-toggle" data-coordinate-menu-toggle>
-            <i class="ph ph-crosshair" aria-hidden="true"></i>
-            <span data-message="coordinateMenu">定位格子</span>
-          </summary>
-          <form
-            class="coordinate-jump"
-            data-coordinate-jump
-            aria-label="跳转到指定格子"
-            data-message-aria-label="jumpControlsLabel"
-            novalidate
-          >
-            <label class="coordinate-jump-field" for="jump-row">
-              <span data-message="jumpRowLabel">行（1～64）</span>
-              <input
-                class="coordinate-jump-input"
-                id="jump-row"
-                type="text"
-                inputmode="numeric"
-                autocomplete="off"
-                maxlength="3"
-                value="1"
-                aria-describedby="jump-feedback"
-                aria-invalid="false"
-                data-jump-row
-                disabled
-              />
-            </label>
-            <label class="coordinate-jump-field" for="jump-column">
-              <span data-message="jumpColumnLabel">列（1～64）</span>
-              <input
-                class="coordinate-jump-input"
-                id="jump-column"
-                type="text"
-                inputmode="numeric"
-                autocomplete="off"
-                maxlength="3"
-                value="1"
-                aria-describedby="jump-feedback"
-                aria-invalid="false"
-                data-jump-column
-                disabled
-              />
-            </label>
-            <button
-              class="zoom-button"
-              type="submit"
-              data-jump-submit
-              data-message="jumpSubmit"
-              disabled
-            >
-              前往
-            </button>
-            <output
-              class="jump-feedback"
-              id="jump-feedback"
-              data-jump-feedback
-              data-state="error"
-              data-message="jumpUnavailable"
-              aria-live="polite"
-            >
-              坐标跳转：世界未启动
-            </output>
-          </form>
-        </details>
-        <div class="world-workspace" data-world-workspace>
-          <section
-            class="ecology-world-pulse"
-            data-ecology-world-pulse
-            aria-labelledby="ecology-world-pulse-label"
-            hidden
-          >
-            <strong class="ecology-world-pulse-label">
-              <span aria-hidden="true">◉</span>
-              <span
-                id="ecology-world-pulse-label"
-                data-message="ecologyWorldPulseLabel"
-                >世界脉搏</span
-              >
-            </strong>
-            <output
-              class="ecology-world-pulse-message"
-              data-ecology-world-pulse-message
-              aria-describedby="simulation-status"
-            ></output>
-            <details
-              class="ecology-world-pulse-replay"
-              data-ecology-world-pulse-replay
-              hidden
-            >
-              <summary>
-                <span data-message="ecologyWorldPulseReplayLabel"
-                  >最近生态回应</span
-                >
-                <b data-ecology-world-pulse-replay-count>0</b>
-              </summary>
-              <ol data-ecology-world-pulse-replay-list></ol>
-            </details>
-            <div
-              class="ecology-world-pulse-layers"
-              data-ecology-world-pulse-layers
-              role="group"
-              aria-label="筛选世界脉搏变化"
-              data-message-aria-label="ecologyWorldPulseLayerFilterLabel"
-              hidden
-            >
-              <button
-                class="ecology-world-pulse-layer"
-                type="button"
-                data-ecology-world-pulse-layer="all"
-                aria-pressed="true"
-                disabled
-              >
-                <span
-                  data-message="ecologyWorldPulseLayerAll"
-                  data-compact-label="全"
-                  data-message-compact-label="ecologyWorldPulseLayerAllCompact"
-                  >全部</span
-                >
-                <span
-                  class="ecology-world-pulse-layer-count"
-                  data-ecology-world-pulse-layer-count="all"
-                  >0</span
-                >
-              </button>
-              <button
-                class="ecology-world-pulse-layer"
-                type="button"
-                data-ecology-world-pulse-layer="plant"
-                aria-pressed="false"
-                disabled
-              >
-                <span
-                  data-message="ecologyWorldPulseLayerPlant"
-                  data-compact-label="草"
-                  data-message-compact-label="ecologyWorldPulseLayerPlantCompact"
-                  >草本</span
-                >
-                <span
-                  class="ecology-world-pulse-layer-count"
-                  data-ecology-world-pulse-layer-count="plant"
-                  >0</span
-                >
-              </button>
-              <button
-                class="ecology-world-pulse-layer"
-                type="button"
-                data-ecology-world-pulse-layer="grazer"
-                aria-pressed="false"
-                disabled
-              >
-                <span
-                  data-message="ecologyWorldPulseLayerGrazer"
-                  data-compact-label="兽"
-                  data-message-compact-label="ecologyWorldPulseLayerGrazerCompact"
-                  >绒芽兽</span
-                >
-                <span
-                  class="ecology-world-pulse-layer-count"
-                  data-ecology-world-pulse-layer-count="grazer"
-                  >0</span
-                >
-              </button>
-              <button
-                class="ecology-world-pulse-layer"
-                type="button"
-                data-ecology-world-pulse-layer="fox"
-                aria-pressed="false"
-                disabled
-              >
-                <span
-                  data-message="ecologyWorldPulseLayerFox"
-                  data-compact-label="狐"
-                  data-message-compact-label="ecologyWorldPulseLayerFoxCompact"
-                  >影尾狐</span
-                >
-                <span
-                  class="ecology-world-pulse-layer-count"
-                  data-ecology-world-pulse-layer-count="fox"
-                  >0</span
-                >
-              </button>
-              <button
-                class="ecology-world-pulse-layer"
-                type="button"
-                data-ecology-world-pulse-layer="forest-floor"
-                aria-pressed="false"
-                disabled
-              >
-                <span
-                  data-message="ecologyWorldPulseLayerForestFloor"
-                  data-compact-label="林"
-                  data-message-compact-label="ecologyWorldPulseLayerForestFloorCompact"
-                  >林地循环</span
-                >
-                <span
-                  class="ecology-world-pulse-layer-count"
-                  data-ecology-world-pulse-layer-count="forest-floor"
-                  >0</span
-                >
-              </button>
-            </div>
-            <button
-              class="ecology-world-pulse-next"
-              type="button"
-              data-ecology-world-pulse-next
-              data-message-aria-label="ecologyWorldPulseNext"
-              aria-label="下一处变化"
-              aria-describedby="ecology-world-pulse-map-message"
-              hidden
-              disabled
-            >
-              <span aria-hidden="true">⌖</span>
-              <span data-message="ecologyWorldPulseNext">下一处变化</span>
-            </button>
-          </section>
-          <section
-            class="world-goal-tracker"
-            data-world-goal-tracker
-            aria-labelledby="world-goal-tracker-label"
-            hidden
-          >
-            <span aria-hidden="true" class="world-goal-tracker-symbol">⌖</span>
-            <div class="world-goal-tracker-copy">
-              <strong
-                id="world-goal-tracker-label"
-                data-world-goal-tracker-label
-              ></strong>
-              <output data-world-goal-tracker-step aria-live="polite"></output>
-            </div>
-            <button
-              class="world-goal-tracker-action"
-              type="button"
-              data-world-goal-tracker-action
-              aria-label="世界目标：当前不可用"
-              data-message-aria-label="worldGoalUnavailable"
-              aria-keyshortcuts="F"
-              disabled
-            >
-              <span
-                data-world-goal-tracker-action-label
-                data-message="goToTarget"
-                >前往目标</span
-              >
-              <kbd aria-hidden="true">F</kbd>
-            </button>
-            <button
-              class="world-goal-tracker-action grazer-migration-observe-next"
-              type="button"
-              data-grazer-migration-observe-next
-              data-message="worldGoalContinueObservation"
-              hidden
-              disabled
-            >
-              继续观察 1 Tick
-            </button>
-            <details
-              class="grazer-migration-restart-session"
-              data-grazer-migration-restart-session
-              hidden
-            >
-              <summary
-                class="grazer-migration-restart-session-toggle"
-                data-grazer-migration-restart-session-toggle
-                data-message="worldGoalGrazerMigrationRestartSession"
-              >
-                新的迁徙追踪
-              </summary>
-              <div class="grazer-migration-restart-session-body">
-                <p data-grazer-migration-restart-session-boundary></p>
-              </div>
-            </details>
-            <details
-              class="grazer-migration-comparison"
-              data-grazer-migration-comparison
-              hidden
-            >
-              <summary
-                class="grazer-migration-comparison-toggle"
-                data-grazer-migration-comparison-toggle
-                data-message="worldGoalGrazerMigrationComparison"
-              >
-                准备前后变化
-              </summary>
-              <div class="grazer-migration-comparison-body">
-                <p data-grazer-migration-comparison-timeline></p>
-                <p data-grazer-migration-comparison-plant></p>
-                <p data-grazer-migration-comparison-grazer></p>
-                <p data-grazer-migration-comparison-world-summary></p>
-                <p
-                  class="grazer-migration-comparison-boundary"
-                  data-grazer-migration-comparison-boundary
-                ></p>
-              </div>
-            </details>
-            <details
-              class="grazer-migration-comparison"
-              data-grazer-migration-now-change
-              hidden
-            >
-              <summary
-                class="grazer-migration-comparison-toggle"
-                data-grazer-migration-now-change-toggle
-                data-message="worldGoalGrazerMigrationNowChange"
-              >
-                完成后现在
-              </summary>
-              <div class="grazer-migration-comparison-body">
-                <p data-grazer-migration-now-change-timeline></p>
-                <p data-grazer-migration-now-change-plant></p>
-                <p data-grazer-migration-now-change-grazer></p>
-                <p
-                  class="grazer-migration-comparison-boundary"
-                  data-grazer-migration-now-change-boundary
-                ></p>
-              </div>
-            </details>
-            <details
-              class="grazer-migration-comparison"
-              data-grazer-migration-now-timeline
-              hidden
-            >
-              <summary
-                class="grazer-migration-comparison-toggle"
-                data-grazer-migration-now-timeline-toggle
-                data-message="worldGoalGrazerMigrationNowTimeline"
-              >
-                完成后轨迹
-              </summary>
-              <div class="grazer-migration-comparison-body">
-                <ol data-grazer-migration-now-timeline-list></ol>
-                <p
-                  class="grazer-migration-comparison-boundary"
-                  data-grazer-migration-now-timeline-boundary
-                ></p>
-              </div>
-            </details>
-            <details
-              class="grazer-migration-comparison"
-              data-grazer-migration-recent-interval
-              hidden
-            >
-              <summary
-                class="grazer-migration-comparison-toggle"
-                data-grazer-migration-recent-interval-toggle
-              >
-                <span data-message="worldGoalGrazerMigrationRecentInterval"
-                  >最近一段变化</span
-                ><span data-grazer-migration-recent-interval-summary></span>
-              </summary>
-              <div class="grazer-migration-comparison-body">
-                <p data-grazer-migration-recent-interval-timeline></p>
-                <p data-grazer-migration-recent-interval-plant></p>
-                <p data-grazer-migration-recent-interval-grazer></p>
-                <p
-                  class="grazer-migration-comparison-boundary"
-                  data-grazer-migration-recent-interval-boundary
-                ></p>
-              </div>
-            </details>
-            <details
-              class="grazer-migration-readiness"
-              data-grazer-migration-readiness
-              hidden
-            >
-              <summary
-                class="grazer-migration-readiness-toggle"
-                data-grazer-migration-readiness-toggle
-                data-message="worldGoalGrazerMigrationReadiness"
-              >
-                迁徙条件
-              </summary>
-              <div class="grazer-migration-readiness-body">
-                <p data-grazer-migration-readiness-summary></p>
-                <p data-grazer-migration-readiness-start></p>
-                <p data-grazer-migration-readiness-requirements></p>
-                <p data-grazer-migration-readiness-current-progress></p>
-                <p
-                  class="grazer-migration-readiness-boundary"
-                  data-grazer-migration-readiness-boundary
-                ></p>
-              </div>
-            </details>
-            <details
-              class="grazer-migration-invalidation"
-              data-grazer-migration-invalidation
-              hidden
-            >
-              <summary
-                class="grazer-migration-invalidation-toggle"
-                data-grazer-migration-invalidation-toggle
-                data-message="worldGoalTrackChanges"
-              >
-                追踪变化
-              </summary>
-              <div class="grazer-migration-invalidation-body">
-                <p data-grazer-migration-invalidation-summary></p>
-                <p data-grazer-migration-invalidation-start></p>
-                <p data-grazer-migration-invalidation-current-evidence></p>
-                <p
-                  class="grazer-migration-invalidation-boundary"
-                  data-grazer-migration-invalidation-boundary
-                ></p>
-                <button
-                  class="grazer-migration-restart"
-                  type="button"
-                  data-grazer-migration-restart
-                  data-message="worldGoalGrazerMigrationRestart"
-                  hidden
-                  disabled
-                >
-                  重新开辟相邻草地
-                </button>
-              </div>
-            </details>
-          </section>
-          <section
-            class="world-discovery-card"
-            data-world-discovery-card
-            aria-labelledby="world-discovery-title"
-            hidden
-          >
-            <p
-              class="world-discovery-eyebrow"
-              data-message="worldDiscoveryEyebrow"
-            >
-              世界发现
-            </p>
-            <h2
-              id="world-discovery-title"
-              data-world-discovery-title
-              data-message="worldDiscoveryTitle"
-            >
-              发现：捕食关系
-            </h2>
-            <p
-              class="world-discovery-chain"
-              data-world-discovery-chain
-              aria-label="食物链：先锋草本到绒芽兽到影尾狐"
-              data-message-aria-label="worldDiscoveryFoodChainLabel"
-            >
-              <span data-message="worldDiscoveryPlant">先锋草本</span>
-              <span aria-hidden="true">→</span>
-              <span data-message="worldDiscoveryGrazer">绒芽兽</span>
-              <span aria-hidden="true">→</span>
-              <span data-message="worldDiscoveryFox">影尾狐</span>
-            </p>
-            <output
-              class="world-discovery-message"
-              data-world-discovery-message
-              aria-live="polite"
-            ></output>
-            <details
-              class="world-discovery-endpoint-comparison"
-              data-world-discovery-endpoint-comparison
-              hidden
-            >
-              <summary
-                class="world-discovery-endpoint-summary"
-                data-message="worldDiscoveryEndpointComparison"
-              >
-                展开端点对照
-              </summary>
-              <div
-                class="world-discovery-endpoint-list"
-                data-world-discovery-endpoint-comparison-list
-                role="list"
-              ></div>
-            </details>
-            <div class="world-discovery-actions">
-              <button
-                class="world-discovery-observe"
-                type="button"
-                data-world-discovery-observe
-                data-message="worldDiscoveryObserve"
-                disabled
-              >
-                前往观察格
-              </button>
-              <button
-                class="world-discovery-next-challenge"
-                type="button"
-                data-world-discovery-next-food-chain
-                data-message="worldDiscoveryNextFoodChain"
-                hidden
-                disabled
-              >
-                继续建立食物链
-              </button>
-              <button
-                class="world-discovery-next-challenge"
-                type="button"
-                data-world-discovery-next-oasis
-                data-message="worldDiscoveryNextOasis"
-                hidden
-                disabled
-              >
-                继续造一片绿洲
-              </button>
-              <button
-                class="world-discovery-next-challenge"
-                type="button"
-                data-world-discovery-next-pond
-                data-message="worldDiscoveryNextPond"
-                hidden
-                disabled
-              >
-                继续造一片湖
-              </button>
-              <button
-                class="world-discovery-next-challenge"
-                type="button"
-                data-world-discovery-next-oasis-from-pond
-                data-message="worldDiscoveryNextOasisFromPond"
-                hidden
-                disabled
-              >
-                继续造一片绿洲
-              </button>
-              <button
-                class="world-discovery-migration-trail"
-                type="button"
-                data-world-discovery-migration-trail
-                data-message="worldDiscoveryMigrationTrail"
-                hidden
-                disabled
-              >
-                开辟相邻草地
-              </button>
-              <button
-                class="world-discovery-dismiss"
-                type="button"
-                data-world-discovery-dismiss
-                data-message="worldDiscoveryDismiss"
-                disabled
-              >
-                收起
-              </button>
-            </div>
-          </section>
-          <section
-            class="climate-grazer-food-repair-card"
-            data-climate-grazer-food-repair-card
-            aria-labelledby="climate-grazer-food-repair-title"
-            aria-live="polite"
-            hidden
-          >
-            <p
-              class="world-discovery-eyebrow"
-              data-message="climateGrazerFoodRepairEyebrow"
-            >
-              气候修复
-            </p>
-            <h2
-              id="climate-grazer-food-repair-title"
-              data-message="climateGrazerFoodRepairTitle"
-            >
-              修复原格食物链
-            </h2>
-            <p data-message="climateGrazerFoodRepairInstruction">
-              先把原格空气湿度提高至适生，再推进一次真实 Tick。
-            </p>
-            <button
-              class="world-discovery-observe"
-              type="button"
-              data-climate-grazer-food-repair
-              data-message="climateGrazerFoodRepairAction"
-            >
-              提高湿度并修复
-            </button>
-          </section>
-          <button
-            class="world-discovery-journal-toggle"
-            type="button"
-            data-world-discovery-journal-toggle
-            aria-controls="world-discovery-journal"
-            aria-expanded="false"
-            hidden
-            disabled
-          >
-            <span aria-hidden="true">✦</span>
-            <span data-message="worldDiscoveryJournalToggle">本局发现</span>
-            <output
-              class="world-discovery-journal-count"
-              data-world-discovery-journal-count
-              >0</output
-            >
-          </button>
-          <aside
-            id="world-discovery-journal"
-            class="world-discovery-journal"
-            data-world-discovery-journal
-            aria-labelledby="world-discovery-journal-title"
-            hidden
-          >
-            <div class="world-discovery-journal-heading">
-              <div>
-                <p
-                  class="world-discovery-eyebrow"
-                  data-message="worldDiscoveryJournalEyebrow"
-                >
-                  本局记录
-                </p>
-                <h2
-                  id="world-discovery-journal-title"
-                  data-message="worldDiscoveryJournalTitle"
-                >
-                  世界发现簿
-                </h2>
-              </div>
-              <button
-                class="world-discovery-journal-close"
-                type="button"
-                data-world-discovery-journal-close
-                aria-label="收起世界发现簿"
-                data-message-aria-label="worldDiscoveryJournalClose"
-                disabled
-              >
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-            <div
-              class="world-discovery-journal-filters"
-              role="group"
-              data-message-aria-label="worldDiscoveryJournalFilterLabel"
-            >
-              <button
-                class="world-discovery-journal-filter"
-                type="button"
-                data-world-discovery-journal-filter="all"
-                aria-pressed="true"
-              >
-                <span data-message="worldDiscoveryJournalFilterAll">全部</span>
-                <output data-world-discovery-journal-filter-count="all"
-                  >0</output
-                >
-              </button>
-              <button
-                class="world-discovery-journal-filter"
-                type="button"
-                data-world-discovery-journal-filter="ecology"
-                aria-pressed="false"
-              >
-                <span data-message="worldDiscoveryJournalFilterEcology"
-                  >生态</span
-                >
-                <output data-world-discovery-journal-filter-count="ecology"
-                  >0</output
-                >
-              </button>
-              <button
-                class="world-discovery-journal-filter"
-                type="button"
-                data-world-discovery-journal-filter="terrain-water"
-                aria-pressed="false"
-              >
-                <span data-message="worldDiscoveryJournalFilterTerrainWater"
-                  >地形与水文</span
-                >
-                <output
-                  data-world-discovery-journal-filter-count="terrain-water"
-                  >0</output
-                >
-              </button>
-            </div>
-            <p
-              class="world-discovery-journal-empty"
-              data-world-discovery-journal-empty
-              hidden
-            >
-              <span data-message="worldDiscoveryJournalFilterEmpty"
-                >本分类暂无本局发现。</span
-              >
-            </p>
-            <ol
-              class="world-discovery-journal-list"
-              data-world-discovery-journal-list
-            ></ol>
-          </aside>
-          <button
-            class="world-creation-log-toggle"
-            type="button"
-            data-world-creation-log-toggle
-            aria-controls="world-creation-log"
-            aria-expanded="false"
-            aria-label="最近创造：0 条"
-            data-message-aria-label="worldCreationLogEmptyLabel"
-            hidden
-            disabled
-          >
-            <span aria-hidden="true">✦</span>
-            <span data-message="worldCreationLogToggle">最近创造</span>
-            <output data-world-creation-log-count>0</output>
-          </button>
-          <aside
-            id="world-creation-log"
-            class="world-creation-log"
-            data-world-creation-log
-            aria-labelledby="world-creation-log-title"
-            hidden
-          >
-            <div class="world-creation-log-heading">
-              <div>
-                <p data-message="worldCreationLogEyebrow">本局痕迹</p>
-                <h2
-                  id="world-creation-log-title"
-                  data-message="worldCreationLogTitle"
-                >
-                  最近创造
-                </h2>
-              </div>
-              <button
-                class="world-creation-log-close"
-                type="button"
-                data-world-creation-log-close
-                aria-label="收起最近创造"
-                data-message-aria-label="worldCreationLogClose"
-                disabled
-              >
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-            <ol
-              class="world-creation-log-list"
-              data-world-creation-log-list
-            ></ol>
-          </aside>
-          <output
-            id="ecology-world-pulse-map-message"
-            class="visually-hidden"
-            data-ecology-world-pulse-map-message
-          ></output>
-          <button
-            class="world-minimap"
-            type="button"
-            aria-label="鹰眼地图：点击任意位置前往对应格；拖动可移动观察视野；按 Enter 居中当前观察格"
-            data-message-aria-label="worldMinimapControlLabel"
-            data-world-minimap
-            aria-describedby="selection-status"
-            disabled
-          >
-            <span class="world-minimap-label" data-message="worldMinimapLabel"
-              >鹰眼地图</span
-            >
-            <span class="world-minimap-map" aria-hidden="true">
-              <canvas
-                class="world-minimap-canvas"
-                data-world-minimap-canvas
-                data-message="worldMinimapUnavailable"
-                width="144"
-                height="144"
-              >
-                当前浏览器无法显示鹰眼地图。
-              </canvas>
-              <canvas
-                class="world-minimap-camera-canvas"
-                data-world-minimap-camera-canvas
-                width="144"
-                height="144"
-              ></canvas>
-            </span>
-          </button>
-          <div
-            class="world-viewport"
-            data-world-viewport
-            role="region"
-            tabindex="0"
-            aria-describedby="pan-instructions"
-            aria-label="可滚动的世界视窗"
-            data-message-aria-label="viewportLabel"
-          >
-            <canvas
-              class="world-canvas"
-              data-world-canvas
-              width="640"
-              height="640"
-              role="group"
-              tabindex="0"
-              aria-describedby="selection-instructions selection-status zoom-status brush-status terrain-status surface-water-status rainfall-status simulation-status ecology-world-pulse-map-message"
-              aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Enter Space Escape . Q E P F I T W C L R D A S G H B N X 1 3 5 [ ]"
-              aria-label="可选择的 64×64 世界网格"
-              data-message="canvasUnavailable"
-              data-message-aria-label="canvasLabel"
-            >
-              当前浏览器无法显示 Canvas 世界网格。
-            </canvas>
-          </div>
-          <details
-            class="observation-shell"
-            data-observation-shell
-            data-state="unavailable"
-          >
-            <summary class="observation-toggle" data-observation-toggle>
-              <i
-                class="ph ph-binoculars observation-compact-icon"
-                aria-hidden="true"
-              ></i>
-              <span class="visually-hidden" data-message="observationToggle"
-                >格子观测</span
-              >
-              <span class="observation-readout-heading">
-                <strong
-                  data-observation-readout-coordinate
-                  data-message="observationReadoutUnavailable"
-                  >格子读数未就绪</strong
-                >
-                <span
-                  class="observation-readout-action"
-                  data-message="observationReadoutAction"
-                  >展开详细观测</span
-                >
-              </span>
-              <span class="observation-readout-values">
-                <span>
-                  <b aria-hidden="true">△</b>
-                  <span data-message="observationElevationLabel">海拔</span>
-                  <strong data-observation-readout-elevation>—</strong>
-                </span>
-                <span>
-                  <b aria-hidden="true">≋</b>
-                  <span data-message="observationSurfaceWaterLabel"
-                    >地表水</span
-                  >
-                  <strong data-observation-readout-surface-water>—</strong>
-                </span>
-                <span>
-                  <b aria-hidden="true">◌</b>
-                  <span data-message="observationSoilWaterLabel">土壤水</span>
-                  <strong data-observation-readout-soil-water>—</strong>
-                </span>
-                <span>
-                  <i class="ph ph-plant" aria-hidden="true"></i>
-                  <span data-message="observationPioneerPlantLabel"
-                    >先锋草本</span
-                  >
-                  <strong data-observation-readout-pioneer-plant>—</strong>
-                </span>
-                <span>
-                  <b aria-hidden="true">✿</b>
-                  <span data-message="observationFlowerLabel">花株</span>
-                  <strong data-observation-readout-flowering-sprout>—</strong>
-                </span>
-                <span>
-                  <b aria-hidden="true">✦</b>
-                  <span data-message="observationPollinatorLabel">花粉蜂</span>
-                  <strong data-observation-readout-pollinator>—</strong>
-                </span>
-                <span>
-                  <b aria-hidden="true">❧</b>
-                  <span data-message="observationDecomposerLabel">腐光菌</span>
-                  <strong data-observation-readout-decomposer>—</strong>
-                </span>
-                <span>
-                  <b aria-hidden="true">◇</b>
-                  <span data-message="observationSoilFertilityLabel"
-                    >土壤肥力</span
-                  >
-                  <strong data-observation-readout-soil-fertility>—</strong>
-                </span>
-                <span>
-                  <b aria-hidden="true">⋰</b>
-                  <span data-message="observationDetritusLabel">腐殖物</span>
-                  <strong data-observation-readout-detritus-mass>—</strong>
-                </span>
-                <span>
-                  <b aria-hidden="true">♠</b>
-                  <span data-message="observationWoodyLabel">芽木</span>
-                  <strong data-observation-readout-woody-plant>—</strong>
-                </span>
-                <span>
-                  <i class="ph ph-tree-evergreen" aria-hidden="true"></i>
-                  <span data-message="observationShrubLabel">灌木</span>
-                  <strong data-observation-readout-shrub>—</strong>
-                </span>
-                <span>
-                  <i class="ph ph-rabbit" aria-hidden="true"></i>
-                  <span data-message="observationSproutGrazerLabel"
-                    >绒芽兽</span
-                  >
-                  <strong data-observation-readout-sprout-grazer>—</strong>
-                </span>
-                <span>
-                  <i class="ph ph-paw-print" aria-hidden="true"></i>
-                  <span data-message="observationShadowtailFoxLabel"
-                    >影尾狐</span
-                  >
-                  <strong data-observation-readout-shadowtail-fox>—</strong>
-                </span>
-              </span>
-              <span
-                class="observation-readout-delta"
-                data-ecology-cell-delta
-                hidden
-              >
-                <b aria-hidden="true">↕</b>
-                <span data-message="ecologyCellDeltaLabel">本 Tick 变化</span>
-                <strong data-ecology-cell-delta-message></strong>
-              </span>
-            </summary>
-            <section
-              class="cell-observation"
-              data-cell-observation
-              data-state="error"
-              aria-label="当前格观测"
-              data-message-aria-label="observationLabel"
-            >
-              <h2
-                class="cell-observation-title"
-                id="cell-observation-title"
-                data-message="observationTitle"
-              >
-                当前格观测
-              </h2>
-              <div
-                class="density-toolbar"
-                role="group"
-                aria-label="观测信息密度"
-                data-message-aria-label="densityControlsLabel"
-              >
-                <button
-                  class="zoom-button density-button"
-                  type="button"
-                  data-information-density="sprout"
-                  data-message="densitySprout"
-                  aria-pressed="true"
-                  disabled
-                >
-                  萌芽视图
-                </button>
-                <button
-                  class="zoom-button density-button"
-                  type="button"
-                  data-information-density="tuning"
-                  data-message="densityTuning"
-                  aria-pressed="false"
-                  disabled
-                >
-                  调律视图
-                </button>
-                <output
-                  class="density-status"
-                  data-density-status
-                  data-message="densityUnavailable"
-                  aria-live="polite"
-                >
-                  信息密度：世界未启动
-                </output>
-              </div>
-              <dl class="cell-observation-list" data-terrain-observation>
-                <div>
-                  <dt data-message="observationElevationLabel">海拔</dt>
-                  <dd data-observation-elevation>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationRainfallRateLabel">降雨率</dt>
-                  <dd data-observation-rainfall-rate>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationTemperatureLabel">温度</dt>
-                  <dd data-observation-temperature>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationAirHumidityLabel">空气湿度</dt>
-                  <dd data-observation-air-humidity>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationSurfaceWaterLabel">地表水</dt>
-                  <dd data-observation-surface-water>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationSoilWaterLabel">土壤水</dt>
-                  <dd data-observation-soil-water>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationPioneerPlantLabel">先锋草本</dt>
-                  <dd data-observation-pioneer-plant>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationFlowerLabel">花株</dt>
-                  <dd data-observation-flowering-sprout>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationPollinatorLabel">花粉蜂</dt>
-                  <dd data-observation-pollinator>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationDecomposerLabel">腐光菌</dt>
-                  <dd data-observation-decomposer>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationSoilFertilityLabel">土壤肥力</dt>
-                  <dd data-observation-soil-fertility>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationDetritusLabel">腐殖物</dt>
-                  <dd data-observation-detritus-mass>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationWoodyCoverLabel">芽木覆盖</dt>
-                  <dd data-observation-woody-plant>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationShrubLabel">灌木</dt>
-                  <dd data-observation-shrub>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationSproutGrazerLabel">绒芽兽</dt>
-                  <dd data-observation-sprout-grazer>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationShadowtailFoxLabel">影尾狐</dt>
-                  <dd data-observation-shadowtail-fox>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationTickLabel">世界 Tick</dt>
-                  <dd data-observation-tick>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationRevisionLabel">世界版本</dt>
-                  <dd data-observation-revision>—</dd>
-                </div>
-              </dl>
-              <div class="observation-comparison-start-row">
-                <button
-                  class="observation-comparison-start"
-                  type="button"
-                  data-observation-comparison-start
-                  data-message="observationComparisonStart"
-                  disabled
-                >
-                  设为对照起点
-                </button>
-              </div>
-              <div
-                class="observation-comparison"
-                data-observation-comparison
-                role="region"
-                aria-labelledby="observation-comparison-title"
-                hidden
-              >
-                <h3
-                  id="observation-comparison-title"
-                  data-observation-comparison-title
-                  data-message="observationComparisonTitle"
-                >
-                  格子对照
-                </h3>
-                <p
-                  class="observation-comparison-status"
-                  data-observation-comparison-status
-                  data-message="observationComparisonUnavailable"
-                >
-                  建立起点后，可比较这格之后的世界回应
-                </p>
-                <ul
-                  class="observation-comparison-list"
-                  data-observation-comparison-list
-                ></ul>
-                <section
-                  class="observation-evidence"
-                  aria-labelledby="observation-evidence-title"
-                  data-observation-evidence
-                >
-                  <h4
-                    id="observation-evidence-title"
-                    data-observation-evidence-title
-                    data-message="observationEvidenceTitle"
-                  >
-                    变化经过与原因链
-                  </h4>
-                  <p
-                    class="observation-evidence-summary"
-                    data-observation-evidence-summary
-                    data-message="observationEvidenceSummaryUnavailable"
-                  >
-                    建立起点后，这里会记录变化步骤与最多三层的已验证原因链
-                  </p>
-                  <p
-                    class="observation-evidence-earlier"
-                    data-observation-evidence-earlier
-                    hidden
-                  ></p>
-                  <ol
-                    class="observation-evidence-list"
-                    data-observation-evidence-list
-                  ></ol>
-                </section>
-                <div class="observation-comparison-actions">
-                  <button
-                    class="observation-comparison-focus"
-                    type="button"
-                    data-observation-comparison-focus
-                    data-message="observationComparisonFocus"
-                    disabled
-                  >
-                    回到对照格
-                  </button>
-                  <button
-                    class="observation-comparison-clear"
-                    type="button"
-                    data-observation-comparison-clear
-                    data-message="observationComparisonClear"
-                    disabled
-                  >
-                    清除对照
-                  </button>
-                </div>
-              </div>
-              <p
-                class="cell-observation-summary"
-                data-observation-summary
-                data-message="worldNotStarted"
-              >
-                世界未启动
-              </p>
-              <dl class="cell-observation-list" data-observation-details hidden>
-                <div>
-                  <dt data-message="observationRowLabel">行</dt>
-                  <dd data-observation-row>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationColumnLabel">列</dt>
-                  <dd data-observation-column>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationCellNumberLabel">格号</dt>
-                  <dd data-observation-cell-number>—</dd>
-                </div>
-                <div>
-                  <dt data-message="observationPositionLabel">位置</dt>
-                  <dd data-observation-position data-message="worldNotStarted">
-                    世界未启动
-                  </dd>
-                </div>
-              </dl>
-            </section>
-          </details>
-        </div>
-        <p
-          class="pan-instructions"
-          id="pan-instructions"
-          data-message="panInstructions"
-        >
-          在世界上滚轮缩放；按住空格加左键或用鼠标中键拖动视图。观测工具可直接左键拖动，也可聚焦视窗后用方向键或翻页键滚动。
-        </p>
-        <p
-          class="selection-instructions"
-          id="selection-instructions"
-          data-message="selectionInstructions"
-        >
-          点击或触摸格子进行选择；聚焦画布后可用方向键移动。
-        </p>
-        <output
-          class="selection-status"
-          id="selection-status"
-          data-selection-status
-          data-message="selectionUnavailable"
-          aria-live="polite"
-        >
-          当前选择：世界未启动
-        </output>
-        <p
-          class="status"
-          data-status
-          data-state="error"
-          data-message="startupFallback"
-          aria-live="polite"
-        >
-          世界尚未启动；如果此状态持续，请刷新页面并确认浏览器允许 JavaScript。
-        </p>
       </section>
     </main>
 
+    <div data-city-v15-mount></div>
   </body>
 </html>
