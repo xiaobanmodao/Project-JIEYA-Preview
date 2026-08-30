@@ -51,8 +51,7 @@
       crossorigin
     />
     <title>界芽：河谷城市</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DUb6QEeC.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-JIEYA-Preview/assets/index-u-dpbs-y.css">
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-CPRQvIvw.js"></script>
   </head>
   <body data-product-surface="city-only" data-app-screen="home">
     <section
@@ -83,6 +82,61 @@
           English
         </button>
       </nav>
+      <section
+        class="home-account-panel"
+        data-account-panel
+        data-account-state="loading"
+        aria-live="polite"
+        hidden
+      >
+        <div class="home-account-heading">
+          <span
+            data-account-state-label="disabled"
+            data-message="accountDisabled"
+            >本地游玩</span
+          >
+          <span data-account-state-label="guest" data-message="accountGuest"
+            >星栈账号</span
+          >
+          <span
+            data-account-state-label="unavailable"
+            data-message="accountUnavailable"
+            >账号暂不可用 · 本地游玩不受影响</span
+          >
+          <strong data-account-display-name></strong>
+        </div>
+        <div class="home-account-actions">
+          <a
+            class="home-account-action"
+            data-account-login
+            data-message="accountLogin"
+            href="/auth/login?return_to=%2F"
+            hidden
+            >使用星栈账号登录</a
+          >
+          <button
+            class="home-account-action"
+            data-account-logout
+            data-message="accountCurrentLogout"
+            type="button"
+            hidden
+          >
+            退出界芽
+          </button>
+          <button
+            class="home-account-action home-account-action-subtle"
+            data-account-global-logout
+            data-message="accountGlobalLogout"
+            type="button"
+            hidden
+          >
+            退出全部应用
+          </button>
+        </div>
+        <small data-account-local-note data-message="accountLocalNote"
+          >登录不会上传城市；本地存档仍只保存在当前设备。</small
+        >
+      </section>
       <header class="home-brand">
         <div class="home-brand-mark" aria-hidden="true">
           <i class="ph ph-buildings"></i>
