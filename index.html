@@ -51,7 +51,7 @@
       crossorigin
     />
     <title>界芽：河谷城市</title>
-    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-B1FSrgBf.js"></script>
+    <script type="module" crossorigin src="/Project-JIEYA-Preview/assets/index-DIuIodSd.js"></script>
   </head>
   <body data-product-surface="city-only" data-app-screen="home">
     <section
@@ -132,11 +132,148 @@
           >
             退出全部应用
           </button>
+          <button
+            class="home-account-action"
+            data-cloud-save-open
+            data-message="cloudSaveOpen"
+            type="button"
+          >
+            云存档
+          </button>
         </div>
         <small data-account-local-note data-message="accountLocalNote"
           >登录不会上传城市；本地存档仍只保存在当前设备。</small
         >
       </section>
+      <dialog
+        class="cloud-save-dialog"
+        data-cloud-save-dialog
+        aria-labelledby="cloud-save-title"
+        aria-describedby="cloud-save-description"
+      >
+        <section>
+          <header class="cloud-save-dialog-header">
+            <div>
+              <p data-message="cloudSaveEyebrow">星栈账号 · 可选同步</p>
+              <h2 id="cloud-save-title" data-message="cloudSaveTitle">
+                云存档
+              </h2>
+            </div>
+            <button
+              class="cloud-save-close"
+              data-cloud-save-close
+              data-message-aria-label="cloudSaveClose"
+              type="button"
+              aria-label="关闭云存档"
+            >
+              <i class="ph ph-x" aria-hidden="true"></i>
+            </button>
+          </header>
+          <p
+            class="cloud-save-explanation"
+            id="cloud-save-description"
+            data-message="cloudSaveExplanation"
+          >
+            只有你主动操作时才会传输城市。断网和账号故障不会影响本地游玩。
+          </p>
+          <p
+            class="cloud-save-status"
+            data-cloud-save-status
+            role="status"
+            aria-live="polite"
+          ></p>
+          <section
+            class="cloud-save-local"
+            aria-labelledby="cloud-save-local-title"
+          >
+            <div>
+              <h3
+                id="cloud-save-local-title"
+                data-message="cloudSaveLocalTitle"
+              >
+                当前设备
+              </h3>
+              <p data-cloud-save-local-summary></p>
+            </div>
+            <div class="cloud-save-primary-actions">
+              <button
+                class="home-account-action"
+                data-cloud-save-upload
+                data-message="cloudSaveUpload"
+                type="button"
+              >
+                上传当前城市
+              </button>
+              <button
+                class="home-account-action home-account-action-subtle"
+                data-cloud-save-refresh
+                data-message="cloudSaveRefresh"
+                type="button"
+              >
+                刷新列表
+              </button>
+            </div>
+          </section>
+          <section class="cloud-save-conflict" data-cloud-save-conflict hidden>
+            <h3 data-message="cloudSaveConflictTitle">发现两个不同版本</h3>
+            <p data-cloud-conflict-summary></p>
+            <div class="cloud-save-conflict-actions">
+              <button
+                data-cloud-conflict-keep-local
+                data-message="cloudSaveKeepLocal"
+                type="button"
+              >
+                保留本地
+              </button>
+              <button
+                data-cloud-conflict-download
+                data-message="cloudSaveDownload"
+                type="button"
+              >
+                下载云端
+              </button>
+              <button
+                data-cloud-conflict-copy
+                data-message="cloudSaveCopy"
+                type="button"
+              >
+                将本地另存为新云端槽
+              </button>
+            </div>
+          </section>
+          <section
+            class="cloud-save-remote"
+            aria-labelledby="cloud-save-remote-title"
+          >
+            <div class="cloud-save-section-heading">
+              <h3
+                id="cloud-save-remote-title"
+                data-message="cloudSaveRemoteTitle"
+              >
+                云端槽位
+              </h3>
+              <small data-message="cloudSaveQuota"
+                >最多 3 个槽位，每槽保留两个版本</small
+              >
+            </div>
+            <div class="cloud-save-list" data-cloud-save-list role="list"></div>
+          </section>
+          <footer class="cloud-save-footer">
+            <small data-message="cloudSaveDeleteNote">
+              删除云档不会删除当前设备里的本地城市；加密备份中的副本会在 30
+              天内到期。
+            </small>
+            <button
+              class="cloud-save-delete-all"
+              data-cloud-save-delete-all
+              data-message="cloudSaveDeleteAll"
+              type="button"
+            >
+              删除全部云存档
+            </button>
+          </footer>
+        </section>
+      </dialog>
       <header class="home-brand">
         <div class="home-brand-mark" aria-hidden="true">
           <i class="ph ph-buildings"></i>
@@ -207,7 +344,7 @@
         hidden
       ></p>
       <p class="home-preview-version" data-message="homePreviewVersion">
-        城市开发预览 0.160.0
+        城市开发预览 0.161.0
       </p>
     </section>
 
